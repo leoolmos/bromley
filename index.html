@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bromley Phase 1 — Interactive Site Map</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --border:#2b313d;
+    --text:#e7e9ee; --muted:#9aa3b2; --accent:#4da3ff; --accent2:#ffb454;
+    --house:#4da3ff; --block:#ff7a59; --good:#5ad17e;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  header{padding:14px 20px;background:var(--panel);border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  header h1{font-size:18px;margin:0;font-weight:600;}
+  header .sub{color:var(--muted);font-size:13px;}
+  header .stats{margin-left:auto;display:flex;gap:14px;font-size:13px;color:var(--muted);}
+  header .stats b{color:var(--text);}
+  #app{display:grid;grid-template-columns:300px 1fr;gap:0;height:calc(100vh - 53px);}
+  #sidebar{background:var(--panel);border-right:1px solid var(--border);overflow-y:auto;padding:14px;}
+  #sidebar h2{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:18px 0 8px;}
+  #sidebar h2:first-child{margin-top:0;}
+  #overview-wrap{position:relative;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:#fff;}
+  #overview-wrap img{display:block;width:100%;}
+  .ov-rect{position:absolute;border:1.5px solid var(--accent);background:rgba(77,163,255,.18);cursor:pointer;transition:background .15s;}
+  .ov-rect:hover, .ov-rect.active{background:rgba(77,163,255,.45);border-color:#fff;}
+  #picker-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;}
+  .pbtn{background:var(--panel2);border:1px solid var(--border);color:var(--text);border-radius:4px;padding:8px 0;font-size:12px;cursor:pointer;text-align:center;}
+  .pbtn:hover{border-color:var(--accent);}
+  .pbtn.active{background:var(--accent);color:#04101f;border-color:var(--accent);font-weight:600;}
+  .pbtn.span2{grid-column:span 2;}
+  #site-btns{display:flex;flex-direction:column;gap:6px;}
+  #site-btns .pbtn{padding:8px 10px;text-align:left;font-size:12px;}
+  #search-box{width:100%;padding:8px 10px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);font-size:13px;}
+  #search-box:focus{outline:none;border-color:var(--accent);}
+  .legend{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted);margin-top:6px;}
+  .legend .row{display:flex;align-items:center;gap:8px;}
+  .dot{width:11px;height:11px;border-radius:50%;display:inline-block;border:1.5px solid #fff;flex:none;}
+  #main{position:relative;overflow:hidden;background:#0a0c10;}
+  #panel-title{position:absolute;top:10px;left:10px;z-index:5;background:rgba(20,22,28,.8);padding:6px 12px;border-radius:6px;font-size:13px;color:var(--muted);border:1px solid var(--border);}
+  #zoom-controls{position:absolute;top:10px;right:10px;z-index:5;display:flex;gap:6px;}
+  #zoom-controls button{width:30px;height:30px;border-radius:6px;border:1px solid var(--border);background:rgba(20,22,28,.85);color:var(--text);font-size:16px;cursor:pointer;}
+  #zoom-controls button:hover{border-color:var(--accent);}
+  #viewport{width:100%;height:100%;overflow:hidden;cursor:grab;}
+  #viewport.dragging{cursor:grabbing;}
+  #stage{position:absolute;top:0;left:0;transform-origin:0 0;}
+  #stage img{display:block;max-width:none;}
+  .marker{position:absolute;transform:translate(-50%,-50%);border-radius:50%;cursor:pointer;box-shadow:0 0 0 1.5px rgba(255,255,255,.9);}
+  .marker.house{width:14px;height:14px;background:var(--house);}
+  .marker.block{width:22px;height:22px;background:var(--block);}
+  .marker:hover, .marker.selected{box-shadow:0 0 0 2.5px #fff, 0 0 10px 3px rgba(255,255,255,.6);z-index:10;}
+  #tooltip{position:fixed;display:none;z-index:50;background:#1c2029;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:12.5px;max-width:280px;box-shadow:0 8px 24px rgba(0,0,0,.5);pointer-events:none;}
+  #tooltip h3{margin:0 0 6px;font-size:13.5px;color:var(--accent2);}
+  #tooltip table{border-collapse:collapse;width:100%;}
+  #tooltip td{padding:1.5px 4px;vertical-align:top;}
+  #tooltip td.k{color:var(--muted);white-space:nowrap;padding-right:6px;}
+  #detail-panel{position:absolute;bottom:0;right:0;z-index:20;width:340px;max-height:70%;overflow-y:auto;background:rgba(18,20,26,.97);border-top:1px solid var(--border);border-left:1px solid var(--border);border-radius:8px 0 0 0;padding:14px;display:none;box-shadow:-4px -4px 20px rgba(0,0,0,.4);}
+  #detail-panel.show{display:block;}
+  #detail-panel h3{margin:0 0 4px;font-size:15px;color:var(--accent2);}
+  #detail-panel .close{position:absolute;top:10px;right:12px;cursor:pointer;color:var(--muted);font-size:16px;}
+  #detail-panel table{border-collapse:collapse;width:100%;font-size:12.5px;margin-top:8px;}
+  #detail-panel td{padding:3px 4px;border-bottom:1px solid var(--border);}
+  #detail-panel td.k{color:var(--muted);width:42%;}
+  #detail-panel .unit-list{margin-top:8px;font-size:12px;}
+  #detail-panel .unit-list table{font-size:11.5px;}
+  #table-toggle{margin:16px 20px;display:flex;gap:10px;align-items:center;}
+  #table-toggle button{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:6px;cursor:pointer;font-size:13px;}
+  #table-toggle button:hover{border-color:var(--accent);}
+  #table-section{display:none;padding:0 20px 30px;}
+  #table-section.show{display:block;}
+  #table-filters{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
+  #table-filters select, #table-filters input{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:6px;font-size:12.5px;}
+  #unit-table-wrap{max-height:480px;overflow:auto;border:1px solid var(--border);border-radius:8px;}
+  table.data{width:100%;border-collapse:collapse;font-size:12.5px;}
+  table.data thead th{position:sticky;top:0;background:var(--panel2);text-align:left;padding:8px;border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap;}
+  table.data tbody td{padding:6px 8px;border-bottom:1px solid #20242d;white-space:nowrap;}
+  table.data tbody tr:hover{background:#1c2029;}
+  table.data .locbtn{background:var(--accent);color:#04101f;border:none;padding:3px 8px;border-radius:5px;font-size:11px;cursor:pointer;}
+  table.data .nolocbtn{color:var(--muted);font-size:11px;}
+  #row-count{color:var(--muted);font-size:12px;margin-bottom:8px;}
+  #flash-pulse{position:absolute;border-radius:50%;border:2px solid #fff;pointer-events:none;animation:pulse 1.1s ease-out 3;z-index:9;}
+  @keyframes pulse{0%{transform:translate(-50%,-50%) scale(1);opacity:1;}100%{transform:translate(-50%,-50%) scale(2.8);opacity:0;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Bromley Phase 1 — Interactive Site Map</h1>
+  <span class="sub">Plot numbering &amp; unit data from the Phase 1 Ground Floor Plans &amp; Plot Schedule (planning ref a0lTv000003RpUXIA0)</span>
+  <span class="stats">
+    <span><b>578</b> total units</span>
+    <span><b>440</b> houses</span>
+    <span><b>138</b> apartments</span>
+    <span><b id="located-count">0</b> located on plan</span>
+  </span>
+</header>
+<div id="app">
+  <div id="sidebar">
+    <h2>Site overview</h2>
+    <div id="overview-wrap">
+      <img id="overview-img" src="" alt="site key plan">
+    </div>
+    <h2>Ground floor plan sheets</h2>
+    <div id="picker-grid"></div>
+    <h2>Apartment block site plans</h2>
+    <div id="site-btns"></div>
+    <h2>Search units</h2>
+    <input id="search-box" type="text" placeholder="Plot number, e.g. R-S01_032">
+    <h2>Legend</h2>
+    <div class="legend">
+      <div class="row"><span class="dot" style="background:var(--house)"></span> Individual house</div>
+      <div class="row"><span class="dot" style="background:var(--block)"></span> Apartment block (multiple units)</div>
+    </div>
+  </div>
+  <div id="main">
+    <div id="panel-title"></div>
+    <div id="zoom-controls">
+      <button id="zoom-in">+</button>
+      <button id="zoom-out">&minus;</button>
+      <button id="zoom-reset">⤾</button>
+    </div>
+    <div id="viewport">
+      <div id="stage">
+        <img id="stage-img" src="">
+        <div id="markers-layer"></div>
+      </div>
+    </div>
+    <div id="detail-panel"><span class="close" id="detail-close">✕</span><div id="detail-body"></div></div>
+  </div>
+</div>
+<div id="tooltip"></div>
+<div id="table-toggle">
+  <button id="toggle-table-btn">Show full unit data table (all 578 units)</button>
+  <span id="table-toggle-hint" style="color:var(--muted);font-size:12.5px;"></span>
+</div>
+<div id="table-section">
+  <div id="table-filters">
+    <input id="filter-search" type="text" placeholder="Filter by plot number / housetype...">
+    <select id="filter-type"><option value="">All plot types</option></select>
+    <select id="filter-tenure"><option value="">All tenures</option></select>
+  </div>
+  <div id="row-count"></div>
+  <div id="unit-table-wrap">
+    <table class="data" id="unit-table">
+      <thead><tr>
+        <th data-k="plot_number">Plot</th>
+        <th data-k="plot_type">Type</th>
+        <th data-k="housetype">Housetype</th>
+        <th data-k="occupancy">Bed/Person</th>
+        <th data-k="tenure">Tenure</th>
+        <th data-k="parking">Parking</th>
+        <th data-k="accessibility">Access</th>
+        <th data-k="gia">GIA m²</th>
+        <th>Map</th>
+      </tr></thead>
+      <tbody id="unit-table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+let MAP_DATA, PANEL_IMAGES, OVERVIEW_IMG;
+
+Promise.all([
+  fetch('map_data.json').then(r => r.json()),
+  fetch('map_images.json').then(r => r.json()),
+  fetch('map_overview_img.json').then(r => r.json()),
+]).then(([data, images, overview]) => {
+  MAP_DATA = data;
+  PANEL_IMAGES = images;
+  OVERVIEW_IMG = overview.overview;
+  init();
+}).catch(err => {
+  document.body.innerHTML = '<div style="padding:40px;color:#fff;font-family:sans-serif">Failed to load map data: ' + err + '</div>';
+});
+
+function init() {
+const panelDefs = MAP_DATA.panel_defs;
+const gridPos = MAP_DATA.grid_pos;
+const overviewRects = MAP_DATA.overview_rects;
+const markersByPanel = MAP_DATA.markers_by_panel;
+const tableRows = MAP_DATA.table_rows;
+
+document.getElementById('overview-img').src = 'data:image/png;base64,' + OVERVIEW_IMG;
+
+let locatedCount = 0;
+for (const k in markersByPanel) locatedCount += markersByPanel[k].length;
+document.getElementById('located-count').textContent = locatedCount + ' markers';
+
+// ---------- Overview clickable rects ----------
+const ovWrap = document.getElementById('overview-wrap');
+for (const sheet in overviewRects) {
+  const r = overviewRects[sheet];
+  const el = document.createElement('div');
+  el.className = 'ov-rect';
+  el.style.left = r.left_pct + '%';
+  el.style.top = r.top_pct + '%';
+  el.style.width = r.w_pct + '%';
+  el.style.height = r.h_pct + '%';
+  el.title = 'Ground Floor Plan ' + sheet + ' of 12';
+  el.addEventListener('click', () => selectPanel('gfp' + sheet));
+  el.dataset.sheet = sheet;
+  ovWrap.appendChild(el);
+}
+
+// ---------- Panel picker grid ----------
+const pickerGrid = document.getElementById('picker-grid');
+for (const pid in gridPos) {
+  const [col, row, span] = gridPos[pid];
+  const btn = document.createElement('div');
+  btn.className = 'pbtn' + (span === 2 ? ' span2' : '');
+  btn.style.gridColumn = span === 2 ? (col + ' / span 2') : col;
+  btn.style.gridRow = row + 1;
+  btn.textContent = pid.replace('gfp', 'Sheet ');
+  btn.dataset.pid = pid;
+  btn.addEventListener('click', () => selectPanel(pid));
+  pickerGrid.appendChild(btn);
+}
+
+const siteBtns = document.getElementById('site-btns');
+['site1A', 'site1B'].forEach(pid => {
+  const btn = document.createElement('div');
+  btn.className = 'pbtn';
+  btn.textContent = panelDefs[pid].label;
+  btn.dataset.pid = pid;
+  btn.addEventListener('click', () => selectPanel(pid));
+  siteBtns.appendChild(btn);
+});
+
+// ---------- Viewer state ----------
+const viewport = document.getElementById('viewport');
+const stage = document.getElementById('stage');
+const stageImg = document.getElementById('stage-img');
+const markersLayer = document.getElementById('markers-layer');
+const tooltip = document.getElementById('tooltip');
+const detailPanel = document.getElementById('detail-panel');
+const detailBody = document.getElementById('detail-body');
+
+let currentPanel = null;
+let zoom = 1, panX = 0, panY = 0;
+let dragging = false, dragStartX = 0, dragStartY = 0, panStartX = 0, panStartY = 0;
+
+function fitZoom(pid) {
+  const d = panelDefs[pid];
+  const vw = viewport.clientWidth, vh = viewport.clientHeight;
+  return Math.min(vw / d.px_w, vh / d.px_h) * 0.96;
+}
+
+function applyTransform() {
+  stage.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+  markersLayer.querySelectorAll('.marker').forEach(m => {
+    m.style.transform = `translate(-50%,-50%) scale(${1/zoom})`;
+  });
+}
+
+function selectPanel(pid) {
+  currentPanel = pid;
+  const d = panelDefs[pid];
+  stageImg.src = 'data:image/jpeg;base64,' + PANEL_IMAGES[pid];
+  stageImg.width = d.px_w;
+  stageImg.height = d.px_h;
+  stage.style.width = d.px_w + 'px';
+  stage.style.height = d.px_h + 'px';
+  document.getElementById('panel-title').textContent = d.label;
+
+  document.querySelectorAll('.pbtn').forEach(b => b.classList.toggle('active', b.dataset.pid === pid));
+  document.querySelectorAll('.ov-rect').forEach(b => b.classList.toggle('active', ('gfp' + b.dataset.sheet) === pid));
+
+  markersLayer.innerHTML = '';
+  (markersByPanel[pid] || []).forEach(mk => {
+    const el = document.createElement('div');
+    el.className = 'marker ' + mk.kind;
+    el.style.left = mk.left_pct + '%';
+    el.style.top = mk.top_pct + '%';
+    el.dataset.id = mk.id;
+    el.addEventListener('mouseenter', e => showTooltip(e, mk));
+    el.addEventListener('mousemove', e => moveTooltip(e));
+    el.addEventListener('mouseleave', hideTooltip);
+    el.addEventListener('click', e => { e.stopPropagation(); showDetail(mk); selectMarker(mk.id); });
+    markersLayer.appendChild(el);
+  });
+
+  zoom = fitZoom(pid);
+  panX = (viewport.clientWidth - d.px_w * zoom) / 2;
+  panY = (viewport.clientHeight - d.px_h * zoom) / 2;
+  applyTransform();
+}
+
+function selectMarker(id) {
+  markersLayer.querySelectorAll('.marker').forEach(m => m.classList.toggle('selected', m.dataset.id === id));
+}
+
+function fmt(v) { return (v === null || v === undefined || v === '') ? '—' : v; }
+
+function tooltipHTML(mk) {
+  if (mk.kind === 'house') {
+    return `<h3>${mk.plot_number}</h3><table>
+      <tr><td class="k">Type</td><td>${fmt(mk.plot_type)}</td></tr>
+      <tr><td class="k">Housetype</td><td>${fmt(mk.housetype)}</td></tr>
+      <tr><td class="k">Bed/Person</td><td>${fmt(mk.occupancy_label)}</td></tr>
+      <tr><td class="k">Tenure</td><td>${fmt(mk.tenure)}</td></tr>
+      <tr><td class="k">Design option</td><td>${fmt(mk.design_option)}</td></tr>
+      <tr><td class="k">Parking</td><td>${fmt(mk.parking)}</td></tr>
+      <tr><td class="k">Accessibility</td><td>${fmt(mk.accessibility)}</td></tr>
+      <tr><td class="k">Handed</td><td>${fmt(mk.handed)}</td></tr>
+      <tr><td class="k">GIA</td><td>${mk.gia ? mk.gia + ' m²' : '—'}</td></tr>
+    </table>`;
+  } else {
+    return `<h3>${mk.name}</h3><table>
+      <tr><td class="k">Units</td><td>${mk.count}</td></tr>
+      <tr><td class="k">Block code</td><td>${mk.prefix}</td></tr>
+    </table><div style="margin-top:6px;color:var(--muted);font-size:11.5px;">Click for full unit list</div>`;
+  }
+}
+
+function showTooltip(e, mk) {
+  tooltip.innerHTML = tooltipHTML(mk);
+  tooltip.style.display = 'block';
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  const pad = 16;
+  let x = e.clientX + pad, y = e.clientY + pad;
+  if (x + 290 > window.innerWidth) x = e.clientX - 290 - pad;
+  if (y + 200 > window.innerHeight) y = e.clientY - 200;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top = y + 'px';
+}
+function hideTooltip() { tooltip.style.display = 'none'; }
+
+function showDetail(mk) {
+  if (mk.kind === 'house') {
+    detailBody.innerHTML = `<h3>${mk.plot_number}</h3>
+      <table>
+        <tr><td class="k">Type</td><td>${fmt(mk.plot_type)}</td></tr>
+        <tr><td class="k">Housetype</td><td>${fmt(mk.housetype)}</td></tr>
+        <tr><td class="k">Bed/Person</td><td>${fmt(mk.occupancy_label)}</td></tr>
+        <tr><td class="k">Tenure</td><td>${fmt(mk.tenure)}</td></tr>
+        <tr><td class="k">Design option</td><td>${fmt(mk.design_option)}</td></tr>
+        <tr><td class="k">Parking spaces</td><td>${fmt(mk.parking)}</td></tr>
+        <tr><td class="k">Accessibility</td><td>${fmt(mk.accessibility)}</td></tr>
+        <tr><td class="k">Handed</td><td>${fmt(mk.handed)}</td></tr>
+        <tr><td class="k">GIA</td><td>${mk.gia ? mk.gia + ' m²' : '—'}</td></tr>
+      </table>`;
+  } else {
+    let rows = mk.units.map(u => `<tr>
+        <td>${u.plot_number}</td><td>${fmt(u.housetype)}</td><td>${fmt(u.tenure)}</td><td>${fmt(u.plot_type)}</td>
+      </tr>`).join('');
+    detailBody.innerHTML = `<h3>${mk.name}</h3>
+      <div style="color:var(--muted);font-size:12.5px;">${mk.count} units · block code ${mk.prefix}</div>
+      <div class="unit-list"><table>
+        <thead><tr><td class="k">Plot</td><td class="k">Housetype</td><td class="k">Tenure</td><td class="k">Type</td></tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>`;
+  }
+  detailPanel.classList.add('show');
+}
+document.getElementById('detail-close').addEventListener('click', () => detailPanel.classList.remove('show'));
+
+// pan & zoom
+viewport.addEventListener('wheel', e => {
+  e.preventDefault();
+  const rect = viewport.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  const factor = e.deltaY < 0 ? 1.15 : 1/1.15;
+  const newZoom = Math.max(0.05, Math.min(zoom * factor, 6));
+  panX = mx - (mx - panX) * (newZoom / zoom);
+  panY = my - (my - panY) * (newZoom / zoom);
+  zoom = newZoom;
+  applyTransform();
+}, { passive: false });
+
+viewport.addEventListener('mousedown', e => {
+  dragging = true;
+  viewport.classList.add('dragging');
+  dragStartX = e.clientX; dragStartY = e.clientY;
+  panStartX = panX; panStartY = panY;
+});
+window.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  panX = panStartX + (e.clientX - dragStartX);
+  panY = panStartY + (e.clientY - dragStartY);
+  applyTransform();
+});
+window.addEventListener('mouseup', () => { dragging = false; viewport.classList.remove('dragging'); });
+
+document.getElementById('zoom-in').addEventListener('click', () => { zoom = Math.min(zoom*1.3,6); applyTransform(); });
+document.getElementById('zoom-out').addEventListener('click', () => { zoom = Math.max(zoom/1.3,0.05); applyTransform(); });
+document.getElementById('zoom-reset').addEventListener('click', () => selectPanel(currentPanel));
+
+// ---------- Search box (sidebar) ----------
+document.getElementById('search-box').addEventListener('keydown', e => {
+  if (e.key !== 'Enter') return;
+  const q = e.target.value.trim().toUpperCase();
+  const row = tableRows.find(r => r.plot_number.toUpperCase() === q);
+  if (row) locateRow(row);
+  else alert('No exact plot number match for "' + q + '". Try the full data table below.');
+});
+
+function locateRow(row) {
+  if (!row.located_panel) {
+    alert(row.plot_number + ' is in the schedule but its label could not be precisely located on the drawings (data-only — see table).');
+    return;
+  }
+  selectPanel(row.located_panel);
+  selectMarker(row.located_marker);
+  const mkEl = markersLayer.querySelector(`[data-id="${row.located_marker}"]`);
+  if (mkEl) {
+    setTimeout(() => {
+      const left = parseFloat(mkEl.style.left), top = parseFloat(mkEl.style.top);
+      const d = panelDefs[row.located_panel];
+      const px = d.px_w * left/100, py = d.px_h * top/100;
+      panX = viewport.clientWidth/2 - px*zoom;
+      panY = viewport.clientHeight/2 - py*zoom;
+      applyTransform();
+      const mk = (markersByPanel[row.located_panel]||[]).find(m => m.id === row.located_marker);
+      if (mk) showDetail(mk);
+    }, 30);
+  }
+}
+
+// ---------- Full data table ----------
+const toggleBtn = document.getElementById('toggle-table-btn');
+const tableSection = document.getElementById('table-section');
+toggleBtn.addEventListener('click', () => {
+  tableSection.classList.toggle('show');
+  toggleBtn.textContent = tableSection.classList.contains('show') ? 'Hide full unit data table' : 'Show full unit data table (all 578 units)';
+});
+
+const typeSel = document.getElementById('filter-type');
+const tenureSel = document.getElementById('filter-tenure');
+const typeSet = [...new Set(tableRows.map(r => r.plot_type))].sort();
+const tenureSet = [...new Set(tableRows.map(r => r.tenure))].sort();
+typeSet.forEach(t => typeSel.add(new Option(t, t)));
+tenureSet.forEach(t => tenureSel.add(new Option(t, t)));
+
+const tbody = document.getElementById('unit-table-body');
+const filterInput = document.getElementById('filter-search');
+const rowCount = document.getElementById('row-count');
+
+function occLabel(o){ if(!o) return '—'; const m=o.match(/^(\d+)B(\d+)P$/); return m? `${m[1]}B/${m[2]}P`:o; }
+
+function renderTable() {
+  const q = filterInput.value.trim().toUpperCase();
+  const ft = typeSel.value, fn = tenureSel.value;
+  const rows = tableRows.filter(r => {
+    if (ft && r.plot_type !== ft) return false;
+    if (fn && r.tenure !== fn) return false;
+    if (q && !(r.plot_number.toUpperCase().includes(q) || (r.housetype||'').toUpperCase().includes(q))) return false;
+    return true;
+  });
+  rowCount.textContent = rows.length + ' of ' + tableRows.length + ' units shown';
+  tbody.innerHTML = rows.map(r => `<tr>
+    <td>${r.plot_number}</td>
+    <td>${fmt(r.plot_type)}</td>
+    <td>${fmt(r.housetype)}</td>
+    <td>${occLabel(r.occupancy)}</td>
+    <td>${fmt(r.tenure)}</td>
+    <td>${fmt(r.parking)}</td>
+    <td>${fmt(r.accessibility)}</td>
+    <td>${r.gia||'—'}</td>
+    <td>${r.located_panel ? `<button class="locbtn" data-pn="${r.plot_number}">Locate</button>` : '<span class="nolocbtn">data only</span>'}</td>
+  </tr>`).join('');
+  tbody.querySelectorAll('.locbtn').forEach(b => b.addEventListener('click', () => {
+    const row = tableRows.find(r => r.plot_number === b.dataset.pn);
+    tableSection.classList.add('show');
+    locateRow(row);
+  }));
+}
+filterInput.addEventListener('input', renderTable);
+typeSel.addEventListener('change', renderTable);
+tenureSel.addEventListener('change', renderTable);
+renderTable();
+
+document.getElementById('table-toggle-hint').textContent =
+  '3 houses (R-S10_043, R-S011_003, R-S15_022) are in the schedule but not precisely labelled on the drawings — listed as "data only".';
+
+// init
+window.addEventListener('resize', () => { if (currentPanel) { /* keep view */ } });
+selectPanel('gfp1');
+}
+</script>
+</body>
+</html>
