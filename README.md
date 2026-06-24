@@ -14,8 +14,14 @@ Open **`index.html`** through any static web server and explore all **578 Phase 
   drawing (where available — every Phase 1 unit has one):
   plot number, bedrooms, housetype, occupancy, tenure, design option, parking,
   accessibility, handed, GIA.
-- **Colour-coded by number of bedrooms** (1–5 bed) with a legend.
-- **Apartment blocks** show their elevation drawing, bed mix and full unit list.
+- **Click any home** to open its detail panel with both the **elevation** and the
+  **floor plans**; click either drawing to open a full-screen **lightbox**
+  (scroll to zoom, drag to pan, arrows to switch view) to read the room layout.
+- **Colour markers by Bedrooms (1–5) or by Tenure.** Tenure mode highlights the
+  **affordable homes** (Low-Cost Rent + Intermediate = 346 of 578, 60%) so you can
+  see exactly where the low-cost houses and apartment blocks sit.
+- **Apartment blocks** show their elevation, per-level floor plan (with each flat's
+  plot number), bed mix and full unit list.
 - **Masterplan — All Phases** panel (Development Parcel Plan) shows the Phase 1A / 1B
   parcels in context with the wider outline area reserved for future phases.
 - **Search** by plot number, **locate** any plot from the full filterable data table

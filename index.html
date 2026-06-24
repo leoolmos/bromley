@@ -10,6 +10,7 @@
     --text:#e7e9ee; --muted:#9aa3b2; --accent:#4da3ff; --accent2:#ffb454;
     --block:#b08bff; --good:#5ad17e;
     --b1:#22b8cf; --b2:#51cf66; --b3:#fcc419; --b4:#ff922b; --b5:#fa5252; --b0:#adb5bd;
+    --tLCR:#fa5252; --tInt:#ffa94d; --tPriv:#4dabf7; --tMix:#b08bff;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
@@ -40,11 +41,15 @@
   #site-btns .pbtn{padding:8px 10px;text-align:left;font-size:12px;}
   #search-box{width:100%;padding:8px 10px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);font-size:13px;}
   #search-box:focus{outline:none;border-color:var(--accent);}
-  .legend{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted);margin-top:6px;}
+  .seg{display:flex;gap:0;border:1px solid var(--border);border-radius:7px;overflow:hidden;}
+  .seg button{flex:1;background:var(--panel2);border:none;color:var(--text);padding:8px 6px;font-size:12.5px;cursor:pointer;}
+  .seg button.active{background:var(--accent);color:#04101f;font-weight:600;}
+  .legend{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted);margin-top:8px;}
   .legend .row{display:flex;align-items:center;gap:8px;}
   .dot{width:12px;height:12px;border-radius:50%;display:inline-block;border:1.5px solid #fff;flex:none;}
   .sq{width:13px;height:13px;border-radius:3px;display:inline-block;border:1.5px solid #fff;flex:none;}
   .note{font-size:11.5px;color:var(--muted);line-height:1.45;background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;margin-top:6px;}
+  .note b{color:var(--text);}
   #main{position:relative;overflow:hidden;background:#0a0c10;}
   #panel-title{position:absolute;top:10px;left:10px;z-index:5;background:rgba(20,22,28,.82);padding:6px 12px;border-radius:6px;font-size:13px;color:var(--text);border:1px solid var(--border);max-width:60%;}
   #zoom-controls{position:absolute;top:10px;right:10px;z-index:5;display:flex;gap:6px;}
@@ -65,13 +70,18 @@
   #tooltip table{border-collapse:collapse;width:100%;font-size:12px;}
   #tooltip td{padding:1.5px 4px;vertical-align:top;}
   #tooltip td.k{color:var(--muted);white-space:nowrap;padding-right:6px;}
-  .bedtag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600;color:#10131a;}
-  #detail-panel{position:absolute;bottom:0;right:0;z-index:20;width:360px;max-height:84%;overflow-y:auto;background:rgba(18,20,26,.98);border-top:1px solid var(--border);border-left:1px solid var(--border);border-radius:10px 0 0 0;padding:14px;display:none;box-shadow:-4px -4px 20px rgba(0,0,0,.4);}
+  #tooltip .tt-hint{margin-top:7px;color:var(--accent);font-size:11px;}
+  .tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600;color:#10131a;}
+  #detail-panel{position:absolute;bottom:0;right:0;z-index:20;width:368px;max-height:88%;overflow-y:auto;background:rgba(18,20,26,.98);border-top:1px solid var(--border);border-left:1px solid var(--border);border-radius:10px 0 0 0;padding:14px;display:none;box-shadow:-4px -4px 20px rgba(0,0,0,.4);}
   #detail-panel.show{display:block;}
   #detail-panel h3{margin:0 0 4px;font-size:16px;color:var(--accent2);padding-right:20px;}
   #detail-panel .close{position:absolute;top:10px;right:12px;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;}
   #detail-panel .close:hover{color:#fff;}
-  #detail-panel .det-img{width:100%;border-radius:8px;border:1px solid var(--border);background:#fff;margin:8px 0;display:block;}
+  .det-figs{display:flex;flex-direction:column;gap:8px;margin:9px 0 4px;}
+  .det-fig{position:relative;cursor:zoom-in;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff;}
+  .det-fig img{width:100%;display:block;}
+  .det-fig .figlabel{position:absolute;top:6px;left:6px;background:rgba(16,19,26,.82);color:#fff;font-size:10.5px;padding:2px 7px;border-radius:5px;}
+  .det-fig .figzoom{position:absolute;bottom:6px;right:6px;background:rgba(16,19,26,.82);color:#fff;font-size:10.5px;padding:2px 7px;border-radius:5px;}
   #detail-panel table{border-collapse:collapse;width:100%;font-size:12.5px;margin-top:6px;}
   #detail-panel td{padding:3px 4px;border-bottom:1px solid var(--border);}
   #detail-panel td.k{color:var(--muted);width:44%;}
@@ -93,17 +103,32 @@
   table.data .locbtn{background:var(--accent);color:#04101f;border:none;padding:3px 8px;border-radius:5px;font-size:11px;cursor:pointer;}
   table.data .nolocbtn{color:var(--muted);font-size:11px;}
   #row-count{color:var(--muted);font-size:12px;margin-bottom:8px;}
+  /* lightbox */
+  #lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,8,12,.94);display:none;flex-direction:column;}
+  #lightbox.show{display:flex;}
+  #lb-bar{display:flex;align-items:center;gap:14px;padding:10px 16px;color:var(--text);font-size:13px;background:rgba(20,22,28,.6);}
+  #lb-bar .lb-title{font-weight:600;color:var(--accent2);}
+  #lb-bar .lb-spacer{margin-left:auto;}
+  #lb-bar button{background:var(--panel2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:6px 12px;font-size:13px;cursor:pointer;}
+  #lb-bar button:hover{border-color:var(--accent);}
+  #lb-stage{flex:1;overflow:hidden;position:relative;cursor:grab;}
+  #lb-stage.dragging{cursor:grabbing;}
+  #lb-img{position:absolute;top:0;left:0;transform-origin:0 0;user-select:none;-webkit-user-drag:none;background:#fff;border-radius:4px;}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:rgba(20,22,28,.8);border:1px solid var(--border);color:#fff;font-size:24px;width:46px;height:60px;border-radius:8px;cursor:pointer;}
+  .lb-nav:hover{border-color:var(--accent);}
+  #lb-prev{left:14px;} #lb-next{right:14px;}
+  #lb-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:11.5px;background:rgba(20,22,28,.7);padding:4px 10px;border-radius:6px;z-index:2;}
 </style>
 </head>
 <body>
 <header>
   <h1>Ravensbourne Place — Phase 1 Interactive Site Map</h1>
-  <span class="sub">578 detailed plots · hover any home for its details &amp; elevation · planning ref a0lTv000003RpUXIA0</span>
+  <span class="sub">578 detailed plots · hover for details + elevation · click for floor plans · planning ref a0lTv000003RpUXIA0</span>
   <span class="stats">
     <span><b>578</b> units</span>
     <span><b>440</b> houses</span>
     <span><b>138</b> apartments</span>
-    <span><b id="img-count">0</b> with images</span>
+    <span><b id="aff-count">0</b> affordable</span>
   </span>
 </header>
 <div id="app">
@@ -111,7 +136,15 @@
     <h2>All phases — masterplan</h2>
     <button class="bigbtn" id="mp-btn" data-pid="masterplan">🗺️ Development Parcel Plan
       <small>Phase 1A &amp; 1B parcels (detailed) + outline area for future phases</small></button>
-    <div class="note" id="phase-note">Only <b>Phase 1</b> is a detailed application, so only its 578 homes have plot-level data &amp; images. Later phases are <b>outline</b> — shown as parcels on the masterplan above.</div>
+    <div class="note" id="phase-note">Only <b>Phase 1</b> is a detailed application, so only its 578 homes have plot-level data &amp; drawings. Later phases are <b>outline</b> — shown as parcels on the masterplan above.</div>
+
+    <h2>Colour markers by</h2>
+    <div class="seg" id="mode-seg">
+      <button data-mode="beds" class="active">Bedrooms</button>
+      <button data-mode="tenure">Tenure (affordable)</button>
+    </div>
+    <div class="legend" id="legend-body"></div>
+    <div class="note" id="aff-note"></div>
 
     <h2>Site key plan</h2>
     <div id="overview-wrap"><img id="overview-img" src="" alt="site key plan"></div>
@@ -124,16 +157,6 @@
 
     <h2>Find a plot</h2>
     <input id="search-box" type="text" placeholder="Plot number, e.g. R-S01_032">
-
-    <h2>Legend — bedrooms</h2>
-    <div class="legend">
-      <div class="row"><span class="dot" style="background:var(--b1)"></span> 1 bed</div>
-      <div class="row"><span class="dot" style="background:var(--b2)"></span> 2 bed</div>
-      <div class="row"><span class="dot" style="background:var(--b3)"></span> 3 bed</div>
-      <div class="row"><span class="dot" style="background:var(--b4)"></span> 4 bed</div>
-      <div class="row"><span class="dot" style="background:var(--b5)"></span> 5 bed</div>
-      <div class="row" style="margin-top:4px;"><span class="sq" style="background:var(--block)"></span> Apartment block (mixed)</div>
-    </div>
   </div>
   <div id="main">
     <div id="panel-title"></div>
@@ -152,6 +175,26 @@
   </div>
 </div>
 <div id="tooltip"></div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <div id="lb-bar">
+    <span class="lb-title" id="lb-title"></span>
+    <span id="lb-caption" style="color:var(--muted)"></span>
+    <span class="lb-spacer"></span>
+    <button id="lb-zoomout">−</button>
+    <button id="lb-zoomin">+</button>
+    <button id="lb-fit">Fit</button>
+    <button id="lb-close">✕ Close</button>
+  </div>
+  <div id="lb-stage">
+    <button class="lb-nav" id="lb-prev">‹</button>
+    <img id="lb-img" src="" alt="">
+    <button class="lb-nav" id="lb-next">›</button>
+    <div id="lb-hint">Scroll to zoom · drag to pan · ← → to switch view · Esc to close</div>
+  </div>
+</div>
+
 <div id="table-toggle">
   <button id="toggle-table-btn">Show full unit data table (all 578 units)</button>
   <span id="table-toggle-hint" style="color:var(--muted);font-size:12.5px;"></span>
@@ -184,23 +227,31 @@
 </div>
 
 <script>
-let MAP_DATA, PANEL_IMAGES, OVERVIEW_IMG, UNIT_IMAGES;
+let MAP_DATA, PANEL_IMAGES, OVERVIEW_IMG, UNIT_IMAGES, UNIT_PLANS;
 
 Promise.all([
   fetch('map_data.json').then(r => r.json()),
   fetch('map_images.json').then(r => r.json()),
   fetch('map_overview_img.json').then(r => r.json()),
   fetch('unit_images.json').then(r => r.json()),
-]).then(([data, images, overview, unitImages]) => {
-  MAP_DATA = data; PANEL_IMAGES = images; OVERVIEW_IMG = overview.overview; UNIT_IMAGES = unitImages;
+  fetch('unit_plans.json').then(r => r.json()),
+]).then(([data, images, overview, unitImages, unitPlans]) => {
+  MAP_DATA = data; PANEL_IMAGES = images; OVERVIEW_IMG = overview.overview;
+  UNIT_IMAGES = unitImages; UNIT_PLANS = unitPlans;
   init();
 }).catch(err => {
   document.body.innerHTML = '<div style="padding:40px;color:#fff;font-family:sans-serif">Failed to load map data: ' + err + '</div>';
 });
 
 const BED_COLORS = {1:'#22b8cf',2:'#51cf66',3:'#fcc419',4:'#ff922b',5:'#fa5252'};
+const TENURE_COLORS = {'Low-Cost Rent':'#fa5252','Intermediate':'#ffa94d','Private':'#4dabf7','Mixed':'#b08bff'};
+const AFFORDABLE = ['Low-Cost Rent','Intermediate'];
 function bedColor(b){ return BED_COLORS[b] || '#adb5bd'; }
-function imgSrc(key){ return key && UNIT_IMAGES[key] ? ('data:image/jpeg;base64,' + UNIT_IMAGES[key]) : null; }
+function tenureColor(t){ return TENURE_COLORS[t] || '#adb5bd'; }
+function elevSrc(key){ return key && UNIT_IMAGES[key] ? ('data:image/jpeg;base64,' + UNIT_IMAGES[key]) : null; }
+function planSrc(key){ return key && UNIT_PLANS[key] ? ('data:image/jpeg;base64,' + UNIT_PLANS[key]) : null; }
+
+let colorMode = 'beds';
 
 function init() {
 const panelDefs = MAP_DATA.panel_defs;
@@ -211,9 +262,10 @@ const tableRows = MAP_DATA.table_rows;
 
 document.getElementById('overview-img').src = 'data:image/png;base64,' + OVERVIEW_IMG;
 
-// images-available count
-let withImg = tableRows.filter(r => r.img).length;
-document.getElementById('img-count').textContent = withImg;
+const affCount = tableRows.filter(r => AFFORDABLE.includes(r.tenure)).length;
+document.getElementById('aff-count').textContent = affCount;
+document.getElementById('aff-note').innerHTML =
+  `<b>Affordable</b> = Low-Cost Rent + Intermediate = <b>${affCount}</b> of 578 (${Math.round(affCount/578*100)}%). Switch to <b>Tenure</b> above to see where they sit.`;
 
 // ---------- Overview clickable rects ----------
 const ovWrap = document.getElementById('overview-wrap');
@@ -228,8 +280,6 @@ for (const sheet in overviewRects) {
   el.dataset.sheet = sheet;
   ovWrap.appendChild(el);
 }
-
-// ---------- Masterplan button ----------
 document.getElementById('mp-btn').addEventListener('click', () => selectPanel('masterplan'));
 
 // ---------- Panel picker grid ----------
@@ -245,7 +295,6 @@ for (const pid in gridPos) {
   btn.addEventListener('click', () => selectPanel(pid));
   pickerGrid.appendChild(btn);
 }
-
 const siteBtns = document.getElementById('site-btns');
 ['site1A', 'site1B'].forEach(pid => {
   const btn = document.createElement('div');
@@ -281,6 +330,38 @@ function applyTransform() {
   });
 }
 
+// ---------- colouring ----------
+function markerColor(mk){
+  if (colorMode === 'tenure') return tenureColor(mk.kind === 'block' ? mk.block_tenure : mk.tenure);
+  return mk.kind === 'block' ? null : bedColor(mk.beds); // block keeps CSS purple in beds mode
+}
+function recolorMarkers(){
+  markersLayer.querySelectorAll('.marker').forEach(el => {
+    const mk = (markersByPanel[currentPanel]||[]).find(m => m.id === el.dataset.id);
+    if (!mk) return;
+    const c = markerColor(mk);
+    el.style.background = c || '';
+  });
+}
+function renderLegend(){
+  const L = document.getElementById('legend-body');
+  if (colorMode === 'beds') {
+    L.innerHTML = [1,2,3,4,5].map(b=>`<div class="row"><span class="dot" style="background:${bedColor(b)}"></span> ${b} bed</div>`).join('')
+      + `<div class="row" style="margin-top:4px;"><span class="sq" style="background:var(--block)"></span> Apartment block (mixed)</div>`;
+  } else {
+    L.innerHTML =
+      `<div class="row"><span class="dot" style="background:var(--tLCR)"></span> Low-Cost Rent <span style="color:#fa5252">· affordable</span></div>`
+    + `<div class="row"><span class="dot" style="background:var(--tInt)"></span> Intermediate <span style="color:#ffa94d">· affordable</span></div>`
+    + `<div class="row"><span class="dot" style="background:var(--tPriv)"></span> Private (market)</div>`
+    + `<div class="row" style="margin-top:4px;"><span class="sq" style="background:var(--tLCR)"></span> Block coloured by its tenure</div>`;
+  }
+}
+document.querySelectorAll('#mode-seg button').forEach(b => b.addEventListener('click', () => {
+  colorMode = b.dataset.mode;
+  document.querySelectorAll('#mode-seg button').forEach(x => x.classList.toggle('active', x === b));
+  renderLegend(); recolorMarkers();
+}));
+
 function selectPanel(pid) {
   currentPanel = pid;
   const d = panelDefs[pid];
@@ -297,7 +378,7 @@ function selectPanel(pid) {
   (markersByPanel[pid] || []).forEach(mk => {
     const el = document.createElement('div');
     el.className = 'marker ' + mk.kind;
-    if (mk.kind === 'house') el.style.background = bedColor(mk.beds);
+    const c = markerColor(mk); if (c) el.style.background = c;
     el.style.left = mk.left_pct + '%'; el.style.top = mk.top_pct + '%';
     el.dataset.id = mk.id;
     el.addEventListener('mouseenter', e => showTooltip(e, mk));
@@ -317,30 +398,29 @@ function selectMarker(id) {
   markersLayer.querySelectorAll('.marker').forEach(m => m.classList.toggle('selected', m.dataset.id === id));
 }
 function fmt(v) { return (v === null || v === undefined || v === '') ? '—' : v; }
-function bedTag(b){ return b? `<span class="bedtag" style="background:${bedColor(b)}">${b} bed</span>` : '—'; }
+function bedTag(b){ return b ? `<span class="tag" style="background:${bedColor(b)}">${b} bed</span>` : '—'; }
+function tenureTag(t){ return t ? `<span class="tag" style="background:${tenureColor(t)}">${t}</span>` : '—'; }
 function bedMixStr(mix){ return Object.keys(mix||{}).sort().map(b=>`${mix[b]}×${b}b`).join(' · ') || '—'; }
 
 // ---------- Tooltip (hover) ----------
 function tooltipHTML(mk) {
-  const src = imgSrc(mk.img);
+  const src = elevSrc(mk.img);
   const imgTag = src ? `<img class="tt-img" src="${src}" alt="">` : '';
   if (mk.kind === 'house') {
     return imgTag + `<div class="tt-body"><h3>${mk.plot_number} &nbsp;${bedTag(mk.beds)}</h3><table>
       <tr><td class="k">Type</td><td>${fmt(mk.plot_type)}</td></tr>
       <tr><td class="k">Housetype</td><td>${fmt(mk.housetype)}</td></tr>
       <tr><td class="k">Bed / person</td><td>${fmt(mk.occupancy_label||mk.occupancy)}</td></tr>
-      <tr><td class="k">Tenure</td><td>${fmt(mk.tenure)}</td></tr>
-      <tr><td class="k">Design option</td><td>${fmt(mk.design_option)}</td></tr>
+      <tr><td class="k">Tenure</td><td>${tenureTag(mk.tenure)}</td></tr>
       <tr><td class="k">Parking</td><td>${fmt(mk.parking)}</td></tr>
-      <tr><td class="k">Accessibility</td><td>${fmt(mk.accessibility)}</td></tr>
       <tr><td class="k">GIA</td><td>${mk.gia ? mk.gia + ' m²' : '—'}</td></tr>
-    </table></div>`;
+    </table><div class="tt-hint">🔍 Click for floor plans &amp; full details</div></div>`;
   } else {
     return imgTag + `<div class="tt-body"><h3>${mk.name}</h3><table>
       <tr><td class="k">Units</td><td>${mk.count}</td></tr>
       <tr><td class="k">Bed mix</td><td>${bedMixStr(mk.bed_mix)}</td></tr>
-      <tr><td class="k">Block code</td><td>${mk.prefix}</td></tr>
-    </table><div style="margin-top:6px;color:var(--muted);font-size:11px;">Click for full unit list</div></div>`;
+      <tr><td class="k">Tenure</td><td>${tenureTag(mk.block_tenure)}</td></tr>
+    </table><div class="tt-hint">🔍 Click for floor plans &amp; unit list</div></div>`;
   }
 }
 function showTooltip(e, mk) { tooltip.innerHTML = tooltipHTML(mk); tooltip.style.display = 'block'; moveTooltip(e); }
@@ -354,18 +434,22 @@ function moveTooltip(e) {
 function hideTooltip() { tooltip.style.display = 'none'; }
 
 // ---------- Detail panel (click) ----------
+function figHTML(src, label){
+  return src ? `<div class="det-fig" data-src="${src}" data-label="${label}"><img src="${src}" alt="">
+      <span class="figlabel">${label}</span><span class="figzoom">🔍 enlarge</span></div>` : '';
+}
 function showDetail(mk) {
-  const src = imgSrc(mk.img);
+  const elev = elevSrc(mk.img), plan = planSrc(mk.img);
   if (mk.kind === 'house') {
     detailBody.innerHTML = `<h3>${mk.plot_number} &nbsp;${bedTag(mk.beds)}</h3>
-      <div class="cap">${fmt(mk.plot_type)} · ${fmt(mk.tenure)}</div>
-      ${src ? `<img class="det-img" src="${src}" alt="">` : ''}
+      <div class="cap">${fmt(mk.plot_type)} · ${tenureTag(mk.tenure)}</div>
+      <div class="det-figs">${figHTML(elev,'Elevations')}${figHTML(plan,'Floor plans')}</div>
       <table>
         <tr><td class="k">Bedrooms</td><td>${fmt(mk.beds)}</td></tr>
         <tr><td class="k">Housetype</td><td>${fmt(mk.housetype)}</td></tr>
         <tr><td class="k">Bed / person</td><td>${fmt(mk.occupancy_label||mk.occupancy)}</td></tr>
         <tr><td class="k">Plot type</td><td>${fmt(mk.plot_type)}</td></tr>
-        <tr><td class="k">Tenure</td><td>${fmt(mk.tenure)}</td></tr>
+        <tr><td class="k">Tenure</td><td>${tenureTag(mk.tenure)}</td></tr>
         <tr><td class="k">Design option</td><td>${fmt(mk.design_option)}</td></tr>
         <tr><td class="k">Parking spaces</td><td>${fmt(mk.parking)}</td></tr>
         <tr><td class="k">Accessibility</td><td>${fmt(mk.accessibility)}</td></tr>
@@ -374,21 +458,69 @@ function showDetail(mk) {
       </table>`;
   } else {
     let rows = mk.units.map(u => `<tr>
-        <td>${u.plot_number}</td><td>${bedTag(u.beds)}</td><td>${fmt(u.housetype)}</td><td>${fmt(u.tenure)}</td>
+        <td>${u.plot_number}</td><td>${bedTag(u.beds)}</td><td>${fmt(u.housetype)}</td><td>${tenureTag(u.tenure)}</td>
       </tr>`).join('');
     detailBody.innerHTML = `<h3>${mk.name}</h3>
-      <div class="cap">${mk.count} apartments · bed mix ${bedMixStr(mk.bed_mix)} · block code ${mk.prefix}</div>
-      ${src ? `<img class="det-img" src="${src}" alt="">` : ''}
+      <div class="cap">${mk.count} apartments · ${tenureTag(mk.block_tenure)} · bed mix ${bedMixStr(mk.bed_mix)}</div>
+      <div class="det-figs">${figHTML(elev,'Elevations')}${figHTML(plan,'Floor plans (per level)')}</div>
       <div class="unit-list"><table>
         <thead><tr><td class="k">Plot</td><td class="k">Beds</td><td class="k">Type</td><td class="k">Tenure</td></tr></thead>
         <tbody>${rows}</tbody>
       </table></div>`;
   }
+  // wire figure clicks -> lightbox
+  const figs = [...detailBody.querySelectorAll('.det-fig')];
+  const items = figs.map(f => ({src:f.dataset.src, label:f.dataset.label}));
+  figs.forEach((f,i) => f.addEventListener('click', () => openLightbox(items, i, mk.kind==='house'?mk.plot_number:mk.name)));
   detailPanel.classList.add('show');
 }
 document.getElementById('detail-close').addEventListener('click', () => detailPanel.classList.remove('show'));
 
-// ---------- pan & zoom ----------
+// ---------- Lightbox (zoom/pan, multi-image) ----------
+const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img'),
+      lbStage = document.getElementById('lb-stage'), lbTitle = document.getElementById('lb-title'),
+      lbCaption = document.getElementById('lb-caption');
+let lbItems = [], lbIdx = 0, lbScale = 1, lbX = 0, lbY = 0, lbDrag = false, lbSX = 0, lbSY = 0, lbPX = 0, lbPY = 0;
+function lbApply(){ lbImg.style.transform = `translate(${lbX}px,${lbY}px) scale(${lbScale})`; }
+function lbFit(){
+  const sw = lbStage.clientWidth, sh = lbStage.clientHeight;
+  const iw = lbImg.naturalWidth || 1, ih = lbImg.naturalHeight || 1;
+  lbScale = Math.min(sw/iw, sh/ih) * 0.96;
+  lbX = (sw - iw*lbScale)/2; lbY = (sh - ih*lbScale)/2; lbApply();
+}
+function lbShow(){
+  const it = lbItems[lbIdx]; lbImg.src = it.src; lbCaption.textContent = it.label + (lbItems.length>1?`  (${lbIdx+1}/${lbItems.length})`:'');
+  document.getElementById('lb-prev').style.display = document.getElementById('lb-next').style.display = lbItems.length>1?'block':'none';
+  if (lbImg.complete && lbImg.naturalWidth) lbFit(); else lbImg.onload = lbFit;
+}
+function openLightbox(items, idx, title){
+  lbItems = items.filter(i=>i.src); if(!lbItems.length) return;
+  lbIdx = Math.max(0, Math.min(idx, lbItems.length-1)); lbTitle.textContent = title;
+  lb.classList.add('show'); lbShow();
+}
+function closeLightbox(){ lb.classList.remove('show'); }
+function lbStep(d){ lbIdx = (lbIdx + d + lbItems.length) % lbItems.length; lbShow(); }
+document.getElementById('lb-close').addEventListener('click', closeLightbox);
+document.getElementById('lb-prev').addEventListener('click', () => lbStep(-1));
+document.getElementById('lb-next').addEventListener('click', () => lbStep(1));
+document.getElementById('lb-fit').addEventListener('click', lbFit);
+document.getElementById('lb-zoomin').addEventListener('click', () => { lbScale*=1.3; lbApply(); });
+document.getElementById('lb-zoomout').addEventListener('click', () => { lbScale/=1.3; lbApply(); });
+lbStage.addEventListener('wheel', e => {
+  e.preventDefault();
+  const r = lbStage.getBoundingClientRect(), mx = e.clientX-r.left, my = e.clientY-r.top;
+  const f = e.deltaY<0 ? 1.15 : 1/1.15, ns = Math.max(0.05, Math.min(lbScale*f, 12));
+  lbX = mx-(mx-lbX)*(ns/lbScale); lbY = my-(my-lbY)*(ns/lbScale); lbScale = ns; lbApply();
+}, {passive:false});
+lbStage.addEventListener('mousedown', e => { if(e.target.classList.contains('lb-nav'))return; lbDrag=true; lbStage.classList.add('dragging'); lbSX=e.clientX; lbSY=e.clientY; lbPX=lbX; lbPY=lbY; });
+window.addEventListener('mousemove', e => { if(!lbDrag)return; lbX=lbPX+(e.clientX-lbSX); lbY=lbPY+(e.clientY-lbSY); lbApply(); });
+window.addEventListener('mouseup', () => { lbDrag=false; lbStage.classList.remove('dragging'); });
+window.addEventListener('keydown', e => {
+  if(!lb.classList.contains('show'))return;
+  if(e.key==='Escape')closeLightbox(); else if(e.key==='ArrowLeft')lbStep(-1); else if(e.key==='ArrowRight')lbStep(1);
+});
+
+// ---------- pan & zoom (main viewer) ----------
 viewport.addEventListener('wheel', e => {
   e.preventDefault();
   const rect = viewport.getBoundingClientRect();
@@ -475,7 +607,7 @@ function renderTable() {
     <td>${fmt(r.plot_type)}</td>
     <td>${fmt(r.housetype)}</td>
     <td>${occLabel(r.occupancy)}</td>
-    <td>${fmt(r.tenure)}</td>
+    <td>${tenureTag(r.tenure)}</td>
     <td>${fmt(r.parking)}</td>
     <td>${fmt(r.accessibility)}</td>
     <td>${r.gia||'—'}</td>
@@ -493,8 +625,9 @@ bedsSel.addEventListener('change', renderTable);
 renderTable();
 
 document.getElementById('table-toggle-hint').textContent =
-  'Every home shows its colour-coded bedroom count, full schedule data and house-type elevation drawing on hover.';
+  'Hover = data + elevation. Click a home = floor plans (click any drawing to enlarge). Toggle Tenure to map affordable homes.';
 
+renderLegend();
 selectPanel('gfp1');
 }
 </script>
