@@ -1,0 +1,9 @@
+# Build workspace (downloads, extracted PDFs, node_modules, render scripts, originals)
+_build/
+node_modules/
+
+# Local Claude Code config
+.claude/
+
+# Large source archives
+*.zip
