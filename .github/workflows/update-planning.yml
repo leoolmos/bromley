@@ -1,0 +1,43 @@
+# Daily check of planning application 26/02199/OUT on the Bromley register.
+# Writes data/planning.json (snapshot) and prepends to data/updates.json when something changed.
+name: Update planning data
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # every day, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-planning
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - id: fetch
+        run: python3 scripts/fetch_planning.py
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/planning.json data/updates.json
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "Update planning data $(date -u +%F)"
+          git push
+      - name: Request a Pages build
+        if: steps.fetch.outputs.changed == 'true'
+        run: >
+          curl -fsS -X POST
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}"
+          -H "Accept: application/vnd.github+json"
+          "https://api.github.com/repos/${{ github.repository }}/pages/builds" || true

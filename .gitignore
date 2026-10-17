@@ -7,3 +7,6 @@ node_modules/
 
 # Large source archives
 *.zip
+
+# Python
+__pycache__/

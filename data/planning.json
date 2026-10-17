@@ -1,0 +1,3429 @@
+{
+ "fetched_at": "2026-10-17T18:00:46+00:00",
+ "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
+ "application": {
+  "reference": "26/02199/OUT",
+  "record_id": "a0lTv000003RpUXIA0",
+  "url": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
+  "type": "Outline planning permission: All matters reserved",
+  "applicant": "Berkeley Homes (Southern) Limited",
+  "status": "Valid",
+  "agent": "Paddy Hynes",
+  "officer": "Xanna Machecourt",
+  "proposal": "Hybrid planning permission for a phased residential-led mixed use development comprising:\nFull planning permission for a phase of the development to provide homes, retail and community uses, public open space and landscaping; demolition of existing structures and site clearance works; enhancements to Public Rights of Way; access and highway works; and all associated works including temporary and permanent enabling works.\nOutline planning permission (all matters reserved) for the provision of further homes, a residence for children in care, flexible commercial, social, healthcare and community uses, car and cycle parking, public open space and landscaping; demolition of existing structures and site clearance works; enhancements to Public Rights of Way; access and highway works; and all associated works including temporary and permanent enabling works.",
+  "decision": null,
+  "decision_date": null,
+  "decision_notice_date": null,
+  "determination_level": null,
+  "received_date": "2026-06-01",
+  "valid_date": "2026-06-16",
+  "consultation_deadline": "2026-09-04",
+  "earliest_decision_date": "2026-09-04",
+  "committee_date": null,
+  "scheduled_decision_date": null,
+  "planning_portal_ref": "PP-14947118",
+  "wards": [
+   "Bromley Common & Holwood",
+   "Bromley Town",
+   "Hayes & Coney Hall"
+  ],
+  "appeals": 0,
+  "open_for_comments": true,
+  "files_url": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register&tabset-ff68f=3"
+ },
+ "documents": [
+  {
+   "id": "068Tv00000m0dgsIAA",
+   "title": "Environmental Statement - Chapter H Air Quality",
+   "category": "Supporting Document",
+   "date": "2026-10-13",
+   "published": "2026-10-14",
+   "ext": "pdf",
+   "size": 3275289,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000m0dgsIAA"
+  },
+  {
+   "id": "068Tv00000m03ARIAY",
+   "title": "Chapter H, Appendix: Air Quality",
+   "category": "Supporting Document",
+   "date": "2026-10-13",
+   "published": "2026-10-14",
+   "ext": "pdf",
+   "size": 1787970,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000m03ARIAY"
+  },
+  {
+   "id": "068Tv00000m0PqqIAE",
+   "title": "(Stage 2) GLA Consultation - AQ Memo",
+   "category": "Supporting Document",
+   "date": "2026-10-13",
+   "published": "2026-10-14",
+   "ext": "xlsx",
+   "size": 90565,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000m0PqqIAE"
+  },
+  {
+   "id": "068Tv00000lvPZjIAM",
+   "title": "Design & Access Statement (Phase 1)-Part 1",
+   "category": "Supporting Document",
+   "date": "2026-10-13",
+   "published": "2026-10-13",
+   "ext": "pdf",
+   "size": 10728390,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lvPZjIAM"
+  },
+  {
+   "id": "068Tv00000lrpCjIAI",
+   "title": "Phase 1 Apartments Schedule",
+   "category": "Supporting Document",
+   "date": "2026-10-12",
+   "published": "2026-10-12",
+   "ext": "pdf",
+   "size": 130448,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lrpCjIAI"
+  },
+  {
+   "id": "068Tv00000lfzr6IAA",
+   "title": "Ravensbourne Place 26-02199-OUT) – Objections to Developer Appendices Submitted 24-9-2026",
+   "category": "Objection Comment",
+   "date": "2026-10-09",
+   "published": "2026-10-09",
+   "ext": "pdf",
+   "size": 191928,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lfzr6IAA"
+  },
+  {
+   "id": "068Tv00000lh9ubIAA",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-09-28",
+   "published": "2026-10-09",
+   "ext": "pdf",
+   "size": 191928,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lh9ubIAA"
+  },
+  {
+   "id": "068Tv00000lc5qBIAQ",
+   "title": "Ravensbourne Place Bromley Phase 1 Detailed Drainage Strategy-P02",
+   "category": "Other",
+   "date": "2026-10-08",
+   "published": "2026-10-08",
+   "ext": "pdf",
+   "size": 20514409,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lc5qBIAQ"
+  },
+  {
+   "id": "068Tv00000lcFhKIAU",
+   "title": "Ravensbourne Place Bromley Flood Risk Assesment-P02",
+   "category": "Other",
+   "date": "2026-10-08",
+   "published": "2026-10-08",
+   "ext": "pdf",
+   "size": 56419741,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lcFhKIAU"
+  },
+  {
+   "id": "068Tv00000lO9f5IAC",
+   "title": "Bromley Green - Groundwater Representation",
+   "category": "Representation",
+   "date": "2026-09-29",
+   "published": "2026-10-06",
+   "ext": "pdf",
+   "size": 108343,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lO9f5IAC"
+  },
+  {
+   "id": "068Tv00000lMgryIAC",
+   "title": "Bromley Green- Groundwater Representation Follow up",
+   "category": "Representation",
+   "date": "2026-09-29",
+   "published": "2026-10-05",
+   "ext": "pdf",
+   "size": 84444,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000lMgryIAC"
+  },
+  {
+   "id": "068Tv00000keAuLIAU",
+   "title": "Further Environmental Information",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 2186697,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keAuLIAU"
+  },
+  {
+   "id": "068Tv00000kdyzeIAA",
+   "title": "Appendix 9 - Phase 2 Further Ecological Assessment (Part 3 of 3)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 8032785,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdyzeIAA"
+  },
+  {
+   "id": "068Tv00000kdhinIAA",
+   "title": "Appendix 9 - Phase 2 Further Ecological Assessment (Part 2 of 3)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 29125996,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdhinIAA"
+  },
+  {
+   "id": "068Tv00000kdq4SIAQ",
+   "title": "Appendix 8 - Response to Bromley Bromley Biodiversity Partnership and Forestry Commission",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 653459,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdq4SIAQ"
+  },
+  {
+   "id": "068Tv00000keCuQIAU",
+   "title": "Appendix 7 - Updated Car Parking Management Plan",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 2100603,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keCuQIAU"
+  },
+  {
+   "id": "068Tv00000kduCtIAI",
+   "title": "Appendix 6 - Updated Framework Travel Plan",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 1906887,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kduCtIAI"
+  },
+  {
+   "id": "068Tv00000keAXdIAM",
+   "title": "Appendix 5 - Transport Assessment Addendum",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 13147674,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keAXdIAM"
+  },
+  {
+   "id": "068Tv00000kdpzZIAQ",
+   "title": "Appendix 4 - Response to comments on Landscape and Ecology Management Strategy and EMMP - Redacted",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 1263762,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdpzZIAQ"
+  },
+  {
+   "id": "068Tv00000kdl9ZIAQ",
+   "title": "Appendix 3 - Grey Belt Statement - Addendum (September 2026)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 5885084,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdl9ZIAQ"
+  },
+  {
+   "id": "068Tv00000kdsO1IAI",
+   "title": "Appendix 2 - U300-JTP-BF-ZZ-DR-A-005-001-P1-Block F Floorplans",
+   "category": "Drawing",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 1255408,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdsO1IAI"
+  },
+  {
+   "id": "068Tv00000ke20rIAA",
+   "title": "Appendix 18 - Archaeological Evaluation Report",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 6540030,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000ke20rIAA"
+  },
+  {
+   "id": "068Tv00000ke1auIAA",
+   "title": "Appendix 17 - Written Scheme of Investigation for an Archaeological Evaluation",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 5200803,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000ke1auIAA"
+  },
+  {
+   "id": "068Tv00000keKLiIAM",
+   "title": "Appendix 16 - Response to LBB Conservation officer",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 664923,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keKLiIAM"
+  },
+  {
+   "id": "068Tv00000keCuWIAU",
+   "title": "Appendix 15 - Updated Energy and Sustainability Statement Appendix F(ii)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "xlsx",
+   "size": 153360,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keCuWIAU"
+  },
+  {
+   "id": "068Tv00000keK5aIAE",
+   "title": "Appendix 15 - Updated Energy and Sustainability Statement - Appendix F (iv)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 29617744,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keK5aIAE"
+  },
+  {
+   "id": "068Tv00000keChZIAU",
+   "title": "Appendix 15 - Updated Energy and Sustainability Statement - Appendix F (iii)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "xlsx",
+   "size": 154290,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keChZIAU"
+  },
+  {
+   "id": "068Tv00000keHvhIAE",
+   "title": "Appendix 15 - Updated Energy and Sustainability Statement",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 3178658,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000keHvhIAE"
+  },
+  {
+   "id": "068Tv00000ke3bBIAQ",
+   "title": "Appendix 14 - Updated Whole Life-Cycle Carbon Assessment",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 892895,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000ke3bBIAQ"
+  },
+  {
+   "id": "068Tv00000kdbS9IAI",
+   "title": "Appendix 13 - Response to LBB and GLA Air Quality comments",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 630469,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdbS9IAI"
+  },
+  {
+   "id": "068Tv00000kdyYDIAY",
+   "title": "Appendix 12 - Technical Note 005",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 725161,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdyYDIAY"
+  },
+  {
+   "id": "068Tv00000ke1RJIAY",
+   "title": "Appendix 11 - Further Ecological Survey Results",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 2800176,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000ke1RJIAY"
+  },
+  {
+   "id": "068Tv00000kdzNoIAI",
+   "title": "Appendix 10 - Updated Biodiversity Net Gain Plan (Part 2 of 2)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 6715944,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdzNoIAI"
+  },
+  {
+   "id": "068Tv00000ke64LIAQ",
+   "title": "Appendix 10 - Updated Biodiversity Net Gain Plan (Part 1 of 2)",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 28863273,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000ke64LIAQ"
+  },
+  {
+   "id": "068Tv00000kdyEpIAI",
+   "title": "Appendix 10 - The Statutory Biodiversity Metric Calculation Tool",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "xlsx",
+   "size": 3615512,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdyEpIAI"
+  },
+  {
+   "id": "068Tv00000kdnGEIAY",
+   "title": "Appendix 1 - Updated Construction Environmental Management Plan",
+   "category": "Supporting Document",
+   "date": "2026-09-24",
+   "published": "2026-09-24",
+   "ext": "pdf",
+   "size": 2914915,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kdnGEIAY"
+  },
+  {
+   "id": "068Tv00000kShahIAC",
+   "title": "Representation - Redacted",
+   "category": "Representation",
+   "date": "2026-09-21",
+   "published": "2026-09-22",
+   "ext": "pdf",
+   "size": 90210,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000kShahIAC"
+  },
+  {
+   "id": "068Tv00000k2JNXIA2",
+   "title": "Response to Conservation and Heritage Comments",
+   "category": "Supporting Document",
+   "date": "2026-09-10",
+   "published": "2026-09-15",
+   "ext": "pdf",
+   "size": 269344,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000k2JNXIA2"
+  },
+  {
+   "id": "068Tv00000jyxeQIAQ",
+   "title": "Bromley Green - Ground Investigation - Representation",
+   "category": "Representation",
+   "date": "2026-09-14",
+   "published": "2026-09-14",
+   "ext": "pdf",
+   "size": 104055,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000jyxeQIAQ"
+  },
+  {
+   "id": "068Tv00000jmva1IAA",
+   "title": "Redacted objection",
+   "category": "Representation",
+   "date": "2026-07-23",
+   "published": "2026-09-10",
+   "ext": "pdf",
+   "size": 418584,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000jmva1IAA"
+  },
+  {
+   "id": "068Tv00000jWYKxIAO",
+   "title": "Attachment to email from Keep Bromley Green - Ecology note",
+   "category": "Comment",
+   "date": "2026-09-04",
+   "published": "2026-09-07",
+   "ext": "pdf",
+   "size": 88295,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000jWYKxIAO"
+  },
+  {
+   "id": "068Tv00000jLaZeIAK",
+   "title": "Green Belt Statement",
+   "category": "Supporting Document",
+   "date": "2026-09-03",
+   "published": "2026-09-03",
+   "ext": "pdf",
+   "size": 5495294,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000jLaZeIAK"
+  },
+  {
+   "id": "068Tv00000jKYaIIAW",
+   "title": "ES - Vol 2 - Appendix E1 - Transport Assessment [Part 2 of 3]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-09-03",
+   "ext": "pdf",
+   "size": 29626425,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000jKYaIIAW"
+  },
+  {
+   "id": "068Tv00000jFkqFIAS",
+   "title": "Ecology Technical Notes",
+   "category": "Supporting Document",
+   "date": "2026-08-28",
+   "published": "2026-09-02",
+   "ext": "pdf",
+   "size": 2410427,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000jFkqFIAS"
+  },
+  {
+   "id": "068Tv00000jAB79IAG",
+   "title": "Representations from khva - Batch 11",
+   "category": "Representation",
+   "date": "2026-08-28",
+   "published": "2026-09-01",
+   "ext": "pdf",
+   "size": 791467,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000jAB79IAG"
+  },
+  {
+   "id": "068Tv00000j9gNyIAI",
+   "title": "Appendix F.4 - Biodiversity Net Gain Plan",
+   "category": "Supporting Document",
+   "date": "2026-08-28",
+   "published": "2026-09-01",
+   "ext": "pdf",
+   "size": 26008894,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000j9gNyIAI"
+  },
+  {
+   "id": "068Tv00000iz2gNIAQ",
+   "title": "Whole Life-Cycle Carbon Assessment main report + appendices A_B",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "pdf",
+   "size": 569588,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iz2gNIAQ"
+  },
+  {
+   "id": "068Tv00000iywj5IAA",
+   "title": "GLA WLC Memo",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "xlsx",
+   "size": 64795,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iywj5IAA"
+  },
+  {
+   "id": "068Tv00000iz6f4IAA",
+   "title": "GLA Energy Memo 2026 - Int com",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "xlsx",
+   "size": 195001,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iz6f4IAA"
+  },
+  {
+   "id": "068Tv00000iyfDaIAI",
+   "title": "Energy and Sustainability Statement main report + appendices A_E",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "pdf",
+   "size": 2795284,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iyfDaIAI"
+  },
+  {
+   "id": "068Tv00000iz1QyIAI",
+   "title": "Energy and Sustainability Statement appendix F(iv)",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "pdf",
+   "size": 29617744,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iz1QyIAI"
+  },
+  {
+   "id": "068Tv00000iybzhIAA",
+   "title": "Energy and Sustainability Statement appendix F(iii) GLA carbon spreadsheet",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "xlsx",
+   "size": 154290,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iybzhIAA"
+  },
+  {
+   "id": "068Tv00000iytBgIAI",
+   "title": "Energy and Sustainability Statement appendix F(ii) GLA carbon spreadsheet",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "xlsx",
+   "size": 153360,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iytBgIAI"
+  },
+  {
+   "id": "068Tv00000iysFXIAY",
+   "title": "Email from agent with supporting documents replying to GLA E&S Comments",
+   "category": "Correspondence",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "pdf",
+   "size": 332232,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iysFXIAY"
+  },
+  {
+   "id": "068Tv00000iz8wzIAA",
+   "title": "Circular Economy Statement appendix D(ii) GLA CE Spreadsheet",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "xlsm",
+   "size": 416719,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iz8wzIAA"
+  },
+  {
+   "id": "068Tv00000iz1ArIAI",
+   "title": "Circular Economy Statement appendix D(i) GLA CE Spreadsheet",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "xlsm",
+   "size": 416392,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iz1ArIAI"
+  },
+  {
+   "id": "068Tv00000iz7L0IAI",
+   "title": "Circular Economy Statement - GLA Memo Stage 1",
+   "category": "Supporting Document",
+   "date": "2026-08-27",
+   "published": "2026-08-28",
+   "ext": "xlsx",
+   "size": 493586,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iz7L0IAI"
+  },
+  {
+   "id": "068Tv00000iWYNJIA4",
+   "title": "Representations from khva - Batch 9",
+   "category": "Representation",
+   "date": "2026-08-21",
+   "published": "2026-08-21",
+   "ext": "pdf",
+   "size": 141767,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iWYNJIA4"
+  },
+  {
+   "id": "068Tv00000iWZ86IAG",
+   "title": "Keep Bromley Green - Planning Objection - SUDs",
+   "category": "Representation",
+   "date": "2026-08-21",
+   "published": "2026-08-21",
+   "ext": "pdf",
+   "size": 58901,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iWZ86IAG"
+  },
+  {
+   "id": "068Tv00000iWdcqIAC",
+   "title": "Keep Bromley Green - Planning Objection - Health Care Provision",
+   "category": "Representation",
+   "date": "2026-08-21",
+   "published": "2026-08-21",
+   "ext": "pdf",
+   "size": 49519,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iWdcqIAC"
+  },
+  {
+   "id": "068Tv00000iWFilIAG",
+   "title": "Keep Bromley Green - Planning Objection - Ecology",
+   "category": "Representation",
+   "date": "2026-08-21",
+   "published": "2026-08-21",
+   "ext": "pdf",
+   "size": 95506,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iWFilIAG"
+  },
+  {
+   "id": "068Tv00000iWldgIAC",
+   "title": "Keep Bromley Green - Planning Objection - Appendix 1",
+   "category": "Representation",
+   "date": "2026-08-21",
+   "published": "2026-08-21",
+   "ext": "pdf",
+   "size": 3651718,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iWldgIAC"
+  },
+  {
+   "id": "068Tv00000iWbhbIAC",
+   "title": "Keep Bromley Green - Planning Objection",
+   "category": "Representation",
+   "date": "2026-08-21",
+   "published": "2026-08-21",
+   "ext": "pdf",
+   "size": 6261634,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iWbhbIAC"
+  },
+  {
+   "id": "068Tv00000iD7tiIAC",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-08-17",
+   "published": "2026-08-17",
+   "ext": "pdf",
+   "size": 91805,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000iD7tiIAC"
+  },
+  {
+   "id": "068Tv00000i3hohIAA",
+   "title": "Representation from hkva - Batch 8",
+   "category": "Representation",
+   "date": "2026-08-07",
+   "published": "2026-08-14",
+   "ext": "pdf",
+   "size": 288585,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000i3hohIAA"
+  },
+  {
+   "id": "068Tv00000i4MgfIAE",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-08-07",
+   "published": "2026-08-14",
+   "ext": "pdf",
+   "size": 59216,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000i4MgfIAE"
+  },
+  {
+   "id": "068Tv00000i0ZCkIAM",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-08-13",
+   "published": "2026-08-13",
+   "ext": "pdf",
+   "size": 276111,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000i0ZCkIAM"
+  },
+  {
+   "id": "068Tv00000hkFxpIAE",
+   "title": "Sport England",
+   "category": "Consultee Comment",
+   "date": "2026-08-07",
+   "published": "2026-08-07",
+   "ext": "pdf",
+   "size": 306548,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hkFxpIAE"
+  },
+  {
+   "id": "068Tv00000hkBivIAE",
+   "title": "Forestry Commission",
+   "category": "Consultee Comment",
+   "date": "2026-08-07",
+   "published": "2026-08-07",
+   "ext": "pdf",
+   "size": 157105,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hkBivIAE"
+  },
+  {
+   "id": "068Tv00000hk5tfIAA",
+   "title": "Environment Agency",
+   "category": "Consultee Comment",
+   "date": "2026-08-07",
+   "published": "2026-08-07",
+   "ext": "pdf",
+   "size": 205821,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hk5tfIAA"
+  },
+  {
+   "id": "068Tv00000hj4Q5IAI",
+   "title": "Representation (redacted) from hkva residents - Batch 7",
+   "category": "Representation",
+   "date": "2026-08-05",
+   "published": "2026-08-07",
+   "ext": "pdf",
+   "size": 414472,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hj4Q5IAI"
+  },
+  {
+   "id": "068Tv00000hjHLlIAM",
+   "title": "Energy and Sustainability Statement appendix F(i) Energy Masterplan Report - redacted",
+   "category": "Supporting Document",
+   "date": "2026-07-08",
+   "published": "2026-08-07",
+   "ext": "pdf",
+   "size": 3361571,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hjHLlIAM"
+  },
+  {
+   "id": "068Tv00000hjEHRIA2",
+   "title": "Objection Comment",
+   "category": "Objection Comment",
+   "date": "2026-07-02",
+   "published": "2026-08-07",
+   "ext": "pdf",
+   "size": 130730,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hjEHRIA2"
+  },
+  {
+   "id": "068Tv00000hjZsEIAU",
+   "title": "ES - Vol 2 - Appendix G1 - Flood Risk Assessment and Outline Drainage Strategy [Part 1 of 2] (Sensitive) - Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-08-07",
+   "ext": "pdf",
+   "size": 26833114,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hjZsEIAU"
+  },
+  {
+   "id": "068Tv00000hXzs2IAC",
+   "title": "Representations (redacted) Batch 6",
+   "category": "Representation",
+   "date": "2026-08-04",
+   "published": "2026-08-04",
+   "ext": "pdf",
+   "size": 718796,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hXzs2IAC"
+  },
+  {
+   "id": "068Tv00000hVwbrIAC",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-07-30",
+   "published": "2026-08-03",
+   "ext": "pdf",
+   "size": 360003,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hVwbrIAC"
+  },
+  {
+   "id": "068Tv00000hUaepIAC",
+   "title": "Representation - hkva residents - Batch 5",
+   "category": "Representation",
+   "date": "2026-07-23",
+   "published": "2026-08-03",
+   "ext": "pdf",
+   "size": 125616,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hUaepIAC"
+  },
+  {
+   "id": "068Tv00000hUG3dIAG",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-07-23",
+   "published": "2026-08-03",
+   "ext": "pdf",
+   "size": 174734,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hUG3dIAG"
+  },
+  {
+   "id": "068Tv00000hPW2MIAW",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-07-24",
+   "published": "2026-07-31",
+   "ext": "pdf",
+   "size": 2172448,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hPW2MIAW"
+  },
+  {
+   "id": "068Tv00000hMJZYIA4",
+   "title": "Representations (redacted) from hkva residents - Batch 4",
+   "category": "Representation",
+   "date": "2026-07-30",
+   "published": "2026-07-30",
+   "ext": "pdf",
+   "size": 852835,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hMJZYIA4"
+  },
+  {
+   "id": "068Tv00000hHTJSIA4",
+   "title": "Planning Objection Ver 1.01",
+   "category": "Representation",
+   "date": "2026-07-29",
+   "published": "2026-07-29",
+   "ext": "pdf",
+   "size": 1423259,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hHTJSIA4"
+  },
+  {
+   "id": "068Tv00000hHQjxIAG",
+   "title": "26 02199 OUT Rookery Estates Planning Application Objection.",
+   "category": "Representation",
+   "date": "2026-07-29",
+   "published": "2026-07-29",
+   "ext": "pdf",
+   "size": 2318426,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hHQjxIAG"
+  },
+  {
+   "id": "068Tv00000hFSWTIA4",
+   "title": "Representations (Redacted) from hkva - Batch 4",
+   "category": "Representation",
+   "date": "2026-07-28",
+   "published": "2026-07-28",
+   "ext": "pdf",
+   "size": 2569872,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hFSWTIA4"
+  },
+  {
+   "id": "068Tv00000hFmErIAK",
+   "title": "Representation (sensitive) from hkva residents - Batch 4",
+   "category": "Representation",
+   "date": "2026-07-24",
+   "published": "2026-07-28",
+   "ext": "pdf",
+   "size": 1844310,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hFmErIAK"
+  },
+  {
+   "id": "068Tv00000hBh7LIAS",
+   "title": "Representation (Redacted) from hkva residents - Batch 3",
+   "category": "Representation",
+   "date": "2026-07-27",
+   "published": "2026-07-27",
+   "ext": "pdf",
+   "size": 2814173,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hBh7LIAS"
+  },
+  {
+   "id": "068Tv00000hBzx6IAC",
+   "title": "Redacted objection",
+   "category": "Representation",
+   "date": "2026-07-26",
+   "published": "2026-07-27",
+   "ext": "pdf",
+   "size": 180926,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000hBzx6IAC"
+  },
+  {
+   "id": "068Tv00000h1AjQIAU",
+   "title": "Supportive Comment - redacted",
+   "category": "Representation",
+   "date": "2026-07-21",
+   "published": "2026-07-23",
+   "ext": "pdf",
+   "size": 440050,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000h1AjQIAU"
+  },
+  {
+   "id": "068Tv00000h15wKIAQ",
+   "title": "Email Objection - redacted",
+   "category": "Representation",
+   "date": "2026-07-21",
+   "published": "2026-07-23",
+   "ext": "pdf",
+   "size": 209077,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000h15wKIAQ"
+  },
+  {
+   "id": "068Tv00000h1TaJIAU",
+   "title": "Email Objection - redacted",
+   "category": "Representation",
+   "date": "2026-07-21",
+   "published": "2026-07-23",
+   "ext": "pdf",
+   "size": 108628,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000h1TaJIAU"
+  },
+  {
+   "id": "068Tv00000h1WDEIA2",
+   "title": "Email Objection - redacted",
+   "category": "Representation",
+   "date": "2026-07-20",
+   "published": "2026-07-23",
+   "ext": "pdf",
+   "size": 68192,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000h1WDEIA2"
+  },
+  {
+   "id": "068Tv00000h1d1nIAA",
+   "title": "Postal Objection - redacted",
+   "category": "Representation",
+   "date": "2026-07-17",
+   "published": "2026-07-23",
+   "ext": "pdf",
+   "size": 778861,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000h1d1nIAA"
+  },
+  {
+   "id": "068Tv00000h1NMzIAM",
+   "title": "Postal Objection - redacted",
+   "category": "Representation",
+   "date": "2026-07-17",
+   "published": "2026-07-23",
+   "ext": "pdf",
+   "size": 778861,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000h1NMzIAM"
+  },
+  {
+   "id": "068Tv00000gsxsZIAQ",
+   "title": "Representation (redacted) from hkva residents - Batch 2",
+   "category": "Representation",
+   "date": "2026-07-21",
+   "published": "2026-07-21",
+   "ext": "pdf",
+   "size": 8779675,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gsxsZIAQ"
+  },
+  {
+   "id": "068Tv00000goqPyIAI",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-07-17",
+   "published": "2026-07-20",
+   "ext": "pdf",
+   "size": 416502,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000goqPyIAI"
+  },
+  {
+   "id": "068Tv00000govpaIAA",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-07-17",
+   "published": "2026-07-20",
+   "ext": "pdf",
+   "size": 95880,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000govpaIAA"
+  },
+  {
+   "id": "068Tv00000goygmIAA",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-07-17",
+   "published": "2026-07-20",
+   "ext": "pdf",
+   "size": 79024,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000goygmIAA"
+  },
+  {
+   "id": "068Tv00000gpDMTIA2",
+   "title": "Representation",
+   "category": "Representation",
+   "date": "2026-07-17",
+   "published": "2026-07-20",
+   "ext": "pdf",
+   "size": 275058,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gpDMTIA2"
+  },
+  {
+   "id": "068Tv00000giuCtIAI",
+   "title": "Representation (redacted) from hkva residents",
+   "category": "Representation",
+   "date": "2026-07-17",
+   "published": "2026-07-17",
+   "ext": "pdf",
+   "size": 3065561,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000giuCtIAI"
+  },
+  {
+   "id": "068Tv00000gI8ggIAC",
+   "title": "07.26 Hayes Lane Bromley Archaeological Evaluation Report targeting potential kiln features FINAL",
+   "category": "Supporting Document",
+   "date": "2026-07-09",
+   "published": "2026-07-09",
+   "ext": "pdf",
+   "size": 6013679,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gI8ggIAC"
+  },
+  {
+   "id": "068Tv00000gEHCQIA4",
+   "title": "Energy and Sustainability Statement appendix F(vi) Ventilation Statement",
+   "category": "Supporting Document",
+   "date": "2026-07-08",
+   "published": "2026-07-08",
+   "ext": "pdf",
+   "size": 86894,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gEHCQIA4"
+  },
+  {
+   "id": "068Tv00000gETN7IAO",
+   "title": "Energy and Sustainability Statement appendix F(v) Overheating Assessment",
+   "category": "Supporting Document",
+   "date": "2026-07-08",
+   "published": "2026-07-08",
+   "ext": "pdf",
+   "size": 4249679,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gETN7IAO"
+  },
+  {
+   "id": "068Tv00000gEhuXIAS",
+   "title": "Energy and Sustainability Statement appendix F(iv) SAP SBEM",
+   "category": "Supporting Document",
+   "date": "2026-07-08",
+   "published": "2026-07-08",
+   "ext": "pdf",
+   "size": 29855507,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gEhuXIAS"
+  },
+  {
+   "id": "068Tv00000gEXLxIAO",
+   "title": "Energy and Sustainability Statement appendix F(iii) GLA carbon spreadsheet - application elemen",
+   "category": "Supporting Document",
+   "date": "2026-07-08",
+   "published": "2026-07-08",
+   "ext": "xlsx",
+   "size": 155711,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gEXLxIAO"
+  },
+  {
+   "id": "068Tv00000gEebjIAC",
+   "title": "Energy and Sustainability Statement appendix F(ii) GLA carbon spreadsheet - detailed element",
+   "category": "Supporting Document",
+   "date": "2026-07-08",
+   "published": "2026-07-08",
+   "ext": "xlsx",
+   "size": 154767,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gEebjIAC"
+  },
+  {
+   "id": "068Tv00000gGEmoIAG",
+   "title": "Keep Bromley Green -hayes-farm-Abridged-evidence-pack",
+   "category": "Objection Comment",
+   "date": "2026-07-05",
+   "published": "2026-07-08",
+   "ext": "pdf",
+   "size": 16207043,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000gGEmoIAG"
+  },
+  {
+   "id": "068Tv00000fB7QFIA0",
+   "title": "Supplementary Report to the Design and Access Statement - Existing Structures and Locations",
+   "category": "Supporting Document",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 18445826,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fB7QFIA0"
+  },
+  {
+   "id": "068Tv00000fBpveIAC",
+   "title": "Phase 1 Street Elevations 1 of 2  - 005-012/REV PB",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 126050348,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBpveIAC"
+  },
+  {
+   "id": "068Tv00000fBM0sIAG",
+   "title": "Phase 1 Plot Schedule REV P2",
+   "category": "Supporting Document",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 113394,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBM0sIAG"
+  },
+  {
+   "id": "068Tv00000fBNhkIAG",
+   "title": "Overall Landscape Masterplan - Phase 1 - U300-STA35-XX-00-DR-L-810-020 REV P3",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 12305553,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBNhkIAG"
+  },
+  {
+   "id": "068Tv00000fBVqlIAG",
+   "title": "HT-5.9 Detached - 005-018/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2315989,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBVqlIAG"
+  },
+  {
+   "id": "068Tv00000fBhmpIAC",
+   "title": "HT-5.3 Detached - 005-017/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2608317,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBhmpIAC"
+  },
+  {
+   "id": "068Tv00000fBVM5IAO",
+   "title": "HT-5.13 Detached - 005-020/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 3508273,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBVM5IAO"
+  },
+  {
+   "id": "068Tv00000fBamyIAC",
+   "title": "HT-5.10 Detached - 005-019/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2509855,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBamyIAC"
+  },
+  {
+   "id": "068Tv00000fBls4IAC",
+   "title": "HT-4BH.2 Detached - 005-046/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1546159,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBls4IAC"
+  },
+  {
+   "id": "068Tv00000fBSZVIA4",
+   "title": "HT-4BH.1 Semi - 005-045/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2047417,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBSZVIA4"
+  },
+  {
+   "id": "068Tv00000fBUt8IAG",
+   "title": "HT-4BH.1 Detached - 005-044/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1179288,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBUt8IAG"
+  },
+  {
+   "id": "068Tv00000fBqbaIAC",
+   "title": "HT-4BH.1 - HT-2BH.1 4 Unit Terrace - 005-050/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2233491,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBqbaIAC"
+  },
+  {
+   "id": "068Tv00000fBLzPIAW",
+   "title": "HT-4.8 Semi - 005-013/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2213683,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBLzPIAW"
+  },
+  {
+   "id": "068Tv00000fBbjCIAS",
+   "title": "HT-4.8 - 4.13 Semi - 005-022/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2731667,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBbjCIAS"
+  },
+  {
+   "id": "068Tv00000fBg5yIAC",
+   "title": "HT-4.5 Detached - 005-012/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1731937,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBg5yIAC"
+  },
+  {
+   "id": "068Tv00000fBUhcIAG",
+   "title": "HT-4.3(b) Detached - 005-011/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1828667,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBUhcIAG"
+  },
+  {
+   "id": "068Tv00000fBQvuIAG",
+   "title": "HT-4.2 Semi - 005-010/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2117006,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBQvuIAG"
+  },
+  {
+   "id": "068Tv00000fBiEEIA0",
+   "title": "HT-4.18 Detached - 005-016/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2012617,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBiEEIA0"
+  },
+  {
+   "id": "068Tv00000fBicPIAS",
+   "title": "HT-4.15 Detached - 005-015/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2666341,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBicPIAS"
+  },
+  {
+   "id": "068Tv00000fBbnsIAC",
+   "title": "HT-4.12 Detached - 005-014/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2562125,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBbnsIAC"
+  },
+  {
+   "id": "068Tv00000fBhuwIAC",
+   "title": "HT-3BH.2(b) Detached - 005-043/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1732074,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBhuwIAC"
+  },
+  {
+   "id": "068Tv00000fBVCTIA4",
+   "title": "HT-3BH.2 - HT 2BH.1 - 3 Unit Terrace - 005-048/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2792106,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBVCTIA4"
+  },
+  {
+   "id": "068Tv00000fBQuGIAW",
+   "title": "HT-3BH.1 Semi - 005-042/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2986913,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBQuGIAW"
+  },
+  {
+   "id": "068Tv00000fBqYMIA0",
+   "title": "HT-3BH.1 - HT-2BH.1 4 Unit Terrace - 005-049/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2279025,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBqYMIA0"
+  },
+  {
+   "id": "068Tv00000fBdJUIA0",
+   "title": "HT-3BH.1 - 3BH.2 Semi - 005-047/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2298744,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBdJUIA0"
+  },
+  {
+   "id": "068Tv00000fBVHCIA4",
+   "title": "HT-3.9(ex) Semi - 005-008/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2861710,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBVHCIA4"
+  },
+  {
+   "id": "068Tv00000fBKC0IAO",
+   "title": "HT-3.8 Semi - 005-007/REV A",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2290327,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBKC0IAO"
+  },
+  {
+   "id": "068Tv00000fBdpeIAC",
+   "title": "HT-3.6(b).sp Detached - 005-006/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1562439,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBdpeIAC"
+  },
+  {
+   "id": "068Tv00000fBINHIA4",
+   "title": "HT-3.4-3.10(a) Semi - 005-021/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1791737,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBINHIA4"
+  },
+  {
+   "id": "068Tv00000fBbKoIAK",
+   "title": "HT-3.4 Semi - 005-005/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2368092,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBbKoIAK"
+  },
+  {
+   "id": "068Tv00000fBXh7IAG",
+   "title": "HT-3.4 Detached - 005-004 REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1898272,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBXh7IAG"
+  },
+  {
+   "id": "068Tv00000fBUbBIAW",
+   "title": "HT-3.10(a) Detached - 005-009/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2485076,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBUbBIAW"
+  },
+  {
+   "id": "068Tv00000fBTQlIAO",
+   "title": "HT-3.1 Semi - 005-003/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2075620,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBTQlIAO"
+  },
+  {
+   "id": "068Tv00000fBSo8IAG",
+   "title": "HT-2BH.1 Semi - 005-040/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2271777,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBSo8IAG"
+  },
+  {
+   "id": "068Tv00000fBkG3IAK",
+   "title": "HT-2BH.1 3 Unit Terrace - 005-041/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 2189299,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBkG3IAK"
+  },
+  {
+   "id": "068Tv00000fBbSrIAK",
+   "title": "HT-2.2 - HT-2.4 Semi - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1613281,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBbSrIAK"
+  },
+  {
+   "id": "068Tv00000fBShZIAW",
+   "title": "HT-2.2 - 3 Unit Terrace - 005-001/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 1951244,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBShZIAW"
+  },
+  {
+   "id": "068Tv00000fBWUtIAO",
+   "title": "Block PH1-G2 Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 15172995,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBWUtIAO"
+  },
+  {
+   "id": "068Tv00000fBSuQIAW",
+   "title": "Block PH1-G1 Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 7946485,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBSuQIAW"
+  },
+  {
+   "id": "068Tv00000fBQhBIAW",
+   "title": "Block PH1-F - Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 18396552,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBQhBIAW"
+  },
+  {
+   "id": "068Tv00000fBNEnIAO",
+   "title": "Block PH1-E Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 7928459,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBNEnIAO"
+  },
+  {
+   "id": "068Tv00000fBQKaIAO",
+   "title": "Block PH1-D2 Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 14465640,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBQKaIAO"
+  },
+  {
+   "id": "068Tv00000fBP27IAG",
+   "title": "Block PH1-D1 Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 7092297,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBP27IAG"
+  },
+  {
+   "id": "068Tv00000fB8RBIA0",
+   "title": "Block PH1-C-Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 8330210,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fB8RBIA0"
+  },
+  {
+   "id": "068Tv00000fBPoRIAW",
+   "title": "Block PH1-B - Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 8003433,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBPoRIAW"
+  },
+  {
+   "id": "068Tv00000fBI6yIAG",
+   "title": "Block PH1-A-Elevations - 005-002/REV P2",
+   "category": "Drawing",
+   "date": "2026-06-16",
+   "published": "2026-06-17",
+   "ext": "pdf",
+   "size": 6888266,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000fBI6yIAG"
+  },
+  {
+   "id": "068Tv00000eW13aIAC",
+   "title": "ES - Vol 3 - Environmental Statement Non-Technical Summary",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 2539246,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eW13aIAC"
+  },
+  {
+   "id": "068Tv00000eVyDnIAK",
+   "title": "ES - Vol 2 - Technical Figures and Appendices",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 271010,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVyDnIAK"
+  },
+  {
+   "id": "068Tv00000eVz9rIAC",
+   "title": "ES - Vol 2 - Figures supporting LVIA (Chapter D)",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 14254015,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVz9rIAC"
+  },
+  {
+   "id": "068Tv00000eVzL8IAK",
+   "title": "ES - Vol 2 - Figures Supporting Noise Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 16333681,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVzL8IAK"
+  },
+  {
+   "id": "068Tv00000eUy6UIAS",
+   "title": "ES - Vol 2 - Figures Supporting Cumulative Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 4426709,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUy6UIAS"
+  },
+  {
+   "id": "068Tv00000eWC8gIAG",
+   "title": "ES - Vol 2 - Appendix N1 - Agricultural Land Classification Report Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 7173171,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eWC8gIAG"
+  },
+  {
+   "id": "068Tv00000eW9igIAC",
+   "title": "ES - Vol 2 - Appendix M5 - GLAAS email Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 556090,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eW9igIAC"
+  },
+  {
+   "id": "068Tv00000eVkNxIAK",
+   "title": "ES - Vol 2 - Appendix M4 - GLAAS letter",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 1072055,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVkNxIAK"
+  },
+  {
+   "id": "068Tv00000eVdaqIAC",
+   "title": "ES - Vol 2 - Appendix M3 - Archaeological Geophysical Survey",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 6058297,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVdaqIAC"
+  },
+  {
+   "id": "068Tv00000eVo6dIAC",
+   "title": "ES - Vol 2 - Appendix M2 - Assessment of Airborne and Spaceborne Remote Sensing Data",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 4112424,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVo6dIAC"
+  },
+  {
+   "id": "068Tv00000eVbfZIAS",
+   "title": "ES - Vol 2 - Appendix M1 - Archaeological DBA Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 8348691,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVbfZIAS"
+  },
+  {
+   "id": "068Tv00000eVqQ4IAK",
+   "title": "ES - Vol 2 - Appendix L1 - Built Heritage Impact Assessment Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 4215653,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVqQ4IAK"
+  },
+  {
+   "id": "068Tv00000eW0kDIAS",
+   "title": "ES - Vol 2 - Appendix K4 - Greenhouse Gas Budget Comparisons",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 309506,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eW0kDIAS"
+  },
+  {
+   "id": "068Tv00000eVzg7IAC",
+   "title": "ES - Vol 2 - Appendix K3 - Energy and Sustainability Statement (May 2026)",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 4390062,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVzg7IAC"
+  },
+  {
+   "id": "068Tv00000eVdpZIAS",
+   "title": "ES - Vol 2 - Appendix K2b (excel part) Whole Life Carbon Assessment appendix B(ii) GLA WLC spreadsheet - application site",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "xlsx",
+   "size": 167599,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVdpZIAS"
+  },
+  {
+   "id": "068Tv00000eVfROIA0",
+   "title": "ES - Vol 2 - Appendix K2a (excel part) Whole Life-Carbon Assessment appendix B(i) GLA WLC spreadsheet - detailed element",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "xlsx",
+   "size": 142621,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVfROIA0"
+  },
+  {
+   "id": "068Tv00000eVvRGIA0",
+   "title": "ES - Vol 2 - Appendix K2 - Whole Life-Cycle Carbon Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 814187,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVvRGIA0"
+  },
+  {
+   "id": "068Tv00000eVMvAIAW",
+   "title": "ES - Vol 2 - Appendix K1 - GHG Emission Inventory Inputs",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 419734,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVMvAIAW"
+  },
+  {
+   "id": "068Tv00000eVYzRIAW",
+   "title": "ES - Vol 2 - Appendix I6 - Site Suitability Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 4680479,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVYzRIAW"
+  },
+  {
+   "id": "068Tv00000eVwboIAC",
+   "title": "ES - Vol 2 - Appendix I5 - Operational Noise Assessments",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 1531115,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVwboIAC"
+  },
+  {
+   "id": "068Tv00000eVke9IAC",
+   "title": "ES - Vol 2 - Appendix I4 - Construction Noise",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 3606951,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVke9IAC"
+  },
+  {
+   "id": "068Tv00000eVMVEIA4",
+   "title": "ES - Vol 2 - Appendix I3 - Acoustics Baseline Conditions",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 8030052,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVMVEIA4"
+  },
+  {
+   "id": "068Tv00000eV10uIAC",
+   "title": "ES - Vol 2 - Appendix I2 - Acoustics Legislation, Policy and Guidance",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 738740,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eV10uIAC"
+  },
+  {
+   "id": "068Tv00000eV2GRIA0",
+   "title": "ES - Vol 2 - Appendix I1 - Acoustics Glossary",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 500574,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eV2GRIA0"
+  },
+  {
+   "id": "068Tv00000eV66xIAC",
+   "title": "ES - Vol 2 - Appendix H8 - Construction Mitigation",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 407174,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eV66xIAC"
+  },
+  {
+   "id": "068Tv00000eV1FPIA0",
+   "title": "ES - Vol 2 - Appendix H7 - Air Quality Positive",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 388831,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eV1FPIA0"
+  },
+  {
+   "id": "068Tv00000eVB4zIAG",
+   "title": "ES - Vol 2 - Appendix H6 - Professional Experience",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 302741,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eVB4zIAG"
+  },
+  {
+   "id": "068Tv00000eUuvTIAS",
+   "title": "ES - Vol 2 - Appendix H5 - Air Quality Neutral",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 378855,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUuvTIAS"
+  },
+  {
+   "id": "068Tv00000eUt9oIAC",
+   "title": "ES - Vol 2 - Appendix H4 - Modelling Methodology",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 632188,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUt9oIAC"
+  },
+  {
+   "id": "068Tv00000eUkBjIAK",
+   "title": "ES - Vol 2 - Appendix H3 - EPUK & IAQM Planning for Air Quality Guidance",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 404924,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUkBjIAK"
+  },
+  {
+   "id": "068Tv00000eUiZMIA0",
+   "title": "ES - Vol 2 - Appendix H2 - Construction Dust Assessment Procedure",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 481858,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUiZMIA0"
+  },
+  {
+   "id": "068Tv00000eUXixIAG",
+   "title": "ES - Vol 2 - Appendix H1 - London Specific Policies and Measures",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 391059,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUXixIAG"
+  },
+  {
+   "id": "068Tv00000eUvRjIAK",
+   "title": "ES - Vol 2 - Appendix G2 - Phase 1 Detailed Drainage Strategy",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 15771576,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUvRjIAK"
+  },
+  {
+   "id": "068Tv00000eUZkZIAW",
+   "title": "ES - Vol 2 - Appendix G1 - Flood Risk Assessment and Outline Drainage Strategy [Part 2 of 2] Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 23038939,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUZkZIAW"
+  },
+  {
+   "id": "068Tv00000eUogZIAS",
+   "title": "ES - Vol 2 - Appendix G1 - Flood Risk Assessment and Outline Drainage Strategy [Part 1 of 2] Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 24133029,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUogZIAS"
+  },
+  {
+   "id": "068Tv00000eUZO6IAO",
+   "title": "ES - Vol 2 - Appendix F5 - River Condition Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 17736682,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUZO6IAO"
+  },
+  {
+   "id": "068Tv00000eV5u4IAC",
+   "title": "ES - Vol 2 - Appendix F4 - Biodiversity Net Gain Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 25199714,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eV5u4IAC"
+  },
+  {
+   "id": "068Tv00000eUhYLIA0",
+   "title": "ES - Vol 2 - Appendix F1 - Phase 1 Ecological Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 11411107,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUhYLIA0"
+  },
+  {
+   "id": "068Tv00000eUPx7IAG",
+   "title": "ES - Vol 2 - Appendix E4 - Car Parking Management Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 4236280,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUPx7IAG"
+  },
+  {
+   "id": "068Tv00000eUbPkIAK",
+   "title": "ES - Vol 2 - Appendix E3 - Delivery & Servicing Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 719495,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUbPkIAK"
+  },
+  {
+   "id": "068Tv00000eU7mhIAC",
+   "title": "ES - Vol 2 - Appendix E2 - Framework Travel Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 3529910,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eU7mhIAC"
+  },
+  {
+   "id": "068Tv00000eV1s7IAC",
+   "title": "ES - Vol 2 - Appendix E1 - Transport Assessment [Part 3 of 3] Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 10704845,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eV1s7IAC"
+  },
+  {
+   "id": "068Tv00000eUb8BIAS",
+   "title": "ES - Vol 2 - Appendix E1 - Transport Assessment [Part 1 of 3] Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 18688182,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUb8BIAS"
+  },
+  {
+   "id": "068Tv00000eU4KFIA0",
+   "title": "ES - Vol 2 - Appendix D9 - Landscape and Ecological Management Strategy",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 11079465,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eU4KFIA0"
+  },
+  {
+   "id": "068Tv00000eUcDvIAK",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 9 of 9]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 10590683,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUcDvIAK"
+  },
+  {
+   "id": "068Tv00000eUUoDIAW",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 8 of 9]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 9495969,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUUoDIAW"
+  },
+  {
+   "id": "068Tv00000eUW6pIAG",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 7 of 9] Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 5714527,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUW6pIAG"
+  },
+  {
+   "id": "068Tv00000eUekCIAS",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 6 of 9]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 30506455,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUekCIAS"
+  },
+  {
+   "id": "068Tv00000eUCzNIAW",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 3 of 9] Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-04",
+   "ext": "pdf",
+   "size": 6024304,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eUCzNIAW"
+  },
+  {
+   "id": "068Tv00000eRmEYIA0",
+   "title": "Ravensbourne Place ES (May 2026) - Vol 2 - Appendix C2 - Detailed Plans (plans bound separately)",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 203726,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRmEYIA0"
+  },
+  {
+   "id": "068Tv00000eS2uMIAS",
+   "title": "Environmental Statement - Vol 1 - Technical Assessments (Contents)",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 455708,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eS2uMIAS"
+  },
+  {
+   "id": "068Tv00000eSNsIIAW",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 5 of 9]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 27839679,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eSNsIIAW"
+  },
+  {
+   "id": "068Tv00000eS57QIAS",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 4 of 9]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 31329630,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eS57QIAS"
+  },
+  {
+   "id": "068Tv00000eS4t2IAC",
+   "title": "ES - Vol 2 - Appendix D8 - Verified Views [Part 2 of 9]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 29043160,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eS4t2IAC"
+  },
+  {
+   "id": "068Tv00000eRgIqIAK",
+   "title": "ES - Vol 2 - Appendix D6 - Visual Effects Table",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 437328,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRgIqIAK"
+  },
+  {
+   "id": "068Tv00000eS9G1IAK",
+   "title": "ES - Vol 2 - Appendix D5 - Landscape Effects Table",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 344024,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eS9G1IAK"
+  },
+  {
+   "id": "068Tv00000eSGvoIAG",
+   "title": "ES - Vol 2 - Appendix D4 - Site Context Photographs 1 to 21 Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 37554403,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eSGvoIAG"
+  },
+  {
+   "id": "068Tv00000eSKb8IAG",
+   "title": "ES - Vol 2 - Appendix D3 - Site Appraisal Photographs A to AA",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 16861466,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eSKb8IAG"
+  },
+  {
+   "id": "068Tv00000eRmoCIAS",
+   "title": "ES - Vol 2 - Appendix D2 - Published Character Area Extracts",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 9837248,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRmoCIAS"
+  },
+  {
+   "id": "068Tv00000eS5AhIAK",
+   "title": "ES - Vol 2 - Appendix D1 - Landscape and Visual Impact Assessment Methodology",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 480703,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eS5AhIAK"
+  },
+  {
+   "id": "068Tv00000eSMxpIAG",
+   "title": "ES - Vol 2 - Appendix C9 - Construction Logistics Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 2273020,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eSMxpIAG"
+  },
+  {
+   "id": "068Tv00000eSKRUIA4",
+   "title": "ES - Vol 2 - Appendix C8 - Construction Environmental Management Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 2150756,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eSKRUIA4"
+  },
+  {
+   "id": "068Tv00000eRzoRIAS",
+   "title": "ES - Vol 2 - Appendix C7 - Operational Waste Management Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1294521,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRzoRIAS"
+  },
+  {
+   "id": "068Tv00000eS6gCIAS",
+   "title": "ES - Vol 2 - Appendix C6 - Lighting Strategy",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 11093771,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eS6gCIAS"
+  },
+  {
+   "id": "068Tv00000eRUxgIAG",
+   "title": "ES - Vol 2 - Appendix C5 - Arboricultural Impact Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 20192641,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRUxgIAG"
+  },
+  {
+   "id": "068Tv00000eReLqIAK",
+   "title": "ES - Vol 2 - Appendix C4 - Illustrative Phasing Strategy",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 3208245,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eReLqIAK"
+  },
+  {
+   "id": "068Tv00000eRqy5IAC",
+   "title": "ES - Vol 2 - Appendix C3 - Parameter Plans (plans bound separately)",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 203778,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRqy5IAC"
+  },
+  {
+   "id": "068Tv00000eSBMcIAO",
+   "title": "ES - Vol 2 - Appendix C10 - Site Waste Management Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1111090,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eSBMcIAO"
+  },
+  {
+   "id": "068Tv00000eRm0CIAS",
+   "title": "ES - Vol 2 - Appendix C1 - Plan showing Outline and Detailed Development",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 4109457,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRm0CIAS"
+  },
+  {
+   "id": "068Tv00000eRTGsIAO",
+   "title": "ES - Vol 2 - Appendix B3 - Scoping Opinion Response Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 901987,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRTGsIAO"
+  },
+  {
+   "id": "068Tv00000eRuX0IAK",
+   "title": "ES - Vol 2 - Appendix B2 - LBB Scoping Opinion",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 2147364,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRuX0IAK"
+  },
+  {
+   "id": "068Tv00000eRyhFIAS",
+   "title": "ES - Vol 2 - Appendix B1 - EIA Scoping Request [Part 2 of 2]",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 2755517,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRyhFIAS"
+  },
+  {
+   "id": "068Tv00000eRvHoIAK",
+   "title": "ES - Vol 2 - Appendix B1 - EIA Scoping Request [Part 1 of 2] Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 14316478,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRvHoIAK"
+  },
+  {
+   "id": "068Tv00000eRhDKIA0",
+   "title": "ES - Vol 2 - Appendix A2 - Environmental Statement Developer Sign Off Sheet Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 273882,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRhDKIA0"
+  },
+  {
+   "id": "068Tv00000eRvcqIAC",
+   "title": "ES - Vol 2 - Appendix A1 - Site Boundary Plan",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 4017698,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRvcqIAC"
+  },
+  {
+   "id": "068Tv00000eRiu5IAC",
+   "title": "ES - Vol 1 - Chapter P - Summary of Mitigation and Monitoring",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1189266,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRiu5IAC"
+  },
+  {
+   "id": "068Tv00000eRN1YIAW",
+   "title": "ES - Vol 1 - Chapter O - Cumulative Impact Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1210845,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRN1YIAW"
+  },
+  {
+   "id": "068Tv00000eRLqyIAG",
+   "title": "ES - Vol 1 - Chapter N - Soil Conditions and Agricultural Land",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1048762,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRLqyIAG"
+  },
+  {
+   "id": "068Tv00000eREw4IAG",
+   "title": "ES - Vol 1 - Chapter M - Archaeology",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1058428,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eREw4IAG"
+  },
+  {
+   "id": "068Tv00000eR1KZIA0",
+   "title": "ES - Vol 1 - Chapter L - Built Heritage",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1330759,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eR1KZIA0"
+  },
+  {
+   "id": "068Tv00000eRIzYIAW",
+   "title": "ES - Vol 1 - Chapter K - Climate Change and Resilience",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1625285,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRIzYIAW"
+  },
+  {
+   "id": "068Tv00000eQfINIA0",
+   "title": "ES - Vol 1 - Chapter J - Socio-Economics",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 2481533,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eQfINIA0"
+  },
+  {
+   "id": "068Tv00000eQVJKIA4",
+   "title": "ES - Vol 1 - Chapter I - Noise and Vibration",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 2137884,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eQVJKIA4"
+  },
+  {
+   "id": "068Tv00000eRAMBIA4",
+   "title": "ES - Vol 1 - Chapter H - Air Quality",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 2669026,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRAMBIA4"
+  },
+  {
+   "id": "068Tv00000eQeZJIA0",
+   "title": "ES - Vol 1 - Chapter G - Flood Risk and Drainage",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1080780,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eQeZJIA0"
+  },
+  {
+   "id": "068Tv00000eQxn7IAC",
+   "title": "ES - Vol 1 - Chapter F - Ecology and Biodiversity",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1575790,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eQxn7IAC"
+  },
+  {
+   "id": "068Tv00000eR7OMIA0",
+   "title": "ES - Vol 1 - Chapter E - Transport",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1862183,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eR7OMIA0"
+  },
+  {
+   "id": "068Tv00000eRId0IAG",
+   "title": "ES - Vol 1 - Chapter D - Landscape and Views",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1650343,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRId0IAG"
+  },
+  {
+   "id": "068Tv00000eR8ddIAC",
+   "title": "ES - Vol 1 - Chapter C - Site and Development Description",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 3200517,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eR8ddIAC"
+  },
+  {
+   "id": "068Tv00000eRFYkIAO",
+   "title": "ES - Vol 1 - Chapter B - Scope, Methodology and Consultation",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1218554,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRFYkIAO"
+  },
+  {
+   "id": "068Tv00000eRK0VIAW",
+   "title": "ES - Vol 1 - Chapter A - Introduction and Background",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 1101799,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eRK0VIAW"
+  },
+  {
+   "id": "068Tv00000eQtd4IAC",
+   "title": "Cover Letter",
+   "category": "Supporting Document",
+   "date": "2026-06-02",
+   "published": "2026-06-03",
+   "ext": "pdf",
+   "size": 423789,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eQtd4IAC"
+  },
+  {
+   "id": "068Tv00000eLjZUIA0",
+   "title": "Typical Soft Landscape Details - U300-STA35-XX-XX-DR-L-195-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1424819,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLjZUIA0"
+  },
+  {
+   "id": "068Tv00000eLu1mIAC",
+   "title": "The Statutory Biodiversity Metric Calculation Tool",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "xlsx",
+   "size": 3615790,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLu1mIAC"
+  },
+  {
+   "id": "068Tv00000eLtTuIAK",
+   "title": "Sub Station - 005-032/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1223731,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLtTuIAK"
+  },
+  {
+   "id": "068Tv00000eLvyjIAC",
+   "title": "Statement of Community Involvement",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 14970933,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLvyjIAC"
+  },
+  {
+   "id": "068Tv00000eLxAwIAK",
+   "title": "Site Location Plan - 110-001/Rev P1",
+   "category": "Location Plan",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1033657,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxAwIAK"
+  },
+  {
+   "id": "068Tv00000eLEyeIAG",
+   "title": "Refuse Stores - 005-031/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2657242,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLEyeIAG"
+  },
+  {
+   "id": "068Tv00000eLqMQIA0",
+   "title": "Ravensbourne Place Development Specification",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1425235,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLqMQIA0"
+  },
+  {
+   "id": "068Tv00000eM02LIAS",
+   "title": "Planting Schedule - U300-STA35-XX-00-DR-L-810-022 P3",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 679648,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eM02LIAS"
+  },
+  {
+   "id": "068Tv00000eLuplIAC",
+   "title": "Planning Statement",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 6014756,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuplIAC"
+  },
+  {
+   "id": "068Tv00000eLuhjIAC",
+   "title": "Phase 1B Site Plan - 005-009/Rev P1",
+   "category": "Block Plan",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1220517,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuhjIAC"
+  },
+  {
+   "id": "068Tv00000eLwLKIA0",
+   "title": "Phase 1B Material Strategy - U300-JOH13-SW-XX-DR-A-005-011/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 16677747,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLwLKIA0"
+  },
+  {
+   "id": "068Tv00000eLxhBIAS",
+   "title": "Phase 1A Site Plan - 005-008/Rev P1",
+   "category": "Block Plan",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 4337566,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxhBIAS"
+  },
+  {
+   "id": "068Tv00000eLxJ0IAK",
+   "title": "Phase 1A Material Strategy - 005-010/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 16487570,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxJ0IAK"
+  },
+  {
+   "id": "068Tv00000eLngFIAS",
+   "title": "Phase 1 Street Elevations 2 of 2 - 005-013/Rev PA",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 3152426,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLngFIAS"
+  },
+  {
+   "id": "068Tv00000eLcWQIA0",
+   "title": "Phase 1 Schedules - U300-JOH13-XX-XX-SC-A-020-001/Rev P1",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 52509,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLcWQIA0"
+  },
+  {
+   "id": "068Tv00000eLq32IAC",
+   "title": "Phase 1 Ground Floor Plan 9 of 12 - 005-022/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1892309,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLq32IAC"
+  },
+  {
+   "id": "068Tv00000eLxsTIAS",
+   "title": "Phase 1 Ground Floor Plan 8 of 12 - 005-021/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2974517,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxsTIAS"
+  },
+  {
+   "id": "068Tv00000eLnd0IAC",
+   "title": "Phase 1 Ground Floor Plan 7 of 12 - 005-020/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2078235,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLnd0IAC"
+  },
+  {
+   "id": "068Tv00000eLtiQIAS",
+   "title": "Phase 1 Ground Floor Plan 6 of 12 - U300-JOH13-SW-00-DR-A-005-019/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2041696,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLtiQIAS"
+  },
+  {
+   "id": "068Tv00000eLkIbIAK",
+   "title": "Phase 1 Ground Floor Plan 5 of 12- 005-018/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1944326,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLkIbIAK"
+  },
+  {
+   "id": "068Tv00000eLxndIAC",
+   "title": "Phase 1 Ground Floor Plan 4 of 12 - 005-017/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1036022,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxndIAC"
+  },
+  {
+   "id": "068Tv00000eLxkPIAS",
+   "title": "Phase 1 Ground Floor Plan 3 of 12 - 005-016/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1872422,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxkPIAS"
+  },
+  {
+   "id": "068Tv00000eLqz5IAC",
+   "title": "Phase 1 Ground Floor Plan 2 of 12 - 005-015/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1875316,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLqz5IAC"
+  },
+  {
+   "id": "068Tv00000eLxyvIAC",
+   "title": "Phase 1 Ground Floor Plan 12 of 12 - 005-025/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2275343,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxyvIAC"
+  },
+  {
+   "id": "068Tv00000eLahVIAS",
+   "title": "Phase 1 Ground Floor Plan 11 of 12 - 005-024/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1420974,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLahVIAS"
+  },
+  {
+   "id": "068Tv00000eLr7AIAS",
+   "title": "Phase 1 Ground Floor Plan 10 of 12 - 005-023/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2374579,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLr7AIAS"
+  },
+  {
+   "id": "068Tv00000eLx1GIAS",
+   "title": "Phase 1 Ground Floor Plan 1 of 12 - 005-014/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1537083,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLx1GIAS"
+  },
+  {
+   "id": "068Tv00000eLs3CIAS",
+   "title": "Parameter Plan Access and Movement - U300-JOH13-SW-XX-DR-A-005-002/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 3996153,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLs3CIAS"
+  },
+  {
+   "id": "068Tv00000eLmtpIAC",
+   "title": "London Plan Fire Statement (Part 4)",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 16712269,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLmtpIAC"
+  },
+  {
+   "id": "068Tv00000eLnujIAC",
+   "title": "London Plan Fire Statement (Part 3)",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 28141239,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLnujIAC"
+  },
+  {
+   "id": "068Tv00000eLnczIAC",
+   "title": "London Plan Fire Statement (Part 2)",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 30073062,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLnczIAC"
+  },
+  {
+   "id": "068Tv00000eLlbCIAS",
+   "title": "London Plan Fire Statement (Part 1)",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 30126683,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLlbCIAS"
+  },
+  {
+   "id": "068Tv00000eM00jIAC",
+   "title": "Legend - U300-STA35-XX-00-DR-L-810-021/Rev P2",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1041904,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eM00jIAC"
+  },
+  {
+   "id": "068Tv00000eLy29IAC",
+   "title": "Land Use Parameter Plan - U300-JOH13-SW-XX-DR-A-005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 3971738,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLy29IAC"
+  },
+  {
+   "id": "068Tv00000eLTHnIAO",
+   "title": "Health Impact Assessment",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2641867,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLTHnIAO"
+  },
+  {
+   "id": "068Tv00000eLuY3IAK",
+   "title": "Hard and Soft Landscape GA Sheet 9 of 19 - U300-STA35-XX-00-DR-L-810-009/Rev P3",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2794395,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuY3IAK"
+  },
+  {
+   "id": "068Tv00000eLuudIAC",
+   "title": "Hard and Soft Landscape GA Sheet 8 of 19 - U300-STA35-XX-00-DR-L-810-008/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 767727,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuudIAC"
+  },
+  {
+   "id": "068Tv00000eLo7hIAC",
+   "title": "Hard and Soft Landscape GA Sheet 6 of 19 - U300-STA35-XX-00-DR-L-810-006/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 927037,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLo7hIAC"
+  },
+  {
+   "id": "068Tv00000eLvNgIAK",
+   "title": "Hard and Soft Landscape GA Sheet 5 of 19 - U300-STA35-XX-00-DR-L-810-005/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1000004,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLvNgIAK"
+  },
+  {
+   "id": "068Tv00000eLwd8IAC",
+   "title": "Hard and Soft Landscape GA Sheet 4 of 19 - U300-STA35-XX-00-DR-L-810-004/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 713082,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLwd8IAC"
+  },
+  {
+   "id": "068Tv00000eLywcIAC",
+   "title": "Hard and Soft Landscape GA Sheet 3 of 19 - U300-STA35-XX-00-DR-L-810-003/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1487307,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLywcIAC"
+  },
+  {
+   "id": "068Tv00000eLjBHIA0",
+   "title": "Hard and Soft Landscape GA Sheet 2 of 19 - U300-STA35-XX-00-DR-L-810-002/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1626855,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLjBHIA0"
+  },
+  {
+   "id": "068Tv00000eLwjWIAS",
+   "title": "Hard and Soft Landscape GA Sheet 19 of 19 - U300-STA35-XX-00-DR-L-810-019/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1024661,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLwjWIAS"
+  },
+  {
+   "id": "068Tv00000eLznpIAC",
+   "title": "Hard and Soft Landscape GA Sheet 18 of 19 - U300-STA35-XX-00-DR-L-810-018/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1394330,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLznpIAC"
+  },
+  {
+   "id": "068Tv00000eLuZgIAK",
+   "title": "Hard and Soft Landscape GA Sheet 17 of 19 - U300-STA35-XX-00-DR-L-810-017/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1459218,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuZgIAK"
+  },
+  {
+   "id": "068Tv00000eLVOTIA4",
+   "title": "Hard and Soft Landscape GA Sheet 16 of 19 - U300-STA35-XX-00-DR-L-810-016/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 669131,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLVOTIA4"
+  },
+  {
+   "id": "068Tv00000eLu6fIAC",
+   "title": "Hard and Soft Landscape GA Sheet 15 of 19 - U300-STA35-XX-00-DR-L-810-015/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2100196,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLu6fIAC"
+  },
+  {
+   "id": "068Tv00000eLrGrIAK",
+   "title": "Hard and Soft Landscape GA Sheet 14 of 19 - U300-STA35-XX-00-DR-L-810-014/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2053319,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLrGrIAK"
+  },
+  {
+   "id": "068Tv00000eLzmDIAS",
+   "title": "Hard and Soft Landscape GA Sheet 13 of 19 - U300-STA35-XX-00-DR-L-810-013/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1212850,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLzmDIAS"
+  },
+  {
+   "id": "068Tv00000eLt5kIAC",
+   "title": "Hard and Soft Landscape GA Sheet 12 of 19 - U300-STA35-XX-00-DR-L-810-012/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1931166,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLt5kIAC"
+  },
+  {
+   "id": "068Tv00000eLz34IAC",
+   "title": "Hard and Soft Landscape GA Sheet 11 of 19 - U300-STA35-XX-00-DR-L-810-011/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1988133,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLz34IAC"
+  },
+  {
+   "id": "068Tv00000eLzkbIAC",
+   "title": "Hard and Soft Landscape GA Sheet 10 of 19 - U300-STA35-XX-00-DR-L-810-010/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2053689,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLzkbIAC"
+  },
+  {
+   "id": "068Tv00000eLzMQIA0",
+   "title": "Hard and Soft Landscape GA Sheet 1 of 19 - U300-STA35-XX-00-DR-L-810-001/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1099166,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLzMQIA0"
+  },
+  {
+   "id": "068Tv00000eLueVIAS",
+   "title": "Hard and Soft Landscape GA - Sheet 7 of 19 - U300-STA35-XX-00-DR-L-810-007/Rev P2",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 528209,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLueVIAS"
+  },
+  {
+   "id": "068Tv00000eLj6PIAS",
+   "title": "Green Infrastructure Parameter Plan - U300-JOH13-SW-XX-DR-A-005-003/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 3949177,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLj6PIAS"
+  },
+  {
+   "id": "068Tv00000eLukvIAC",
+   "title": "Flood Risk Sequential Test",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2473109,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLukvIAC"
+  },
+  {
+   "id": "068Tv00000eLrS6IAK",
+   "title": "Fibre Connectivity & Telecommunication Reception Report",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2006633,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLrS6IAK"
+  },
+  {
+   "id": "068Tv00000eLqB8IAK",
+   "title": "Development Parcel Plan - 005-007/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 995528,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLqB8IAK"
+  },
+  {
+   "id": "068Tv00000eLuxrIAC",
+   "title": "Detached Garages - 005-030/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 2842050,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuxrIAC"
+  },
+  {
+   "id": "068Tv00000eNvrhIAC",
+   "title": "Desk Study Report - Part 1 Redacted",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 9570988,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eNvrhIAC"
+  },
+  {
+   "id": "068Tv00000eLYFxIAO",
+   "title": "Desk Study Report (Appendix B and C) - Part 4",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 16437048,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLYFxIAO"
+  },
+  {
+   "id": "068Tv00000eLuD3IAK",
+   "title": "Desk Study Report (Appendix A) - Part 2",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 24891380,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuD3IAK"
+  },
+  {
+   "id": "068Tv00000eMdIHIA0",
+   "title": "Design and Access Statement (Outline) - Part 1 Redacted",
+   "category": "Design and Access Statement",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 22418974,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eMdIHIA0"
+  },
+  {
+   "id": "068Tv00000eLuxqIAC",
+   "title": "Design Code - Part 2",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 18762334,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLuxqIAC"
+  },
+  {
+   "id": "068Tv00000eLmfLIAS",
+   "title": "Design Code - Part 1",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 22854559,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLmfLIAS"
+  },
+  {
+   "id": "068Tv00000eLiK1IAK",
+   "title": "Design & Access Statement (Phase 1) - Part 3",
+   "category": "Design and Access Statement",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 12452420,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLiK1IAK"
+  },
+  {
+   "id": "068Tv00000eLwV2IAK",
+   "title": "Design & Access Statement (Phase 1) - Part 2",
+   "category": "Design and Access Statement",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 20721703,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLwV2IAK"
+  },
+  {
+   "id": "068Tv00000eLywbIAC",
+   "title": "Design & Access Statement (Phase 1) - Part 1",
+   "category": "Design and Access Statement",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 10728252,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLywbIAC"
+  },
+  {
+   "id": "068Tv00000eLoPOIA0",
+   "title": "Design & Access Statement (Outline) - Part 4",
+   "category": "Design and Access Statement",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 15947746,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLoPOIA0"
+  },
+  {
+   "id": "068Tv00000eLwV1IAK",
+   "title": "Design & Access Statement (Outline) - Part 3",
+   "category": "Design and Access Statement",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 26198169,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLwV1IAK"
+  },
+  {
+   "id": "068Tv00000eMpzRIAS",
+   "title": "Design & Access Statement (Outline) - Part 2 Redacted",
+   "category": "Design and Access Statement",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 22013324,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eMpzRIAS"
+  },
+  {
+   "id": "068Tv00000eLquFIAS",
+   "title": "Density Parameter Plan - U300-JOH13-SW-XX-DR-A-005-005/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 3933045,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLquFIAS"
+  },
+  {
+   "id": "068Tv00000eLn3VIAS",
+   "title": "Daylight and sunlight amenity report",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 14342625,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLn3VIAS"
+  },
+  {
+   "id": "068Tv00000eLmx3IAC",
+   "title": "Circular Economy statement appendices D(iv) and D(v) (OWMP and SWMP)",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 98317,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLmx3IAC"
+  },
+  {
+   "id": "068Tv00000eLtorIAC",
+   "title": "Circular Economy Statement main report and appendices A-C",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 914665,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLtorIAC"
+  },
+  {
+   "id": "068Tv00000eLcWOIA0",
+   "title": "Circular Economy Statement appendix D(iii) Pre-demolition Site Audit",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1118167,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLcWOIA0"
+  },
+  {
+   "id": "068Tv00000eLj3BIAS",
+   "title": "Circular Economy Statement appendix D(ii) GLA CE spreadsheet - application site",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "xlsx",
+   "size": 395532,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLj3BIAS"
+  },
+  {
+   "id": "068Tv00000eLtfBIAS",
+   "title": "Circular Economy Statement appendix D(i) GLA CE spreadsheet - detailed element",
+   "category": "Supporting Document",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "xlsx",
+   "size": 394612,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLtfBIAS"
+  },
+  {
+   "id": "068Tv00000eLyLVIA0",
+   "title": "Building Height Parameter Plan - U300-JOH13-SW-XX-DR-A-005-004/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 3934917,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLyLVIA0"
+  },
+  {
+   "id": "068Tv00000eLvNfIAK",
+   "title": "Block PH1A Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 918049,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLvNfIAK"
+  },
+  {
+   "id": "068Tv00000eLxMFIA0",
+   "title": "Block PH1-G2 Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 795022,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLxMFIA0"
+  },
+  {
+   "id": "068Tv00000eLqSpIAK",
+   "title": "Block PH1-G1 Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 864252,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLqSpIAK"
+  },
+  {
+   "id": "068Tv00000eLzRFIA0",
+   "title": "Block PH1-F Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 859460,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLzRFIA0"
+  },
+  {
+   "id": "068Tv00000eLv5xIAC",
+   "title": "Block PH1-E Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 860645,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLv5xIAC"
+  },
+  {
+   "id": "068Tv00000eLnJfIAK",
+   "title": "Block PH1-D1 Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 797642,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLnJfIAK"
+  },
+  {
+   "id": "068Tv00000eLo7fIAC",
+   "title": "Block PH1-C-Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 925411,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLo7fIAC"
+  },
+  {
+   "id": "068Tv00000eLvp4IAC",
+   "title": "Block PH1-B - Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1026115,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLvp4IAC"
+  },
+  {
+   "id": "068Tv00000eLrn4IAC",
+   "title": "Block PH1 - D2 Floorplans - 005-001/Rev P1",
+   "category": "Drawing",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 796603,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLrn4IAC"
+  },
+  {
+   "id": "068Tv00000eLlmTIAS",
+   "title": "Application Form Redacted",
+   "category": "Application Form No Personal Data",
+   "date": "2026-06-01",
+   "published": "2026-06-02",
+   "ext": "pdf",
+   "size": 1126834,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000eLlmTIAS"
+  }
+ ],
+ "comments": {
+  "total": 3620,
+  "by_stance": {
+   "Object": 2521,
+   "Support": 1070,
+   "Representation": 28,
+   "Neutral": 1
+  },
+  "by_month": {
+   "2026-06": {
+    "Object": 473,
+    "Support": 15,
+    "Representation": 1
+   },
+   "2026-07": {
+    "Object": 1715,
+    "Support": 168,
+    "Representation": 14
+   },
+   "2026-08": {
+    "Object": 219,
+    "Representation": 2,
+    "Neutral": 1,
+    "Support": 380
+   },
+   "2026-09": {
+    "Object": 91,
+    "Support": 438,
+    "Representation": 1
+   },
+   "2026-10": {
+    "Support": 69,
+    "Object": 23,
+    "Representation": 10
+   }
+  },
+  "last_comment_date": "2026-10-16",
+  "last_7_days": 18
+ },
+ "committee": {
+  "name": "Development Control Committee",
+  "url": "https://cds.bromley.gov.uk/ieListMeetings.aspx?CommitteeId=133",
+  "meetings": [
+   {
+    "date": "2026-09-17",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8315&Ver=4",
+    "agenda_published": true,
+    "mentions_application": false
+   },
+   {
+    "date": "2026-10-14",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8501&Ver=4",
+    "agenda_published": false,
+    "mentions_application": false
+   },
+   {
+    "date": "2026-11-12",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8316&Ver=4",
+    "agenda_published": false,
+    "mentions_application": false
+   },
+   {
+    "date": "2027-01-21",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8317&Ver=4",
+    "agenda_published": false,
+    "mentions_application": false
+   }
+  ]
+ }
+}
