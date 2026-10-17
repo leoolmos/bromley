@@ -1,0 +1,1109 @@
+{
+ "_source": "Phase 1 Apartments Schedule (JTP \"01276B_Phase 1 Apartments NIA Schedule\", dated 13.10.2026), published on the Bromley register 12/10/2026, document 068Tv00000lrpCjIAI",
+ "units": {
+  "R-S02_A_001": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_A_002": {
+   "block": "A",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_A_003": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 95,
+   "nia_sqft": 1018
+  },
+  "R-S02_A_004": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_A_005": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_A_006": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_A_007": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_A_008": {
+   "block": "A",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_A_009": {
+   "block": "A",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_A_010": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 95,
+   "nia_sqft": 1018
+  },
+  "R-S02_A_011": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_A_012": {
+   "block": "A",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_A_013": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_A_014": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_A_015": {
+   "block": "A",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_A_016": {
+   "block": "A",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_A_017": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 95,
+   "nia_sqft": 1018
+  },
+  "R-S02_A_018": {
+   "block": "A",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_A_019": {
+   "block": "A",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_B_001": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_B_002": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_B_003": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_004": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_B_005": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_B_006": {
+   "block": "B",
+   "type": "3B5P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 86,
+   "nia_sqft": 926
+  },
+  "R-S02_B_007": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_B_008": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_009": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_B_010": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_B_011": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_012": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_013": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_B_014": {
+   "block": "B",
+   "type": "3B5P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 86,
+   "nia_sqft": 926
+  },
+  "R-S02_B_015": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_B_016": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_017": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_018": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_B_019": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_B_020": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_B_021": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_022": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_B_023": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_B_024": {
+   "block": "B",
+   "type": "3B5P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 86,
+   "nia_sqft": 926
+  },
+  "R-S02_B_025": {
+   "block": "B",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_B_026": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_027": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_B_028": {
+   "block": "B",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_C_001": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_C_002": {
+   "block": "C",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_C_003": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 95,
+   "nia_sqft": 1018
+  },
+  "R-S02_C_004": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_C_005": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_C_006": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_C_007": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_C_008": {
+   "block": "C",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_C_009": {
+   "block": "C",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_C_010": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 95,
+   "nia_sqft": 1018
+  },
+  "R-S02_C_011": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_C_012": {
+   "block": "C",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_C_013": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S02_C_014": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_C_015": {
+   "block": "C",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S02_C_016": {
+   "block": "C",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S02_C_017": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 95,
+   "nia_sqft": 1018
+  },
+  "R-S02_C_018": {
+   "block": "C",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 71,
+   "nia_sqft": 761
+  },
+  "R-S02_C_019": {
+   "block": "C",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D1_001": {
+   "block": "D1",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D1_002": {
+   "block": "D1",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D1_003": {
+   "block": "D1",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D1_004": {
+   "block": "D1",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D1_005": {
+   "block": "D1",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D1_006": {
+   "block": "D1",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D1_007": {
+   "block": "D1",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 86,
+   "nia_sqft": 930
+  },
+  "R-S14_D1_008": {
+   "block": "D1",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D1_009": {
+   "block": "D1",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D1_010": {
+   "block": "D1",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D1_011": {
+   "block": "D1",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 86,
+   "nia_sqft": 930
+  },
+  "R-S14_D2_001": {
+   "block": "D2",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D2_002": {
+   "block": "D2",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D2_003": {
+   "block": "D2",
+   "type": "3B5P",
+   "level": 0,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 92,
+   "nia_sqft": 985
+  },
+  "R-S14_D2_004": {
+   "block": "D2",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D2_005": {
+   "block": "D2",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D2_006": {
+   "block": "D2",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D2_007": {
+   "block": "D2",
+   "type": "3B5P",
+   "level": 1,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 92,
+   "nia_sqft": 985
+  },
+  "R-S14_D2_008": {
+   "block": "D2",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S14_D2_009": {
+   "block": "D2",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D2_010": {
+   "block": "D2",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S14_D2_011": {
+   "block": "D2",
+   "type": "3B5P",
+   "level": 2,
+   "tenure": "Low-Cost Rent",
+   "nia_sqm": 92,
+   "nia_sqft": 985
+  },
+  "R-S06A_E_001": {
+   "block": "E",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S06A_E_002": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S06A_E_003": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 756
+  },
+  "R-S06A_E_004": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S06A_E_005": {
+   "block": "E",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S06A_E_006": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S06A_E_007": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 756
+  },
+  "R-S06A_E_008": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S06A_E_009": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S06A_E_010": {
+   "block": "E",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 50,
+   "nia_sqft": 540
+  },
+  "R-S06A_E_011": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S06A_E_012": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 756
+  },
+  "R-S06A_E_013": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S06A_E_014": {
+   "block": "E",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_001": {
+   "block": "F",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "S07A_F_002": {
+   "block": "F",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "S07A_F_003": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_004": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_005": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_006": {
+   "block": "F",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "S07A_F_007": {
+   "block": "F",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "S07A_F_008": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_009": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_010": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_011": {
+   "block": "F",
+   "type": "1B2P",
+   "level": 3,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "S07A_F_012": {
+   "block": "F",
+   "type": "1B2P",
+   "level": 3,
+   "tenure": "Intermediate",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "S07A_F_013": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 3,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "S07A_F_014": {
+   "block": "F",
+   "type": "2B4P",
+   "level": 3,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G1_001": {
+   "block": "G1",
+   "type": "1B1P",
+   "level": 0,
+   "tenure": "Private",
+   "nia_sqm": 42,
+   "nia_sqft": 448
+  },
+  "R-S13_G1_002": {
+   "block": "G1",
+   "type": "1B2P",
+   "level": 0,
+   "tenure": "Private",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S13_G1_003": {
+   "block": "G1",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Private",
+   "nia_sqm": 75,
+   "nia_sqft": 802
+  },
+  "R-S13_G1_004": {
+   "block": "G1",
+   "type": "1B2P",
+   "level": 1,
+   "tenure": "Private",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S13_G1_005": {
+   "block": "G1",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Private",
+   "nia_sqm": 90,
+   "nia_sqft": 966
+  },
+  "R-S13_G1_006": {
+   "block": "G1",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Private",
+   "nia_sqm": 75,
+   "nia_sqft": 802
+  },
+  "R-S13_G1_007": {
+   "block": "G1",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Private",
+   "nia_sqm": 75,
+   "nia_sqft": 802
+  },
+  "R-S13_G1_008": {
+   "block": "G1",
+   "type": "1B2P",
+   "level": 2,
+   "tenure": "Private",
+   "nia_sqm": 62,
+   "nia_sqft": 671
+  },
+  "R-S13_G1_009": {
+   "block": "G1",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Private",
+   "nia_sqm": 90,
+   "nia_sqft": 966
+  },
+  "R-S13_G1_010": {
+   "block": "G1",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Private",
+   "nia_sqm": 75,
+   "nia_sqft": 802
+  },
+  "R-S13_G1_011": {
+   "block": "G1",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Private",
+   "nia_sqm": 75,
+   "nia_sqft": 802
+  },
+  "R-S13_G2_001": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 757
+  },
+  "R-S13_G2_002": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G2_003": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 0,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G2_004": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 757
+  },
+  "R-S13_G2_005": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G2_006": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G2_007": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 1,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G2_008": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 757
+  },
+  "R-S13_G2_009": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G2_010": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  },
+  "R-S13_G2_011": {
+   "block": "G2",
+   "type": "2B4P",
+   "level": 2,
+   "tenure": "Intermediate",
+   "nia_sqm": 70,
+   "nia_sqft": 755
+  }
+ }
+}

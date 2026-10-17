@@ -1,0 +1,30 @@
+[
+ {
+  "fetched_at": "2026-10-17T18:00:46+00:00",
+  "summary_pt": "Primeiro registro do monitoramento: 332 documentos e 3620 comentários públicos no registro. Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "First tracked snapshot: 332 documents and 3620 public comments on the register. Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-09-04",
+   "earliest_decision_date": "2026-09-04",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [],
+   "agenda_new": [],
+   "new_documents": [],
+   "removed_documents": [],
+   "comments_total": 3620,
+   "comments_delta": null,
+   "stance_delta": {}
+  },
+  "note_pt": "Desde a versão anterior deste app (24/06/2026): 105 documentos novos no registro, sendo 52 documentos técnicos, 42 representações de moradores ou grupos e 3 pareceres de órgãos (Environment Agency, Forestry Commission e Sport England, em 07/08). A consulta formal terminou em 04/09. Em 24/09 o requerente enviou Further Environmental Information com 18 apêndices (CEMP atualizado, plantas do Block F, adendo Grey Belt, adendo de transporte, BNG atualizado, arqueologia etc.), em resposta à revisão do Estudo Ambiental feita para o Council. Em outubro saíram a Flood Risk Assessment e a Drainage Strategy revisadas (P02, 08/10), o Phase 1 Apartments Schedule (12/10), o Design & Access Statement da Fase 1, parte 1, revisado (13/10) e o capítulo de qualidade do ar revisado com memo da GLA (14/10). O Plot Schedule das casas não mudou (Rev P2). Os apartamentos mantêm tipologia e tenure; o novo schedule acrescenta andar e área útil (NIA), já incluídos no mapa. Comentários: 3.620 no total (2.521 contra, 1.070 a favor); de agosto a outubro os comentários a favor superaram os contrários. Ainda não há data de comitê.",
+  "note_en": "Since the previous version of this app (24 Jun 2026): 105 new documents on the register, of which 52 are technical documents, 42 are representations from residents or groups, and 3 are consultee responses (Environment Agency, Forestry Commission and Sport England, 7 Aug). The formal consultation closed on 4 Sep. On 24 Sep the applicant submitted Further Environmental Information with 18 appendices (updated CEMP, Block F floor plans, Grey Belt addendum, transport addendum, updated BNG, archaeology, etc.), responding to the review of the Environmental Statement carried out for the Council. October brought the revised Flood Risk Assessment and Drainage Strategy (P02, 8 Oct), the Phase 1 Apartments Schedule (12 Oct), the revised Phase 1 Design & Access Statement part 1 (13 Oct) and the revised air quality chapter with a GLA memo (14 Oct). The houses' Plot Schedule is unchanged (Rev P2). Flats keep their type and tenure; the new schedule adds floor level and NIA, now shown on the map. Comments: 3,620 in total (2,521 objecting, 1,070 supporting); from August to October, supporting comments outnumbered objections. There is still no committee date."
+ }
+]

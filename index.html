@@ -1,635 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ravensbourne Place — Phase 1 Interactive Site Map</title>
-<style>
-  :root{
-    --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --border:#2b313d;
-    --text:#e7e9ee; --muted:#9aa3b2; --accent:#4da3ff; --accent2:#ffb454;
-    --block:#b08bff; --good:#5ad17e;
-    --b1:#22b8cf; --b2:#51cf66; --b3:#fcc419; --b4:#ff922b; --b5:#fa5252; --b0:#adb5bd;
-    --tLCR:#fa5252; --tInt:#ffa94d; --tPriv:#4dabf7; --tMix:#b08bff;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-  header{padding:12px 20px;background:var(--panel);border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;}
-  header h1{font-size:18px;margin:0;font-weight:600;}
-  header .sub{color:var(--muted);font-size:12.5px;}
-  header .stats{margin-left:auto;display:flex;gap:14px;font-size:13px;color:var(--muted);}
-  header .stats b{color:var(--text);}
-  #app{display:grid;grid-template-columns:300px 1fr;gap:0;height:calc(100vh - 52px);}
-  #sidebar{background:var(--panel);border-right:1px solid var(--border);overflow-y:auto;padding:14px;}
-  #sidebar h2{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:18px 0 8px;}
-  #sidebar h2:first-child{margin-top:0;}
-  #overview-wrap{position:relative;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:#fff;}
-  #overview-wrap img{display:block;width:100%;}
-  .ov-rect{position:absolute;border:1.5px solid var(--accent);background:rgba(77,163,255,.18);cursor:pointer;transition:background .15s;}
-  .ov-rect:hover, .ov-rect.active{background:rgba(77,163,255,.45);border-color:#fff;}
-  .bigbtn{display:block;width:100%;text-align:left;background:linear-gradient(90deg,#2a2150,#1e222b);border:1px solid #4b3f7a;color:var(--text);border-radius:6px;padding:10px 12px;font-size:13px;cursor:pointer;margin-bottom:4px;}
-  .bigbtn:hover{border-color:var(--block);}
-  .bigbtn.active{background:var(--block);color:#1a1030;border-color:var(--block);font-weight:600;}
-  .bigbtn small{display:block;color:var(--muted);font-size:11px;margin-top:2px;}
-  .bigbtn.active small{color:#2a1a4d;}
-  #picker-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;}
-  .pbtn{background:var(--panel2);border:1px solid var(--border);color:var(--text);border-radius:4px;padding:8px 0;font-size:12px;cursor:pointer;text-align:center;}
-  .pbtn:hover{border-color:var(--accent);}
-  .pbtn.active{background:var(--accent);color:#04101f;border-color:var(--accent);font-weight:600;}
-  .pbtn.span2{grid-column:span 2;}
-  #site-btns{display:flex;flex-direction:column;gap:6px;}
-  #site-btns .pbtn{padding:8px 10px;text-align:left;font-size:12px;}
-  #search-box{width:100%;padding:8px 10px;border-radius:6px;border:1px solid var(--border);background:var(--panel2);color:var(--text);font-size:13px;}
-  #search-box:focus{outline:none;border-color:var(--accent);}
-  .seg{display:flex;gap:0;border:1px solid var(--border);border-radius:7px;overflow:hidden;}
-  .seg button{flex:1;background:var(--panel2);border:none;color:var(--text);padding:8px 6px;font-size:12.5px;cursor:pointer;}
-  .seg button.active{background:var(--accent);color:#04101f;font-weight:600;}
-  .legend{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted);margin-top:8px;}
-  .legend .row{display:flex;align-items:center;gap:8px;}
-  .dot{width:12px;height:12px;border-radius:50%;display:inline-block;border:1.5px solid #fff;flex:none;}
-  .sq{width:13px;height:13px;border-radius:3px;display:inline-block;border:1.5px solid #fff;flex:none;}
-  .note{font-size:11.5px;color:var(--muted);line-height:1.45;background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:8px 10px;margin-top:6px;}
-  .note b{color:var(--text);}
-  #main{position:relative;overflow:hidden;background:#0a0c10;}
-  #panel-title{position:absolute;top:10px;left:10px;z-index:5;background:rgba(20,22,28,.82);padding:6px 12px;border-radius:6px;font-size:13px;color:var(--text);border:1px solid var(--border);max-width:60%;}
-  #zoom-controls{position:absolute;top:10px;right:10px;z-index:5;display:flex;gap:6px;}
-  #zoom-controls button{width:30px;height:30px;border-radius:6px;border:1px solid var(--border);background:rgba(20,22,28,.85);color:var(--text);font-size:16px;cursor:pointer;}
-  #zoom-controls button:hover{border-color:var(--accent);}
-  #viewport{width:100%;height:100%;overflow:hidden;cursor:grab;}
-  #viewport.dragging{cursor:grabbing;}
-  #stage{position:absolute;top:0;left:0;transform-origin:0 0;}
-  #stage img{display:block;max-width:none;}
-  .marker{position:absolute;transform:translate(-50%,-50%);border-radius:50%;cursor:pointer;box-shadow:0 0 0 1.4px rgba(255,255,255,.92);}
-  .marker.house{width:15px;height:15px;}
-  .marker.block{width:24px;height:24px;border-radius:5px;background:var(--block);}
-  .marker:hover, .marker.selected{box-shadow:0 0 0 2.5px #fff, 0 0 10px 3px rgba(255,255,255,.6);z-index:10;}
-  #tooltip{position:fixed;display:none;z-index:50;background:#1c2029;border:1px solid var(--border);border-radius:10px;padding:0;width:300px;box-shadow:0 10px 30px rgba(0,0,0,.55);pointer-events:none;overflow:hidden;}
-  #tooltip .tt-img{width:100%;display:block;background:#fff;border-bottom:1px solid var(--border);}
-  #tooltip .tt-body{padding:9px 12px 11px;}
-  #tooltip h3{margin:0 0 6px;font-size:14px;color:var(--accent2);}
-  #tooltip table{border-collapse:collapse;width:100%;font-size:12px;}
-  #tooltip td{padding:1.5px 4px;vertical-align:top;}
-  #tooltip td.k{color:var(--muted);white-space:nowrap;padding-right:6px;}
-  #tooltip .tt-hint{margin-top:7px;color:var(--accent);font-size:11px;}
-  .tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:600;color:#10131a;}
-  #detail-panel{position:absolute;bottom:0;right:0;z-index:20;width:368px;max-height:88%;overflow-y:auto;background:rgba(18,20,26,.98);border-top:1px solid var(--border);border-left:1px solid var(--border);border-radius:10px 0 0 0;padding:14px;display:none;box-shadow:-4px -4px 20px rgba(0,0,0,.4);}
-  #detail-panel.show{display:block;}
-  #detail-panel h3{margin:0 0 4px;font-size:16px;color:var(--accent2);padding-right:20px;}
-  #detail-panel .close{position:absolute;top:10px;right:12px;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;}
-  #detail-panel .close:hover{color:#fff;}
-  .det-figs{display:flex;flex-direction:column;gap:8px;margin:9px 0 4px;}
-  .det-fig{position:relative;cursor:zoom-in;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff;}
-  .det-fig img{width:100%;display:block;}
-  .det-fig .figlabel{position:absolute;top:6px;left:6px;background:rgba(16,19,26,.82);color:#fff;font-size:10.5px;padding:2px 7px;border-radius:5px;}
-  .det-fig .figzoom{position:absolute;bottom:6px;right:6px;background:rgba(16,19,26,.82);color:#fff;font-size:10.5px;padding:2px 7px;border-radius:5px;}
-  #detail-panel table{border-collapse:collapse;width:100%;font-size:12.5px;margin-top:6px;}
-  #detail-panel td{padding:3px 4px;border-bottom:1px solid var(--border);}
-  #detail-panel td.k{color:var(--muted);width:44%;}
-  #detail-panel .unit-list{margin-top:10px;font-size:12px;}
-  #detail-panel .unit-list table{font-size:11.5px;}
-  #detail-panel .cap{font-size:11px;color:var(--muted);margin:-2px 0 4px;}
-  #table-toggle{margin:16px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
-  #table-toggle button{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:6px;cursor:pointer;font-size:13px;}
-  #table-toggle button:hover{border-color:var(--accent);}
-  #table-section{display:none;padding:0 20px 30px;}
-  #table-section.show{display:block;}
-  #table-filters{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
-  #table-filters select, #table-filters input{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:6px;font-size:12.5px;}
-  #unit-table-wrap{max-height:480px;overflow:auto;border:1px solid var(--border);border-radius:8px;}
-  table.data{width:100%;border-collapse:collapse;font-size:12.5px;}
-  table.data thead th{position:sticky;top:0;background:var(--panel2);text-align:left;padding:8px;border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap;}
-  table.data tbody td{padding:6px 8px;border-bottom:1px solid #20242d;white-space:nowrap;}
-  table.data tbody tr:hover{background:#1c2029;}
-  table.data .locbtn{background:var(--accent);color:#04101f;border:none;padding:3px 8px;border-radius:5px;font-size:11px;cursor:pointer;}
-  table.data .nolocbtn{color:var(--muted);font-size:11px;}
-  #row-count{color:var(--muted);font-size:12px;margin-bottom:8px;}
-  /* lightbox */
-  #lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,8,12,.94);display:none;flex-direction:column;}
-  #lightbox.show{display:flex;}
-  #lb-bar{display:flex;align-items:center;gap:14px;padding:10px 16px;color:var(--text);font-size:13px;background:rgba(20,22,28,.6);}
-  #lb-bar .lb-title{font-weight:600;color:var(--accent2);}
-  #lb-bar .lb-spacer{margin-left:auto;}
-  #lb-bar button{background:var(--panel2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:6px 12px;font-size:13px;cursor:pointer;}
-  #lb-bar button:hover{border-color:var(--accent);}
-  #lb-stage{flex:1;overflow:hidden;position:relative;cursor:grab;}
-  #lb-stage.dragging{cursor:grabbing;}
-  #lb-img{position:absolute;top:0;left:0;transform-origin:0 0;user-select:none;-webkit-user-drag:none;background:#fff;border-radius:4px;}
-  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:rgba(20,22,28,.8);border:1px solid var(--border);color:#fff;font-size:24px;width:46px;height:60px;border-radius:8px;cursor:pointer;}
-  .lb-nav:hover{border-color:var(--accent);}
-  #lb-prev{left:14px;} #lb-next{right:14px;}
-  #lb-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:11.5px;background:rgba(20,22,28,.7);padding:4px 10px;border-radius:6px;z-index:2;}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ravensbourne Place — mapa interativo</title>
+<meta name="description" content="Mapa interativo do empreendimento Ravensbourne Place (Bromley, pedido 26/02199/OUT): cada casa da Fase 1 com ficha, fachada e planta, as 4 fases do projeto e o acompanhamento do pedido de planejamento.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M8 17l8-7 8 7v8H8z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
-<header>
-  <h1>Ravensbourne Place — Phase 1 Interactive Site Map</h1>
-  <span class="sub">578 detailed plots · hover for details + elevation · click for floor plans · planning ref a0lTv000003RpUXIA0</span>
-  <span class="stats">
-    <span><b>578</b> units</span>
-    <span><b>440</b> houses</span>
-    <span><b>138</b> apartments</span>
-    <span><b id="aff-count">0</b> affordable</span>
-  </span>
-</header>
-<div id="app">
-  <div id="sidebar">
-    <h2>All phases — masterplan</h2>
-    <button class="bigbtn" id="mp-btn" data-pid="masterplan">🗺️ Development Parcel Plan
-      <small>Phase 1A &amp; 1B parcels (detailed) + outline area for future phases</small></button>
-    <div class="note" id="phase-note">Only <b>Phase 1</b> is a detailed application, so only its 578 homes have plot-level data &amp; drawings. Later phases are <b>outline</b> — shown as parcels on the masterplan above.</div>
+<div class="loading" id="loading"><div><div class="spin"></div><span data-t="loading">Carregando mapa…</span></div></div>
 
-    <h2>Colour markers by</h2>
-    <div class="seg" id="mode-seg">
-      <button data-mode="beds" class="active">Bedrooms</button>
-      <button data-mode="tenure">Tenure (affordable)</button>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">RP</div>
+    <div>
+      <h1>Ravensbourne Place</h1>
+      <p><span data-t="subtitle">Bromley · Berkeley Homes · pedido</span> 26/02199/OUT</p>
     </div>
-    <div class="legend" id="legend-body"></div>
-    <div class="note" id="aff-note"></div>
-
-    <h2>Site key plan</h2>
-    <div id="overview-wrap"><img id="overview-img" src="" alt="site key plan"></div>
-
-    <h2>Ground floor plan sheets</h2>
-    <div id="picker-grid"></div>
-
-    <h2>Apartment block site plans</h2>
-    <div id="site-btns"></div>
-
-    <h2>Find a plot</h2>
-    <input id="search-box" type="text" placeholder="Plot number, e.g. R-S01_032">
   </div>
-  <div id="main">
-    <div id="panel-title"></div>
-    <div id="zoom-controls">
-      <button id="zoom-in">+</button>
-      <button id="zoom-out">&minus;</button>
-      <button id="zoom-reset">⤾</button>
+  <button class="status-chip" id="status-chip" title=""><span class="dot"></span><span id="status-chip-text">…</span></button>
+  <div class="top-actions">
+    <div class="seg" id="lang-seg"><button data-lang="pt" class="active">PT</button><button data-lang="en">EN</button></div>
+    <button class="icon-btn" id="theme-btn" aria-label="Tema">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="grab" id="grab"></div>
+    <nav class="tabs" id="tabs">
+      <button data-tab="explore" class="active" data-t="tab_explore">Explorar</button>
+      <button data-tab="phases" data-t="tab_phases">Fases</button>
+      <button data-tab="updates"><span data-t="tab_updates">Atualizações</span><span class="badge hidden" id="upd-badge"></span></button>
+      <button data-tab="list" data-t="tab_list">Lista</button>
+    </nav>
+
+    <!-- EXPLORE -->
+    <div class="tab-body" id="tab-explore">
+      <section>
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input id="search" autocomplete="off" data-tp="search_ph" placeholder="Buscar plot, ex. R-S12_034 ou Block E">
+          <div class="suggest hidden" id="suggest"></div>
+        </div>
+      </section>
+      <section>
+        <div class="stats" id="stats"></div>
+      </section>
+      <section>
+        <h4 class="sec-title" data-t="color_by">Colorir por</h4>
+        <div class="seg" id="mode-seg" style="width:100%">
+          <button data-mode="beds" class="active" style="flex:1" data-t="m_beds">Quartos</button>
+          <button data-mode="tenure" style="flex:1" data-t="m_tenure">Tenure</button>
+          <button data-mode="type" style="flex:1" data-t="m_type">Tipo</button>
+        </div>
+        <div class="legend" id="legend" style="margin-top:10px"></div>
+        <p class="small muted" style="margin:6px 8px 0" data-t="legend_hint">Clique numa categoria para mostrar/ocultar no mapa.</p>
+      </section>
+      <section>
+        <h4 class="sec-title" data-t="layers">Camadas</h4>
+        <div class="card" style="padding:6px 12px">
+          <label class="toggle-row"><span data-t="ly_drawings">Desenhos da Fase 1 (plantas)</span><span class="switch"><input type="checkbox" id="ly-drawings" checked><span></span></span></label>
+          <div id="opacity-row" style="padding:0 0 8px"><input type="range" class="range" id="ly-opacity" min="20" max="100" value="85"></div>
+          <label class="toggle-row"><span data-t="ly_phases">Fases 1–4</span><span class="switch"><input type="checkbox" id="ly-phases" checked><span></span></span></label>
+          <label class="toggle-row"><span data-t="ly_parcels">Parcelas da Fase 1</span><span class="switch"><input type="checkbox" id="ly-parcels" checked><span></span></span></label>
+          <label class="toggle-row"><span data-t="ly_homes">Casas e prédios</span><span class="switch"><input type="checkbox" id="ly-homes" checked><span></span></span></label>
+        </div>
+      </section>
+      <section>
+        <h4 class="sec-title" data-t="sheets">Pranchas originais</h4>
+        <div class="sheet-grid" id="sheet-grid"></div>
+        <p class="small muted" style="margin:8px 0 0" data-t="sheets_hint">Abrem em tela cheia com zoom. No mapa elas já aparecem encaixadas no lugar.</p>
+      </section>
+      <section>
+        <p class="small muted" id="about-data"></p>
+      </section>
     </div>
-    <div id="viewport">
-      <div id="stage">
-        <img id="stage-img" src="">
-        <div id="markers-layer"></div>
+
+    <!-- PHASES -->
+    <div class="tab-body hidden" id="tab-phases"></div>
+
+    <!-- UPDATES -->
+    <div class="tab-body hidden" id="tab-updates"></div>
+
+    <!-- LIST -->
+    <div class="tab-body hidden" id="tab-list">
+      <div class="filter-row">
+        <input id="f-q" data-tp="filter_ph" placeholder="Filtrar…">
+        <select id="f-beds"></select>
+        <select id="f-tenure"></select>
+        <select id="f-type"></select>
+        <select id="f-phase"></select>
+      </div>
+      <div class="small muted" id="f-count" style="margin-bottom:6px"></div>
+      <div style="overflow-x:auto;margin:0 -4px">
+      <table class="list-table" id="list-table">
+        <thead><tr>
+          <th data-k="id">Plot</th><th data-k="beds" data-t="th_beds">Qts</th><th data-k="plot_type" data-t="th_type">Tipo</th>
+          <th data-k="tenure">Tenure</th><th data-k="area" data-t="th_area">m²</th><th data-k="phase" data-t="th_phase">Fase</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
       </div>
     </div>
-    <div id="detail-panel"><span class="close" id="detail-close">✕</span><div id="detail-body"></div></div>
-  </div>
-</div>
-<div id="tooltip"></div>
+  </aside>
 
-<!-- Lightbox -->
-<div id="lightbox">
-  <div id="lb-bar">
-    <span class="lb-title" id="lb-title"></span>
-    <span id="lb-caption" style="color:var(--muted)"></span>
-    <span class="lb-spacer"></span>
-    <button id="lb-zoomout">−</button>
-    <button id="lb-zoomin">+</button>
-    <button id="lb-fit">Fit</button>
-    <button id="lb-close">✕ Close</button>
-  </div>
-  <div id="lb-stage">
-    <button class="lb-nav" id="lb-prev">‹</button>
-    <img id="lb-img" src="" alt="">
-    <button class="lb-nav" id="lb-next">›</button>
-    <div id="lb-hint">Scroll to zoom · drag to pan · ← → to switch view · Esc to close</div>
-  </div>
-</div>
+  <div id="map"></div>
+  <div class="map-hint" id="map-hint"></div>
 
-<div id="table-toggle">
-  <button id="toggle-table-btn">Show full unit data table (all 578 units)</button>
-  <span id="table-toggle-hint" style="color:var(--muted);font-size:12.5px;"></span>
-</div>
-<div id="table-section">
-  <div id="table-filters">
-    <input id="filter-search" type="text" placeholder="Filter by plot number / housetype...">
-    <select id="filter-type"><option value="">All plot types</option></select>
-    <select id="filter-beds"><option value="">All bedrooms</option></select>
-    <select id="filter-tenure"><option value="">All tenures</option></select>
+  <aside class="detail" id="detail">
+    <div class="detail-head">
+      <div style="min-width:0">
+        <h2 id="d-title"></h2>
+        <div class="sub" id="d-sub"></div>
+      </div>
+      <button class="icon-btn close" id="d-close" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="detail-body" id="d-body"></div>
+  </aside>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <div class="lb-bar">
+    <span class="title" id="lb-title"></span><span class="cap" id="lb-cap"></span>
+    <span class="sp"></span>
+    <button id="lb-out">−</button><button id="lb-in">+</button><button id="lb-fit" data-t="fit">Ajustar</button>
+    <a id="lb-open" target="_blank" rel="noopener" data-t="open_file">Abrir arquivo</a>
+    <button id="lb-close">✕</button>
   </div>
-  <div id="row-count"></div>
-  <div id="unit-table-wrap">
-    <table class="data" id="unit-table">
-      <thead><tr>
-        <th data-k="plot_number">Plot</th>
-        <th data-k="beds">Beds</th>
-        <th data-k="plot_type">Type</th>
-        <th data-k="housetype">Housetype</th>
-        <th data-k="occupancy">Bed/Person</th>
-        <th data-k="tenure">Tenure</th>
-        <th data-k="parking">Parking</th>
-        <th data-k="accessibility">Access</th>
-        <th data-k="gia">GIA m²</th>
-        <th>Map</th>
-      </tr></thead>
-      <tbody id="unit-table-body"></tbody>
-    </table>
+  <div class="lb-stage" id="lb-stage">
+    <button class="lb-nav lb-prev" id="lb-prev">‹</button>
+    <img id="lb-img" alt="">
+    <button class="lb-nav lb-next" id="lb-next">›</button>
+    <div class="lb-hint" data-t="lb_hint">Role/pinça para zoom · arraste para mover · ← → troca · Esc fecha</div>
   </div>
 </div>
 
-<script>
-let MAP_DATA, PANEL_IMAGES, OVERVIEW_IMG, UNIT_IMAGES, UNIT_PLANS;
-
-Promise.all([
-  fetch('map_data.json').then(r => r.json()),
-  fetch('map_images.json').then(r => r.json()),
-  fetch('map_overview_img.json').then(r => r.json()),
-  fetch('unit_images.json').then(r => r.json()),
-  fetch('unit_plans.json').then(r => r.json()),
-]).then(([data, images, overview, unitImages, unitPlans]) => {
-  MAP_DATA = data; PANEL_IMAGES = images; OVERVIEW_IMG = overview.overview;
-  UNIT_IMAGES = unitImages; UNIT_PLANS = unitPlans;
-  init();
-}).catch(err => {
-  document.body.innerHTML = '<div style="padding:40px;color:#fff;font-family:sans-serif">Failed to load map data: ' + err + '</div>';
-});
-
-const BED_COLORS = {1:'#22b8cf',2:'#51cf66',3:'#fcc419',4:'#ff922b',5:'#fa5252'};
-const TENURE_COLORS = {'Low-Cost Rent':'#fa5252','Intermediate':'#ffa94d','Private':'#4dabf7','Mixed':'#b08bff'};
-const AFFORDABLE = ['Low-Cost Rent','Intermediate'];
-function bedColor(b){ return BED_COLORS[b] || '#adb5bd'; }
-function tenureColor(t){ return TENURE_COLORS[t] || '#adb5bd'; }
-function elevSrc(key){ return key && UNIT_IMAGES[key] ? ('data:image/jpeg;base64,' + UNIT_IMAGES[key]) : null; }
-function planSrc(key){ return key && UNIT_PLANS[key] ? ('data:image/jpeg;base64,' + UNIT_PLANS[key]) : null; }
-
-let colorMode = 'beds';
-
-function init() {
-const panelDefs = MAP_DATA.panel_defs;
-const gridPos = MAP_DATA.grid_pos;
-const overviewRects = MAP_DATA.overview_rects;
-const markersByPanel = MAP_DATA.markers_by_panel;
-const tableRows = MAP_DATA.table_rows;
-
-document.getElementById('overview-img').src = 'data:image/png;base64,' + OVERVIEW_IMG;
-
-const affCount = tableRows.filter(r => AFFORDABLE.includes(r.tenure)).length;
-document.getElementById('aff-count').textContent = affCount;
-document.getElementById('aff-note').innerHTML =
-  `<b>Affordable</b> = Low-Cost Rent + Intermediate = <b>${affCount}</b> of 578 (${Math.round(affCount/578*100)}%). Switch to <b>Tenure</b> above to see where they sit.`;
-
-// ---------- Overview clickable rects ----------
-const ovWrap = document.getElementById('overview-wrap');
-for (const sheet in overviewRects) {
-  const r = overviewRects[sheet];
-  const el = document.createElement('div');
-  el.className = 'ov-rect';
-  el.style.left = r.left_pct + '%'; el.style.top = r.top_pct + '%';
-  el.style.width = r.w_pct + '%'; el.style.height = r.h_pct + '%';
-  el.title = 'Ground Floor Plan ' + sheet + ' of 12';
-  el.addEventListener('click', () => selectPanel('gfp' + sheet));
-  el.dataset.sheet = sheet;
-  ovWrap.appendChild(el);
-}
-document.getElementById('mp-btn').addEventListener('click', () => selectPanel('masterplan'));
-
-// ---------- Panel picker grid ----------
-const pickerGrid = document.getElementById('picker-grid');
-for (const pid in gridPos) {
-  const [col, row, span] = gridPos[pid];
-  const btn = document.createElement('div');
-  btn.className = 'pbtn' + (span === 2 ? ' span2' : '');
-  btn.style.gridColumn = span === 2 ? (col + ' / span 2') : col;
-  btn.style.gridRow = row + 1;
-  btn.textContent = pid.replace('gfp', 'Sheet ');
-  btn.dataset.pid = pid;
-  btn.addEventListener('click', () => selectPanel(pid));
-  pickerGrid.appendChild(btn);
-}
-const siteBtns = document.getElementById('site-btns');
-['site1A', 'site1B'].forEach(pid => {
-  const btn = document.createElement('div');
-  btn.className = 'pbtn';
-  btn.textContent = panelDefs[pid].label;
-  btn.dataset.pid = pid;
-  btn.addEventListener('click', () => selectPanel(pid));
-  siteBtns.appendChild(btn);
-});
-
-// ---------- Viewer state ----------
-const viewport = document.getElementById('viewport');
-const stage = document.getElementById('stage');
-const stageImg = document.getElementById('stage-img');
-const markersLayer = document.getElementById('markers-layer');
-const tooltip = document.getElementById('tooltip');
-const detailPanel = document.getElementById('detail-panel');
-const detailBody = document.getElementById('detail-body');
-
-let currentPanel = null;
-let zoom = 1, panX = 0, panY = 0;
-let dragging = false, dragStartX = 0, dragStartY = 0, panStartX = 0, panStartY = 0;
-
-function fitZoom(pid) {
-  const d = panelDefs[pid];
-  const vw = viewport.clientWidth, vh = viewport.clientHeight;
-  return Math.min(vw / d.px_w, vh / d.px_h) * 0.96;
-}
-function applyTransform() {
-  stage.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
-  markersLayer.querySelectorAll('.marker').forEach(m => {
-    m.style.transform = `translate(-50%,-50%) scale(${1/zoom})`;
-  });
-}
-
-// ---------- colouring ----------
-function markerColor(mk){
-  if (colorMode === 'tenure') return tenureColor(mk.kind === 'block' ? mk.block_tenure : mk.tenure);
-  return mk.kind === 'block' ? null : bedColor(mk.beds); // block keeps CSS purple in beds mode
-}
-function recolorMarkers(){
-  markersLayer.querySelectorAll('.marker').forEach(el => {
-    const mk = (markersByPanel[currentPanel]||[]).find(m => m.id === el.dataset.id);
-    if (!mk) return;
-    const c = markerColor(mk);
-    el.style.background = c || '';
-  });
-}
-function renderLegend(){
-  const L = document.getElementById('legend-body');
-  if (colorMode === 'beds') {
-    L.innerHTML = [1,2,3,4,5].map(b=>`<div class="row"><span class="dot" style="background:${bedColor(b)}"></span> ${b} bed</div>`).join('')
-      + `<div class="row" style="margin-top:4px;"><span class="sq" style="background:var(--block)"></span> Apartment block (mixed)</div>`;
-  } else {
-    L.innerHTML =
-      `<div class="row"><span class="dot" style="background:var(--tLCR)"></span> Low-Cost Rent <span style="color:#fa5252">· affordable</span></div>`
-    + `<div class="row"><span class="dot" style="background:var(--tInt)"></span> Intermediate <span style="color:#ffa94d">· affordable</span></div>`
-    + `<div class="row"><span class="dot" style="background:var(--tPriv)"></span> Private (market)</div>`
-    + `<div class="row" style="margin-top:4px;"><span class="sq" style="background:var(--tLCR)"></span> Block coloured by its tenure</div>`;
-  }
-}
-document.querySelectorAll('#mode-seg button').forEach(b => b.addEventListener('click', () => {
-  colorMode = b.dataset.mode;
-  document.querySelectorAll('#mode-seg button').forEach(x => x.classList.toggle('active', x === b));
-  renderLegend(); recolorMarkers();
-}));
-
-function selectPanel(pid) {
-  currentPanel = pid;
-  const d = panelDefs[pid];
-  stageImg.src = 'data:image/jpeg;base64,' + PANEL_IMAGES[pid];
-  stageImg.width = d.px_w; stageImg.height = d.px_h;
-  stage.style.width = d.px_w + 'px'; stage.style.height = d.px_h + 'px';
-  document.getElementById('panel-title').textContent = d.label;
-
-  document.querySelectorAll('.pbtn').forEach(b => b.classList.toggle('active', b.dataset.pid === pid));
-  document.getElementById('mp-btn').classList.toggle('active', pid === 'masterplan');
-  document.querySelectorAll('.ov-rect').forEach(b => b.classList.toggle('active', ('gfp' + b.dataset.sheet) === pid));
-
-  markersLayer.innerHTML = '';
-  (markersByPanel[pid] || []).forEach(mk => {
-    const el = document.createElement('div');
-    el.className = 'marker ' + mk.kind;
-    const c = markerColor(mk); if (c) el.style.background = c;
-    el.style.left = mk.left_pct + '%'; el.style.top = mk.top_pct + '%';
-    el.dataset.id = mk.id;
-    el.addEventListener('mouseenter', e => showTooltip(e, mk));
-    el.addEventListener('mousemove', e => moveTooltip(e));
-    el.addEventListener('mouseleave', hideTooltip);
-    el.addEventListener('click', e => { e.stopPropagation(); showDetail(mk); selectMarker(mk.id); });
-    markersLayer.appendChild(el);
-  });
-
-  zoom = fitZoom(pid);
-  panX = (viewport.clientWidth - d.px_w * zoom) / 2;
-  panY = (viewport.clientHeight - d.px_h * zoom) / 2;
-  applyTransform();
-}
-
-function selectMarker(id) {
-  markersLayer.querySelectorAll('.marker').forEach(m => m.classList.toggle('selected', m.dataset.id === id));
-}
-function fmt(v) { return (v === null || v === undefined || v === '') ? '—' : v; }
-function bedTag(b){ return b ? `<span class="tag" style="background:${bedColor(b)}">${b} bed</span>` : '—'; }
-function tenureTag(t){ return t ? `<span class="tag" style="background:${tenureColor(t)}">${t}</span>` : '—'; }
-function bedMixStr(mix){ return Object.keys(mix||{}).sort().map(b=>`${mix[b]}×${b}b`).join(' · ') || '—'; }
-
-// ---------- Tooltip (hover) ----------
-function tooltipHTML(mk) {
-  const src = elevSrc(mk.img);
-  const imgTag = src ? `<img class="tt-img" src="${src}" alt="">` : '';
-  if (mk.kind === 'house') {
-    return imgTag + `<div class="tt-body"><h3>${mk.plot_number} &nbsp;${bedTag(mk.beds)}</h3><table>
-      <tr><td class="k">Type</td><td>${fmt(mk.plot_type)}</td></tr>
-      <tr><td class="k">Housetype</td><td>${fmt(mk.housetype)}</td></tr>
-      <tr><td class="k">Bed / person</td><td>${fmt(mk.occupancy_label||mk.occupancy)}</td></tr>
-      <tr><td class="k">Tenure</td><td>${tenureTag(mk.tenure)}</td></tr>
-      <tr><td class="k">Parking</td><td>${fmt(mk.parking)}</td></tr>
-      <tr><td class="k">GIA</td><td>${mk.gia ? mk.gia + ' m²' : '—'}</td></tr>
-    </table><div class="tt-hint">🔍 Click for floor plans &amp; full details</div></div>`;
-  } else {
-    return imgTag + `<div class="tt-body"><h3>${mk.name}</h3><table>
-      <tr><td class="k">Units</td><td>${mk.count}</td></tr>
-      <tr><td class="k">Bed mix</td><td>${bedMixStr(mk.bed_mix)}</td></tr>
-      <tr><td class="k">Tenure</td><td>${tenureTag(mk.block_tenure)}</td></tr>
-    </table><div class="tt-hint">🔍 Click for floor plans &amp; unit list</div></div>`;
-  }
-}
-function showTooltip(e, mk) { tooltip.innerHTML = tooltipHTML(mk); tooltip.style.display = 'block'; moveTooltip(e); }
-function moveTooltip(e) {
-  const pad = 16, tw = 300, th = tooltip.offsetHeight || 320;
-  let x = e.clientX + pad, y = e.clientY + pad;
-  if (x + tw > window.innerWidth) x = e.clientX - tw - pad;
-  if (y + th > window.innerHeight) y = Math.max(8, window.innerHeight - th - 8);
-  tooltip.style.left = x + 'px'; tooltip.style.top = y + 'px';
-}
-function hideTooltip() { tooltip.style.display = 'none'; }
-
-// ---------- Detail panel (click) ----------
-function figHTML(src, label){
-  return src ? `<div class="det-fig" data-src="${src}" data-label="${label}"><img src="${src}" alt="">
-      <span class="figlabel">${label}</span><span class="figzoom">🔍 enlarge</span></div>` : '';
-}
-function showDetail(mk) {
-  const elev = elevSrc(mk.img), plan = planSrc(mk.img);
-  if (mk.kind === 'house') {
-    detailBody.innerHTML = `<h3>${mk.plot_number} &nbsp;${bedTag(mk.beds)}</h3>
-      <div class="cap">${fmt(mk.plot_type)} · ${tenureTag(mk.tenure)}</div>
-      <div class="det-figs">${figHTML(elev,'Elevations')}${figHTML(plan,'Floor plans')}</div>
-      <table>
-        <tr><td class="k">Bedrooms</td><td>${fmt(mk.beds)}</td></tr>
-        <tr><td class="k">Housetype</td><td>${fmt(mk.housetype)}</td></tr>
-        <tr><td class="k">Bed / person</td><td>${fmt(mk.occupancy_label||mk.occupancy)}</td></tr>
-        <tr><td class="k">Plot type</td><td>${fmt(mk.plot_type)}</td></tr>
-        <tr><td class="k">Tenure</td><td>${tenureTag(mk.tenure)}</td></tr>
-        <tr><td class="k">Design option</td><td>${fmt(mk.design_option)}</td></tr>
-        <tr><td class="k">Parking spaces</td><td>${fmt(mk.parking)}</td></tr>
-        <tr><td class="k">Accessibility</td><td>${fmt(mk.accessibility)}</td></tr>
-        <tr><td class="k">Handed</td><td>${fmt(mk.handed)}</td></tr>
-        <tr><td class="k">GIA</td><td>${mk.gia ? mk.gia + ' m²' : '—'}</td></tr>
-      </table>`;
-  } else {
-    let rows = mk.units.map(u => `<tr>
-        <td>${u.plot_number}</td><td>${bedTag(u.beds)}</td><td>${fmt(u.housetype)}</td><td>${tenureTag(u.tenure)}</td>
-      </tr>`).join('');
-    detailBody.innerHTML = `<h3>${mk.name}</h3>
-      <div class="cap">${mk.count} apartments · ${tenureTag(mk.block_tenure)} · bed mix ${bedMixStr(mk.bed_mix)}</div>
-      <div class="det-figs">${figHTML(elev,'Elevations')}${figHTML(plan,'Floor plans (per level)')}</div>
-      <div class="unit-list"><table>
-        <thead><tr><td class="k">Plot</td><td class="k">Beds</td><td class="k">Type</td><td class="k">Tenure</td></tr></thead>
-        <tbody>${rows}</tbody>
-      </table></div>`;
-  }
-  // wire figure clicks -> lightbox
-  const figs = [...detailBody.querySelectorAll('.det-fig')];
-  const items = figs.map(f => ({src:f.dataset.src, label:f.dataset.label}));
-  figs.forEach((f,i) => f.addEventListener('click', () => openLightbox(items, i, mk.kind==='house'?mk.plot_number:mk.name)));
-  detailPanel.classList.add('show');
-}
-document.getElementById('detail-close').addEventListener('click', () => detailPanel.classList.remove('show'));
-
-// ---------- Lightbox (zoom/pan, multi-image) ----------
-const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img'),
-      lbStage = document.getElementById('lb-stage'), lbTitle = document.getElementById('lb-title'),
-      lbCaption = document.getElementById('lb-caption');
-let lbItems = [], lbIdx = 0, lbScale = 1, lbX = 0, lbY = 0, lbDrag = false, lbSX = 0, lbSY = 0, lbPX = 0, lbPY = 0;
-function lbApply(){ lbImg.style.transform = `translate(${lbX}px,${lbY}px) scale(${lbScale})`; }
-function lbFit(){
-  const sw = lbStage.clientWidth, sh = lbStage.clientHeight;
-  const iw = lbImg.naturalWidth || 1, ih = lbImg.naturalHeight || 1;
-  lbScale = Math.min(sw/iw, sh/ih) * 0.96;
-  lbX = (sw - iw*lbScale)/2; lbY = (sh - ih*lbScale)/2; lbApply();
-}
-function lbShow(){
-  const it = lbItems[lbIdx]; lbImg.src = it.src; lbCaption.textContent = it.label + (lbItems.length>1?`  (${lbIdx+1}/${lbItems.length})`:'');
-  document.getElementById('lb-prev').style.display = document.getElementById('lb-next').style.display = lbItems.length>1?'block':'none';
-  if (lbImg.complete && lbImg.naturalWidth) lbFit(); else lbImg.onload = lbFit;
-}
-function openLightbox(items, idx, title){
-  lbItems = items.filter(i=>i.src); if(!lbItems.length) return;
-  lbIdx = Math.max(0, Math.min(idx, lbItems.length-1)); lbTitle.textContent = title;
-  lb.classList.add('show'); lbShow();
-}
-function closeLightbox(){ lb.classList.remove('show'); }
-function lbStep(d){ lbIdx = (lbIdx + d + lbItems.length) % lbItems.length; lbShow(); }
-document.getElementById('lb-close').addEventListener('click', closeLightbox);
-document.getElementById('lb-prev').addEventListener('click', () => lbStep(-1));
-document.getElementById('lb-next').addEventListener('click', () => lbStep(1));
-document.getElementById('lb-fit').addEventListener('click', lbFit);
-document.getElementById('lb-zoomin').addEventListener('click', () => { lbScale*=1.3; lbApply(); });
-document.getElementById('lb-zoomout').addEventListener('click', () => { lbScale/=1.3; lbApply(); });
-lbStage.addEventListener('wheel', e => {
-  e.preventDefault();
-  const r = lbStage.getBoundingClientRect(), mx = e.clientX-r.left, my = e.clientY-r.top;
-  const f = e.deltaY<0 ? 1.15 : 1/1.15, ns = Math.max(0.05, Math.min(lbScale*f, 12));
-  lbX = mx-(mx-lbX)*(ns/lbScale); lbY = my-(my-lbY)*(ns/lbScale); lbScale = ns; lbApply();
-}, {passive:false});
-lbStage.addEventListener('mousedown', e => { if(e.target.classList.contains('lb-nav'))return; lbDrag=true; lbStage.classList.add('dragging'); lbSX=e.clientX; lbSY=e.clientY; lbPX=lbX; lbPY=lbY; });
-window.addEventListener('mousemove', e => { if(!lbDrag)return; lbX=lbPX+(e.clientX-lbSX); lbY=lbPY+(e.clientY-lbSY); lbApply(); });
-window.addEventListener('mouseup', () => { lbDrag=false; lbStage.classList.remove('dragging'); });
-window.addEventListener('keydown', e => {
-  if(!lb.classList.contains('show'))return;
-  if(e.key==='Escape')closeLightbox(); else if(e.key==='ArrowLeft')lbStep(-1); else if(e.key==='ArrowRight')lbStep(1);
-});
-
-// ---------- pan & zoom (main viewer) ----------
-viewport.addEventListener('wheel', e => {
-  e.preventDefault();
-  const rect = viewport.getBoundingClientRect();
-  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
-  const factor = e.deltaY < 0 ? 1.15 : 1/1.15;
-  const newZoom = Math.max(0.04, Math.min(zoom * factor, 8));
-  panX = mx - (mx - panX) * (newZoom / zoom);
-  panY = my - (my - panY) * (newZoom / zoom);
-  zoom = newZoom; applyTransform();
-}, { passive: false });
-viewport.addEventListener('mousedown', e => {
-  dragging = true; viewport.classList.add('dragging');
-  dragStartX = e.clientX; dragStartY = e.clientY; panStartX = panX; panStartY = panY;
-});
-window.addEventListener('mousemove', e => {
-  if (!dragging) return;
-  panX = panStartX + (e.clientX - dragStartX); panY = panStartY + (e.clientY - dragStartY);
-  applyTransform();
-});
-window.addEventListener('mouseup', () => { dragging = false; viewport.classList.remove('dragging'); });
-document.getElementById('zoom-in').addEventListener('click', () => { zoom = Math.min(zoom*1.3,8); applyTransform(); });
-document.getElementById('zoom-out').addEventListener('click', () => { zoom = Math.max(zoom/1.3,0.04); applyTransform(); });
-document.getElementById('zoom-reset').addEventListener('click', () => selectPanel(currentPanel));
-
-// ---------- Search ----------
-document.getElementById('search-box').addEventListener('keydown', e => {
-  if (e.key !== 'Enter') return;
-  const q = e.target.value.trim().toUpperCase();
-  const row = tableRows.find(r => r.plot_number.toUpperCase() === q);
-  if (row) locateRow(row);
-  else alert('No exact plot number match for "' + q + '". Try the full data table below.');
-});
-function locateRow(row) {
-  if (!row.located_panel) {
-    alert(row.plot_number + ' is in the schedule but its label could not be precisely located on the drawings (data-only — see table).');
-    return;
-  }
-  selectPanel(row.located_panel);
-  selectMarker(row.located_marker);
-  const mkEl = markersLayer.querySelector(`[data-id="${row.located_marker}"]`);
-  if (mkEl) setTimeout(() => {
-    const left = parseFloat(mkEl.style.left), top = parseFloat(mkEl.style.top);
-    const d = panelDefs[row.located_panel];
-    const px = d.px_w * left/100, py = d.px_h * top/100;
-    panX = viewport.clientWidth/2 - px*zoom; panY = viewport.clientHeight/2 - py*zoom;
-    applyTransform();
-    const mk = (markersByPanel[row.located_panel]||[]).find(m => m.id === row.located_marker);
-    if (mk) showDetail(mk);
-  }, 30);
-}
-
-// ---------- Full data table ----------
-const toggleBtn = document.getElementById('toggle-table-btn');
-const tableSection = document.getElementById('table-section');
-toggleBtn.addEventListener('click', () => {
-  tableSection.classList.toggle('show');
-  toggleBtn.textContent = tableSection.classList.contains('show') ? 'Hide full unit data table' : 'Show full unit data table (all 578 units)';
-});
-const typeSel = document.getElementById('filter-type');
-const tenureSel = document.getElementById('filter-tenure');
-const bedsSel = document.getElementById('filter-beds');
-[...new Set(tableRows.map(r => r.plot_type))].sort().forEach(t => typeSel.add(new Option(t, t)));
-[...new Set(tableRows.map(r => r.tenure))].sort().forEach(t => tenureSel.add(new Option(t, t)));
-[...new Set(tableRows.map(r => r.beds).filter(Boolean))].sort((a,b)=>a-b).forEach(b => bedsSel.add(new Option(b + ' bed', b)));
-
-const tbody = document.getElementById('unit-table-body');
-const filterInput = document.getElementById('filter-search');
-const rowCount = document.getElementById('row-count');
-function occLabel(o){ if(!o) return '—'; const m=o.match(/^(\d+)B(\d+)P$/); return m? `${m[1]}B/${m[2]}P`:o; }
-function renderTable() {
-  const q = filterInput.value.trim().toUpperCase();
-  const ft = typeSel.value, fn = tenureSel.value, fb = bedsSel.value;
-  const rows = tableRows.filter(r => {
-    if (ft && r.plot_type !== ft) return false;
-    if (fn && r.tenure !== fn) return false;
-    if (fb && String(r.beds) !== fb) return false;
-    if (q && !(r.plot_number.toUpperCase().includes(q) || (r.housetype||'').toUpperCase().includes(q))) return false;
-    return true;
-  });
-  rowCount.textContent = rows.length + ' of ' + tableRows.length + ' units shown';
-  tbody.innerHTML = rows.map(r => `<tr>
-    <td>${r.plot_number}</td>
-    <td>${bedTag(r.beds)}</td>
-    <td>${fmt(r.plot_type)}</td>
-    <td>${fmt(r.housetype)}</td>
-    <td>${occLabel(r.occupancy)}</td>
-    <td>${tenureTag(r.tenure)}</td>
-    <td>${fmt(r.parking)}</td>
-    <td>${fmt(r.accessibility)}</td>
-    <td>${r.gia||'—'}</td>
-    <td>${r.located_panel ? `<button class="locbtn" data-pn="${r.plot_number}">Locate</button>` : '<span class="nolocbtn">data only</span>'}</td>
-  </tr>`).join('');
-  tbody.querySelectorAll('.locbtn').forEach(b => b.addEventListener('click', () => {
-    const row = tableRows.find(r => r.plot_number === b.dataset.pn);
-    locateRow(row);
-  }));
-}
-filterInput.addEventListener('input', renderTable);
-typeSel.addEventListener('change', renderTable);
-tenureSel.addEventListener('change', renderTable);
-bedsSel.addEventListener('change', renderTable);
-renderTable();
-
-document.getElementById('table-toggle-hint').textContent =
-  'Hover = data + elevation. Click a home = floor plans (click any drawing to enlarge). Toggle Tenure to map affordable homes.';
-
-renderLegend();
-selectPanel('gfp1');
-}
-</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

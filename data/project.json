@@ -1,0 +1,93 @@
+{
+ "name": "Ravensbourne Place",
+ "reference": "26/02199/OUT",
+ "site": "Land at Rookery Estates, Bromley Common (Hayes Lane / A21), Bromley",
+ "applicant": "Berkeley Homes (Southern) Limited",
+ "architect": "JTP",
+ "totals": {
+  "homes_max": 2200,
+  "phase1_homes": 578,
+  "health_sqm": 1376,
+  "retail_community_sqm": 520,
+  "phase1_retail_sqm": 240,
+  "start": 2028,
+  "completion": 2049
+ },
+ "phase1_tenure": [
+  {"tenure": "Intermediate", "homes": 207, "hab_rooms": 746},
+  {"tenure": "Low-Cost Rent", "homes": 139, "hab_rooms": 544},
+  {"tenure": "Private", "homes": 232, "hab_rooms": 1287}
+ ],
+ "phases": [
+  {
+   "id": "1", "color": "#4f6bd8",
+   "type": "detailed",
+   "title_pt": "Fase 1 — pedido detalhado", "title_en": "Phase 1 — detailed (full) application",
+   "desc_pt": "Única parte com projeto completo: 578 casas e apartamentos, 240 m² de comércio/uso comunitário, bacias de drenagem (SuDS), estação de bombeamento e a trilha FP131 até Norman Park. Dividida em 1A (sul) e 1B (norte, junto ao Bromley FC). Cada imóvel tem planta, fachada e ficha.",
+   "desc_en": "The only part designed in full: 578 homes, 240 sqm retail/community space, SuDS basins, a pumping station and the upgraded FP131 path to Norman Park. Split into 1A (south) and 1B (north, by Bromley FC). Every home has its floor plan, elevation and schedule data.",
+   "construction": [2028, 2035, 2040]
+  },
+  {
+   "id": "2", "color": "#f2b84b", "type": "outline",
+   "title_pt": "Fase 2 — outline", "title_en": "Phase 2 — outline",
+   "desc_pt": "Faixa ao longo de Hayes Lane entre as áreas 1A e 1B. Pedido \"outline\" (todos os detalhes reservados): número de casas, desenho e tipologias só serão definidos em pedidos de \"reserved matters\" futuros.",
+   "desc_en": "Strip along Hayes Lane between areas 1A and 1B. Outline (all matters reserved): number of homes, layout and house types will only be fixed by future reserved-matters applications.",
+   "construction": [2035, 2040, 2045]
+  },
+  {
+   "id": "3", "color": "#e57373", "type": "outline",
+   "title_pt": "Fase 3 — outline", "title_en": "Phase 3 — outline",
+   "desc_pt": "Área norte, entre o Bromley FC e as casas de Hayes Lane / Bromley. Outline — detalhes em reserved matters futuros.",
+   "desc_en": "Northern area between Bromley FC and the houses of Hayes Lane / Bromley. Outline — details in future reserved matters.",
+   "construction": [2040, 2045, 2049]
+  },
+  {
+   "id": "4", "color": "#9c7ad1", "type": "outline",
+   "title_pt": "Fase 4 — outline", "title_en": "Phase 4 — outline",
+   "desc_pt": "Área nordeste, na direção da A21 (Bromley Common). Última fase; conclusão prevista para 2049. Outline — detalhes em reserved matters futuros.",
+   "desc_en": "North-eastern area towards the A21 (Bromley Common). Final phase, completion assumed in 2049. Outline — details in future reserved matters.",
+   "construction": [2049]
+  }
+ ],
+ "programme": [
+  {"year": 2028, "phases": [], "label_pt": "Demolição e obras preparatórias", "label_en": "Demolition + enabling works"},
+  {"year": 2035, "phases": ["1", "2"], "label_pt": "Fases 1 e 2 em obra", "label_en": "Phases 1 and 2 under construction"},
+  {"year": 2040, "phases": ["1", "2", "3"], "label_pt": "Fases 1, 2 e 3 em obra", "label_en": "Phases 1, 2 and 3 under construction"},
+  {"year": 2045, "phases": ["2", "3"], "label_pt": "Fases 2 e 3 em obra", "label_en": "Phases 2 and 3 under construction"},
+  {"year": 2049, "phases": ["3", "4"], "label_pt": "Fases 3 e 4; conclusão (1º ano de ocupação total)", "label_en": "Phases 3 and 4; completion (first year of full occupation)"}
+ ],
+ "programme_note_pt": "Cronograma indicativo usado nos estudos ambientais (ES, Cap. C, Tabela C4.1): os anos são \"anos de avaliação\", não datas contratuais.",
+ "programme_note_en": "Indicative programme used for the environmental assessment (ES Chapter C, Table C4.1): these are assessment years, not committed dates.",
+ "phase_count_note_pt": "Contagem por parcela no Plot Schedule: 1A = 456, 1B = 122. O ES (Cap. C, §C3.9) cita 458 e 120.",
+ "phase_count_note_en": "Count by parcel in the Plot Schedule: 1A = 456, 1B = 122. The ES (Chapter C, §C3.9) quotes 458 and 120.",
+ "decision_notes": [
+  {
+   "pt": "O registro do Council não mostra data de comitê nem data agendada de decisão (campos vazios). Status atual: \"Valid\", ou seja, em análise.",
+   "en": "The Council register shows no committee date and no scheduled decision date (fields empty). Current status: \"Valid\", i.e. under consideration."
+  },
+  {
+   "pt": "Pedidos deste porte são decididos pelo Development Control Committee. Este painel verifica as pautas das próximas reuniões a cada fetch; ver datas abaixo.",
+   "en": "Applications of this size are decided by the Development Control Committee. This page checks the agendas of upcoming meetings on every fetch; see dates below."
+  },
+  {
+   "pt": "Prazo legal para pedidos com Estudo de Impacto Ambiental: 16 semanas após a validação (16/06/2026), ou seja, 06/10/2026. Já passou; em projetos grandes é comum o prazo ser prorrogado por acordo com o requerente.",
+   "en": "Statutory period for EIA applications: 16 weeks from validation (16 Jun 2026), i.e. 6 Oct 2026. It has passed; for large schemes the period is commonly extended by agreement with the applicant."
+  },
+  {
+   "pt": "Em 24/09/2026 o requerente enviou \"Further Environmental Information\" (FEI), em resposta à revisão independente do Estudo Ambiental feita pela Sweco para o Council. Informação ambiental adicional desse tipo, quando substancial, precisa ser publicada e aberta a comentários por pelo menos 30 dias antes da decisão.",
+   "en": "On 24 Sep 2026 the applicant submitted Further Environmental Information (FEI), responding to the independent review of the Environmental Statement carried out by Sweco for the Council. Substantive additional environmental information of this kind must be publicised and open for comment for at least 30 days before a decision."
+  },
+  {
+   "pt": "Por ter mais de 150 casas e ficar em Green Belt, o pedido é referível ao Mayor of London (GLA). Se o comitê votar a favor ou contra, o Mayor tem ainda uma etapa \"Stage 2\" (14 dias) antes de a decisão ser emitida.",
+   "en": "With more than 150 homes and a Green Belt site, the application is referable to the Mayor of London (GLA). Whatever the committee resolves, the Mayor then has a \"Stage 2\" step (14 days) before the decision is issued."
+  }
+ ],
+ "sources": [
+  {"label": "ES Vol 1 — Chapter C: Site and Scheme Description", "id": "068Tv00000eR8ddIAC"},
+  {"label": "ES Vol 2 — Appendix C4: Illustrative Phasing Strategy", "id": "068Tv00000eReLqIAK"},
+  {"label": "Development Parcel Plan (005-007)", "id": "068Tv00000eLqB8IAK"},
+  {"label": "Phase 1 Plot Schedule Rev P2", "id": "068Tv00000fBM0sIAG"},
+  {"label": "Phase 1 Apartments Schedule (Oct 2026)", "id": "068Tv00000lrpCjIAI"},
+  {"label": "Further Environmental Information (24 Sep 2026)", "id": "068Tv00000keAuLIAU"}
+ ]
+}
