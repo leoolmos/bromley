@@ -1,10 +1,11 @@
 {
- "fetched_at": "2026-10-17T18:00:46+00:00",
+ "fetched_at": "2026-10-17T18:22:22+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
   "record_id": "a0lTv000003RpUXIA0",
   "url": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
+  "files_url": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register&tabset-ff68f=3",
   "type": "Outline planning permission: All matters reserved",
   "applicant": "Berkeley Homes (Southern) Limited",
   "status": "Valid",
@@ -28,8 +29,7 @@
    "Hayes & Coney Hall"
   ],
   "appeals": 0,
-  "open_for_comments": true,
-  "files_url": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register&tabset-ff68f=3"
+  "open_for_comments": true
  },
  "documents": [
   {
