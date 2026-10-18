@@ -135,7 +135,7 @@ const PH = { '1': '#4f6bd8', '2': '#f2b84b', '3': '#e57373', '4': '#9c7ad1' };
 const AFFORDABLE = ['Low-Cost Rent', 'Intermediate'];
 
 const S = { mode: 'beds', hidden: { beds: new Set(), tenure: new Set(), type: new Set() }, sel: null };
-let D, map, layers = {}, markers = new Map(), selRing;
+let D, map, layers = {}, markers = new Map(), selRing, sun = null;
 
 /* ---------------- helpers ---------------- */
 const fmtDate = (iso, opts) => {
@@ -348,11 +348,13 @@ function select(type, id, opts = {}) {
     if (map.hasLayer(layers.homes)) selRing.addTo(map);
     if (opts.fly) map.flyTo([h.lat, h.lon], Math.max(map.getZoom(), 18.5), { duration: .6 });
     showHouse(h);
+    sun?.setFocus({ lat: h.lat, lon: h.lon, heightM: 9, label: h.id });
   } else if (type === 'b') {
     const b = D.blockById.get(id);
     const m = markers.get(id); m && m.setIcon(blockIcon(b));
     if (opts.fly) map.flyTo([b.lat, b.lon], Math.max(map.getZoom(), 18), { duration: .6 });
     showBlock(b, opts.unit);
+    sun?.setFocus({ lat: b.lat, lon: b.lon, heightM: (b.storeys || 3) * 3 + 3, label: b.name });
   }
   setHash(type === 'b' && opts.unit ? `h=${opts.unit}` : `${type}=${id}`);
 }
@@ -369,6 +371,7 @@ function closeDetail() {
   $('#detail').classList.remove('open');
   if (S.sel && S.sel.type === 'b') { const id = S.sel.id; S.sel = null; const m = markers.get(id); m && m.setIcon(blockIcon(D.blockById.get(id))); }
   S.sel = null; map && map.removeLayer(selRing);
+  sun?.setFocus(null);
   setHash('');
 }
 const fig = (src, label, full) => src ? `<div class="fig" data-src="${full || src}" data-label="${esc(label)}"><img loading="lazy" src="${src}" alt="${esc(label)}"><span class="tag">${esc(label)}</span><span class="zoom">${t('enlarge')}</span></div>` : '';
@@ -457,6 +460,7 @@ function phaseStats(id) {
 }
 function showPhase(id) {
   const p = D.project.phases.find(x => x.id === id);
+  sun?.setFocus(null);
   const st = phaseStats(id);
   const homes = id === '1' ? D.homes.length : null;
   const yrs = p.construction;
@@ -791,6 +795,7 @@ function applyLang() {
   $('#about-data').textContent = t('about', fmtDate(D.planning.fetched_at));
   renderStats(); renderLegend(); renderSheets(); renderPhases(); renderUpdates(); renderStatusChip(); initList(); updatesBadge();
   map.removeLayer(layers.parcelLabels); onZoom();   // map labels in the new language
+  sun?.setLang(LANG);
   if (S.sel) { const s = S.sel; S.sel = null; select(s.type, s.id); }
 }
 function initTheme() {
@@ -887,6 +892,16 @@ function initLightbox() {
   window.addEventListener('resize', () => { if ($('#lightbox').classList.contains('open')) lbFit(); });
 }
 
+/* ---------------- sun simulation (assets/sun.js) ---------------- */
+// after initUI: a persisted open() collapses the mobile sheet, which the sheet observer must see
+function initSun() {
+  // default focus: the house nearest the centroid of all homes (in Phase 1A, where most of them are)
+  const hs = D.homes.filter(h => h.lat), c = [hs.reduce((a, h) => a + h.lat, 0) / hs.length, hs.reduce((a, h) => a + h.lon, 0) / hs.length];
+  const k = Math.cos(c[0] * Math.PI / 180), d2 = h => (h.lat - c[0]) ** 2 + ((h.lon - c[1]) * k) ** 2;
+  const h0 = D.houses.filter(h => h.lat).reduce((a, h) => d2(h) < d2(a) ? h : a);
+  try { sun = window.SunPath?.create(map, { center: [h0.lat, h0.lon], lang: LANG }) || null; } catch (e) { console.error(e); }
+}
+
 /* ---------------- wiring ---------------- */
 function initUI() {
   $$('#tabs button').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
@@ -905,10 +920,12 @@ function initUI() {
   $('#ly-opacity').addEventListener('input', e => layers.drawings.setOpacity(e.target.value / 100));
   const sb = $('#sidebar');
   // mirror the mobile sheet state on <body> so map controls can sit above the sheet
-  new MutationObserver(() => {
+  const syncSheet = () => {
     document.body.classList.toggle('sheet-collapsed', sb.classList.contains('collapsed'));
     document.body.classList.toggle('sheet-expanded', sb.classList.contains('expanded'));
-  }).observe(sb, { attributes: true, attributeFilter: ['class'] });
+  };
+  syncSheet();
+  new MutationObserver(syncSheet).observe(sb, { attributes: true, attributeFilter: ['class'] });
   $('#grab').addEventListener('click', () => {
     if (sb.classList.contains('expanded')) { sb.classList.remove('expanded'); sb.classList.add('collapsed'); }
     else if (sb.classList.contains('collapsed')) sb.classList.remove('collapsed');
@@ -922,6 +939,7 @@ load().then(() => {
   initTheme();
   initMap();
   initUI();
+  initSun();
   initSearch();
   initLightbox();
   applyLang();

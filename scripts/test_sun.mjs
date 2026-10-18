@@ -33,7 +33,8 @@ if (existsSync(REF)) {
   console.log(`Reference: ${REF} (lat ${lat}, lon ${lon})`);
 
   // NREL SPA (pvlib) applies no refraction once the geometric elevation is below -0.8333° (sun radius + 0.5667°),
-  // so its "apparent" value there is geometric: compare our geometric elevation for those samples.
+  // so its "apparent" value there is geometric: compare our geometric elevation for those samples. A reference value
+  // below the cutoff can only come from that branch (just above it SPA adds >= ~0.56°), so the test is equivalent.
   const SPA_CUTOFF = -0.8333, spa = /pvlib|nrel|spa/i.test(ref.generator || '');
   const bands = { high: { el: [], az: [] }, low: { el: [], az: [] }, below: { el: [], az: [] } };
   let geoCompared = 0;
@@ -181,6 +182,43 @@ for (const [m, d, exp] of [[6, 21, 62.0], [12, 21, 15.2]]) {
     : fail(`sunrise/sunset 2026: worst elevation dev ${fmt(worstEl)}, bad days ${bad.slice(0, 5).join(', ')}`);
   const j = SunMath.times(2026, 6, 21, LAT, LON), w = SunMath.times(2026, 12, 21, LAT, LON);
   console.log(`  info 21 Jun: rise ${iso(j.sunrise)} set ${iso(j.sunset)} len ${fmt(j.dayLengthMin / 60, 2)} h | 21 Dec: rise ${iso(w.sunrise)} set ${iso(w.sunset)} len ${fmt(w.dayLengthMin / 60, 2)} h`);
+}
+
+// Far from Greenwich, where a longitude sign error would show (the site is at 0.02° E).
+// Positions: pvlib 0.16 SPA, geometric elevation; events: PyEphem 4.2 (centre at -0.833°, no refraction model).
+// pvlib's own rise/set is ~1 min off for events outside the UT day, so it is not used for those.
+{
+  const sites = {
+    sydney: [-33.87, 151.21, [
+      ['2026-01-15T03:00Z', 72.3157, 312.4918], ['2026-03-20T22:30Z', 29.8058, 67.1935], ['2026-06-21T05:00Z', 18.0386, 316.2561],
+      ['2026-09-22T19:15Z', -6.8431, 94.5231], ['2026-12-21T01:50Z', 79.5437, 3.8131], ['2027-04-10T16:00Z', -51.5829, 125.1356],
+    ], [
+      ['2026-01-15', '2026-01-14T18:59:29Z', '2026-01-15T09:08:58Z', '2026-01-15T02:04:24Z'],
+      ['2026-06-21', '2026-06-20T20:59:57Z', '2026-06-21T06:53:48Z', '2026-06-21T01:56:53Z'],
+      ['2026-12-21', '2026-12-20T18:40:38Z', '2026-12-21T09:05:24Z', '2026-12-21T01:53:00Z'],
+    ]],
+    fresno: [36.74, -119.79, [
+      ['2026-01-15T03:00Z', -22.4917, 259.7465], ['2026-03-20T22:30Z', 40.5851, 230.5173], ['2026-06-21T05:00Z', -16.2557, 317.2765],
+      ['2026-09-22T19:15Z', 52.3601, 164.8317], ['2026-12-21T21:00Z', 28.0365, 196.2824], ['2027-04-10T16:00Z', 28.6087, 102.0389],
+    ], [
+      ['2026-01-15', '2026-01-15T15:10:44Z', '2026-01-16T01:06:52Z', '2026-01-15T20:08:40Z'],
+      ['2026-06-21', '2026-06-21T12:40:39Z', '2026-06-22T03:21:25Z', '2026-06-21T20:01:03Z'],
+      ['2026-12-21', '2026-12-21T15:08:03Z', '2026-12-22T00:46:43Z', '2026-12-21T19:57:23Z'],
+    ]],
+  };
+  for (const [name, [lat, lon, pos, evs]] of Object.entries(sites)) {
+    let el = 0, az = 0, ev = 0;
+    for (const [u, e, a] of pos) {
+      const s = SunMath.position(new Date(u), lat, lon);
+      el = Math.max(el, Math.abs(s.geometricElevation - e)); az = Math.max(az, angDiff(s.azimuth, a));
+    }
+    for (const [d, r, st, n] of evs) {
+      const [y, m, dd] = d.split('-').map(Number), t = SunMath.times(y, m, dd, lat, lon);
+      ev = Math.max(ev, ...[[t.sunrise, r], [t.sunset, st], [t.solarNoon, n]].map(([o, x]) => o ? Math.abs(o - Date.parse(x)) / 6e4 : Infinity));
+    }
+    const line = `${name} (${lat}, ${lon}): elevation max ${fmt(el)}°, azimuth max ${fmt(az)}° (limit 0.05), rise/set/noon max ${fmt(ev, 2)} min (limit 1)`;
+    el <= 0.05 && az <= 0.05 && ev <= 1 ? pass(line) : fail(line);
+  }
 }
 
 // Polar day / night return nulls
