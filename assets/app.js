@@ -347,8 +347,8 @@ function onZoom() {
 // phone: the detail sheet covers the lower part of the map, so keep the home in the strip above it
 function focusOn(lat, lon, zoom, fly) {
   const phone = matchMedia('(max-width: 900px)').matches;
-  if (phone && $('#detail').classList.contains('full')) $('#detail').classList.remove('full');   // a new card opens at half height
-  const cover = phone ? $('#detail').offsetHeight : 0;
+  // the half-open card's height (from its CSS, never a mid-animation reading); a card the user made full stays full
+  const cover = phone ? (window.Sheets?.detailHalf() ?? $('#detail').offsetHeight) : 0;
   if (fly) {
     const z = Math.max(map.getZoom(), zoom);
     map.flyTo(map.unproject(map.project([lat, lon], z).add([0, cover / 2]), z), z, { duration: .6 });
