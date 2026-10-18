@@ -18,7 +18,7 @@ const STR = {
     search_ph: 'Buscar plot, ex. R-S12_034 ou Block E', filter_ph: 'Filtrar por plot ou tipologia…',
     color_by: 'Colorir por', m_beds: 'Quartos', m_tenure: 'Tenure', m_type: 'Tipo', m_price: 'Preço',
     ly_sold: 'Vendidas recentemente (Land Registry)', ly_listings: 'À venda agora (OnTheMarket)', th_value: 'Estim.',
-    legend_hint: 'Clique numa categoria para mostrar/ocultar no mapa.',
+    legend_hint: 'Clique numa categoria para mostrar/ocultar no mapa. Com zoom, o número em cada casa é a quantidade de quartos.',
     layers: 'Camadas', ly_drawings: 'Desenhos da Fase 1 (plantas)', ly_phases: 'Fases 1–4', ly_parcels: 'Parcelas da Fase 1', ly_homes: 'Casas e prédios',
     sheets: 'Pranchas originais', sheets_hint: 'Abrem em tela cheia com zoom. No mapa elas já aparecem encaixadas no lugar.',
     fit: 'Ajustar', open_file: 'Abrir arquivo', lb_hint: 'Role/pinça para zoom · arraste para mover · ← → troca · Esc fecha',
@@ -74,7 +74,7 @@ const STR = {
     search_ph: 'Search a plot, e.g. R-S12_034 or Block E', filter_ph: 'Filter by plot or house type…',
     color_by: 'Colour by', m_beds: 'Bedrooms', m_tenure: 'Tenure', m_type: 'Type', m_price: 'Price',
     ly_sold: 'Recently sold (Land Registry)', ly_listings: 'For sale now (OnTheMarket)', th_value: 'Est.',
-    legend_hint: 'Click a category to show/hide it on the map.',
+    legend_hint: 'Click a category to show/hide it on the map. Zoomed in, the number on each house is its bedroom count.',
     layers: 'Layers', ly_drawings: 'Phase 1 drawings (plans)', ly_phases: 'Phases 1–4', ly_parcels: 'Phase 1 parcels', ly_homes: 'Houses and blocks',
     sheets: 'Original drawings', sheets_hint: 'Open full-screen with zoom. On the map they are already fitted in place.',
     fit: 'Fit', open_file: 'Open file', lb_hint: 'Scroll/pinch to zoom · drag to pan · ← → switch · Esc closes',
@@ -252,6 +252,7 @@ function initMap() {
   // homes
   layers.homes = L.layerGroup().addTo(map);
   buildMarkers();
+  document.fonts?.ready.then(() => markers.forEach(m => m.redraw?.()));   // the dots' numbers use the web font
   selRing = L.circleMarker([0, 0], { radius: 12, color: '#0f172a', weight: 3, fill: false, interactive: false });
 
   // basemap switcher
@@ -284,16 +285,44 @@ function initMap() {
 
 function markerRadius() {
   const z = map.getZoom();
-  return z < 15 ? 2.5 : z < 16 ? 3.5 : z < 17 ? 4.5 : z < 18 ? 6 : z < 19 ? 7.5 : 9;
+  return z < 15 ? 2.5 : z < 16 ? 3.5 : z < 17 ? 4.5 : z < 17.5 ? 6 : z < 18 ? 6.5 : z < 19 ? 7.5 : 9;
 }
+// a house dot with its bedroom count written in it, so the number reads in every colour mode; drawn from
+// radius 6.5 (zoom 17.5), where neighbouring terraced houses stop overlapping
+const LABEL_R = 6.5;
+function inkOn(hex) {   // the more legible of white / near-black on this fill (WCAG contrast ratio)
+  const m = /^#([\da-f]{6})$/i.exec(hex || '');
+  if (!m) return '#ffffff';
+  const [r, g, b] = [0, 2, 4].map(i => parseInt(m[1].slice(i, i + 2), 16) / 255)
+    .map(c => (c <= .03928 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4));
+  const lum = .2126 * r + .7152 * g + .0722 * b;
+  return 1.05 / (lum + .05) >= (lum + .05) / .059 ? '#ffffff' : '#0f172a';
+}
+const HomeDot = L.CircleMarker.extend({
+  _updatePath() {
+    L.CircleMarker.prototype._updatePath.call(this);
+    const ctx = this._renderer._ctx, r = this._radius, txt = this.options.label;
+    // only inside the canvas draw pass, like the circle itself (redraw() and setStyle() also call this)
+    if (!ctx || !this._renderer._drawing || !txt || r < LABEL_R || this._empty()) return;
+    ctx.save();
+    ctx.globalAlpha = 1;
+    ctx.font = `700 ${Math.round(r * 1.3)}px Inter, system-ui, sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'alphabetic';
+    const box = ctx.measureText(txt);   // centre the digit's ink, not its em box
+    ctx.fillStyle = inkOn(this.options.fillColor);
+    ctx.fillText(txt, this._point.x, this._point.y + (box.actualBoundingBoxAscent - box.actualBoundingBoxDescent) / 2);
+    ctx.restore();
+  },
+});
 function buildMarkers() {
   layers.homes.clearLayers(); markers.clear();
   const r = map ? markerRadius() : 4;
   for (const h of D.houses) {
     if (!h.lat || !visible(h)) continue;
-    const m = L.circleMarker([h.lat, h.lon], {
+    const m = new HomeDot([h.lat, h.lon], {
       radius: r, weight: h.approx ? 1.5 : 1.2, color: h.approx ? '#0f172a' : '#ffffff', dashArray: h.approx ? '2 2' : null,
-      fillColor: colorOf(h), fillOpacity: .95,
+      fillColor: colorOf(h), fillOpacity: .95, label: h.beds ? String(h.beds) : '',
     });
     m.bindTooltip(() => `<b>${esc(h.id)}</b> · ${t('bed_short', h.beds)} · ${esc(tm('type', h.plot_type))}${PX('tip', h) || ''}`, { className: 'home-tip', direction: 'top', offset: [0, -6] });
     m.on('click', e => { L.DomEvent.stopPropagation(e); select('h', h.id); });
