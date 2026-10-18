@@ -1,0 +1,1180 @@
+{
+ "generated": "2026-10-18",
+ "ukhpi": {
+  "region": "bromley",
+  "region_label": "London Borough of Bromley",
+  "source": "HM Land Registry UK House Price Index (linked data)",
+  "source_url": "https://landregistry.data.gov.uk/data/ukhpi.json?refRegion=http://landregistry.data.gov.uk/id/region/bromley&min-refMonth=2022-01&_pageSize=200&_sort=refMonth&_properties=refMonth,averagePrice,averagePriceDetached,averagePriceSemiDetached,averagePriceTerraced,averagePriceFlatMaisonette",
+  "month_url": "https://landregistry.data.gov.uk/data/ukhpi/region/bromley/month/2026-07.json",
+  "licence": "Contains HM Land Registry data © Crown copyright and database right 2026. This data is licensed under the Open Government Licence v3.0.",
+  "checked": "2026-10-18",
+  "first_month": "2022-01",
+  "latest_month": "2026-07",
+  "latest_one_year_change_pct": {
+   "all": -3.1,
+   "detached": -2.6,
+   "semi": -1.9,
+   "terraced": -2.0,
+   "flat": -5.2
+  },
+  "notes": "Mixed-adjusted average prices (all property types and by type); 'flat' is flat/maisonette. UK HPI is published about two months after the reference month (with the latest months revised as more sales are registered), so 2026-07 was the newest month available when checked. Index ratios equal average-price ratios, so month[t]/month[s] can be used to time-adjust a sale.",
+  "months": [
+   {
+    "month": "2022-01",
+    "all": 488573,
+    "detached": 1020895,
+    "semi": 604969,
+    "terraced": 445940,
+    "flat": 305272
+   },
+   {
+    "month": "2022-02",
+    "all": 492855,
+    "detached": 1027580,
+    "semi": 609991,
+    "terraced": 450222,
+    "flat": 308367
+   },
+   {
+    "month": "2022-03",
+    "all": 495299,
+    "detached": 1034079,
+    "semi": 613920,
+    "terraced": 452256,
+    "flat": 309363
+   },
+   {
+    "month": "2022-04",
+    "all": 497771,
+    "detached": 1037735,
+    "semi": 616006,
+    "terraced": 455697,
+    "flat": 310933
+   },
+   {
+    "month": "2022-05",
+    "all": 502566,
+    "detached": 1047661,
+    "semi": 622799,
+    "terraced": 461367,
+    "flat": 312666
+   },
+   {
+    "month": "2022-06",
+    "all": 511405,
+    "detached": 1062941,
+    "semi": 632983,
+    "terraced": 470548,
+    "flat": 318459
+   },
+   {
+    "month": "2022-07",
+    "all": 515508,
+    "detached": 1070828,
+    "semi": 639565,
+    "terraced": 475015,
+    "flat": 319910
+   },
+   {
+    "month": "2022-08",
+    "all": 521841,
+    "detached": 1082621,
+    "semi": 648161,
+    "terraced": 482362,
+    "flat": 322750
+   },
+   {
+    "month": "2022-09",
+    "all": 523868,
+    "detached": 1089657,
+    "semi": 651847,
+    "terraced": 484909,
+    "flat": 322455
+   },
+   {
+    "month": "2022-10",
+    "all": 528385,
+    "detached": 1100303,
+    "semi": 657345,
+    "terraced": 488940,
+    "flat": 325168
+   },
+   {
+    "month": "2022-11",
+    "all": 528626,
+    "detached": 1103812,
+    "semi": 657675,
+    "terraced": 488796,
+    "flat": 324989
+   },
+   {
+    "month": "2022-12",
+    "all": 529819,
+    "detached": 1103463,
+    "semi": 658503,
+    "terraced": 490201,
+    "flat": 326387
+   },
+   {
+    "month": "2023-01",
+    "all": 526961,
+    "detached": 1098661,
+    "semi": 656208,
+    "terraced": 486953,
+    "flat": 324155
+   },
+   {
+    "month": "2023-02",
+    "all": 519882,
+    "detached": 1084467,
+    "semi": 647432,
+    "terraced": 479111,
+    "flat": 320359
+   },
+   {
+    "month": "2023-03",
+    "all": 507496,
+    "detached": 1064628,
+    "semi": 633447,
+    "terraced": 465516,
+    "flat": 312172
+   },
+   {
+    "month": "2023-04",
+    "all": 507045,
+    "detached": 1065485,
+    "semi": 632161,
+    "terraced": 464406,
+    "flat": 312279
+   },
+   {
+    "month": "2023-05",
+    "all": 504910,
+    "detached": 1058825,
+    "semi": 629096,
+    "terraced": 462149,
+    "flat": 311607
+   },
+   {
+    "month": "2023-06",
+    "all": 505784,
+    "detached": 1059403,
+    "semi": 629056,
+    "terraced": 464347,
+    "flat": 312061
+   },
+   {
+    "month": "2023-07",
+    "all": 505665,
+    "detached": 1056337,
+    "semi": 629564,
+    "terraced": 465591,
+    "flat": 311444
+   },
+   {
+    "month": "2023-08",
+    "all": 505540,
+    "detached": 1059355,
+    "semi": 630360,
+    "terraced": 467024,
+    "flat": 309701
+   },
+   {
+    "month": "2023-09",
+    "all": 506484,
+    "detached": 1060523,
+    "semi": 632561,
+    "terraced": 468470,
+    "flat": 309693
+   },
+   {
+    "month": "2023-10",
+    "all": 504496,
+    "detached": 1054280,
+    "semi": 629473,
+    "terraced": 466424,
+    "flat": 309134
+   },
+   {
+    "month": "2023-11",
+    "all": 498178,
+    "detached": 1040810,
+    "semi": 622065,
+    "terraced": 459269,
+    "flat": 305788
+   },
+   {
+    "month": "2023-12",
+    "all": 498493,
+    "detached": 1037447,
+    "semi": 622079,
+    "terraced": 459148,
+    "flat": 306942
+   },
+   {
+    "month": "2024-01",
+    "all": 496773,
+    "detached": 1035095,
+    "semi": 620127,
+    "terraced": 458018,
+    "flat": 305389
+   },
+   {
+    "month": "2024-02",
+    "all": 495477,
+    "detached": 1027888,
+    "semi": 617888,
+    "terraced": 457879,
+    "flat": 304955
+   },
+   {
+    "month": "2024-03",
+    "all": 488761,
+    "detached": 1015231,
+    "semi": 608302,
+    "terraced": 451450,
+    "flat": 301279
+   },
+   {
+    "month": "2024-04",
+    "all": 483981,
+    "detached": 1003705,
+    "semi": 601460,
+    "terraced": 446480,
+    "flat": 299228
+   },
+   {
+    "month": "2024-05",
+    "all": 488587,
+    "detached": 1011490,
+    "semi": 606062,
+    "terraced": 450809,
+    "flat": 302785
+   },
+   {
+    "month": "2024-06",
+    "all": 492447,
+    "detached": 1016203,
+    "semi": 610955,
+    "terraced": 455611,
+    "flat": 305002
+   },
+   {
+    "month": "2024-07",
+    "all": 497124,
+    "detached": 1025285,
+    "semi": 617798,
+    "terraced": 461747,
+    "flat": 306640
+   },
+   {
+    "month": "2024-08",
+    "all": 501497,
+    "detached": 1035397,
+    "semi": 623959,
+    "terraced": 467388,
+    "flat": 308079
+   },
+   {
+    "month": "2024-09",
+    "all": 506316,
+    "detached": 1052422,
+    "semi": 631945,
+    "terraced": 471609,
+    "flat": 309274
+   },
+   {
+    "month": "2024-10",
+    "all": 505839,
+    "detached": 1053497,
+    "semi": 630823,
+    "terraced": 470147,
+    "flat": 309404
+   },
+   {
+    "month": "2024-11",
+    "all": 504376,
+    "detached": 1052202,
+    "semi": 629977,
+    "terraced": 468181,
+    "flat": 308131
+   },
+   {
+    "month": "2024-12",
+    "all": 501178,
+    "detached": 1044299,
+    "semi": 625766,
+    "terraced": 465897,
+    "flat": 306114
+   },
+   {
+    "month": "2025-01",
+    "all": 503544,
+    "detached": 1049733,
+    "semi": 630305,
+    "terraced": 469129,
+    "flat": 306304
+   },
+   {
+    "month": "2025-02",
+    "all": 508980,
+    "detached": 1059018,
+    "semi": 637135,
+    "terraced": 475154,
+    "flat": 309452
+   },
+   {
+    "month": "2025-03",
+    "all": 517153,
+    "detached": 1063026,
+    "semi": 645079,
+    "terraced": 483466,
+    "flat": 317137
+   },
+   {
+    "month": "2025-04",
+    "all": 518189,
+    "detached": 1072987,
+    "semi": 649773,
+    "terraced": 483179,
+    "flat": 315798
+   },
+   {
+    "month": "2025-05",
+    "all": 523362,
+    "detached": 1086486,
+    "semi": 658224,
+    "terraced": 487719,
+    "flat": 317824
+   },
+   {
+    "month": "2025-06",
+    "all": 525466,
+    "detached": 1100999,
+    "semi": 664821,
+    "terraced": 489508,
+    "flat": 315844
+   },
+   {
+    "month": "2025-07",
+    "all": 527954,
+    "detached": 1096200,
+    "semi": 665439,
+    "terraced": 493417,
+    "flat": 319106
+   },
+   {
+    "month": "2025-08",
+    "all": 523367,
+    "detached": 1083994,
+    "semi": 659833,
+    "terraced": 490110,
+    "flat": 316173
+   },
+   {
+    "month": "2025-09",
+    "all": 518451,
+    "detached": 1075301,
+    "semi": 654279,
+    "terraced": 486404,
+    "flat": 312242
+   },
+   {
+    "month": "2025-10",
+    "all": 522105,
+    "detached": 1083940,
+    "semi": 659690,
+    "terraced": 490104,
+    "flat": 313801
+   },
+   {
+    "month": "2025-11",
+    "all": 523515,
+    "detached": 1088533,
+    "semi": 661721,
+    "terraced": 491777,
+    "flat": 314108
+   },
+   {
+    "month": "2025-12",
+    "all": 524076,
+    "detached": 1088670,
+    "semi": 663097,
+    "terraced": 492427,
+    "flat": 314261
+   },
+   {
+    "month": "2026-01",
+    "all": 516135,
+    "detached": 1072123,
+    "semi": 654847,
+    "terraced": 486251,
+    "flat": 308108
+   },
+   {
+    "month": "2026-02",
+    "all": 514044,
+    "detached": 1069670,
+    "semi": 652517,
+    "terraced": 483725,
+    "flat": 306710
+   },
+   {
+    "month": "2026-03",
+    "all": 513377,
+    "detached": 1068452,
+    "semi": 653572,
+    "terraced": 483986,
+    "flat": 305061
+   },
+   {
+    "month": "2026-04",
+    "all": 519887,
+    "detached": 1083368,
+    "semi": 661750,
+    "terraced": 489478,
+    "flat": 309076
+   },
+   {
+    "month": "2026-05",
+    "all": 517418,
+    "detached": 1075910,
+    "semi": 660140,
+    "terraced": 488027,
+    "flat": 306879
+   },
+   {
+    "month": "2026-06",
+    "all": 514567,
+    "detached": 1070600,
+    "semi": 655981,
+    "terraced": 485486,
+    "flat": 305253
+   },
+   {
+    "month": "2026-07",
+    "all": 511670,
+    "detached": 1067151,
+    "semi": 652925,
+    "terraced": 483699,
+    "flat": 302447
+   }
+  ]
+ },
+ "sdlt": {
+  "effective_from": "2025-04-01",
+  "in_force_on": "2026-10-18",
+  "source_url": "https://www.gov.uk/stamp-duty-land-tax/residential-property-rates",
+  "checked": "2026-10-18",
+  "rate_unit": "fraction",
+  "standard": [
+   {
+    "from": 0,
+    "rate": 0.0
+   },
+   {
+    "from": 125000,
+    "rate": 0.02
+   },
+   {
+    "from": 250000,
+    "rate": 0.05
+   },
+   {
+    "from": 925000,
+    "rate": 0.1
+   },
+   {
+    "from": 1500000,
+    "rate": 0.12
+   }
+  ],
+  "first_time_buyer": {
+   "bands": [
+    {
+     "from": 0,
+     "rate": 0.0
+    },
+    {
+     "from": 300000,
+     "rate": 0.05
+    }
+   ],
+   "max_price": 500000,
+   "source_url": "https://www.gov.uk/guidance/stamp-duty-land-tax-relief-for-land-or-property-transactions#first-time-buyers-relief",
+   "conditions": "All buyers are first-time buyers, the home will be their main residence and the price is no more than the cap; above the cap standard rates apply to the whole price. Shared ownership: relief if the FULL market value is within the cap (market value election or staged payments)."
+  },
+  "additional_surcharge": 0.05,
+  "additional_surcharge_note": "Added to every band when the buyer (or spouse/co-buyer) will own more than one residential property worth GBP 40,000+ (rate raised from 3% to 5% on 31 October 2024). Not due when replacing a main residence sold on/before completion.",
+  "non_resident_surcharge": 0.02,
+  "non_resident_note": "Buyers not present in the UK for at least 183 days in the 12 months before purchase; stacks with the other rates (FTB relief or the 5% surcharge). Refund possible if the 183-day test is met later.",
+  "new_lease_rent": {
+   "threshold": 125000,
+   "rate": 0.01
+  },
+  "examples": [
+   {
+    "label_pt": "£450.000 - comprador padrão (único imóvel)",
+    "label_en": "£450,000 - standard buyer (only home)",
+    "price": 450000,
+    "buyer": "standard",
+    "relief_applies": false,
+    "tax": 12500,
+    "effective_rate_pct": 2.78,
+    "breakdown": [
+     {
+      "from": 0,
+      "to": 125000,
+      "rate": 0.0,
+      "tax": 0
+     },
+     {
+      "from": 125000,
+      "to": 250000,
+      "rate": 0.02,
+      "tax": 2500
+     },
+     {
+      "from": 250000,
+      "to": 450000,
+      "rate": 0.05,
+      "tax": 10000
+     }
+    ]
+   },
+   {
+    "label_pt": "£450.000 - comprador de primeiro imóvel",
+    "label_en": "£450,000 - first-time buyer",
+    "price": 450000,
+    "buyer": "first_time_buyer",
+    "relief_applies": true,
+    "tax": 7500,
+    "effective_rate_pct": 1.67,
+    "breakdown": [
+     {
+      "from": 0,
+      "to": 300000,
+      "rate": 0.0,
+      "tax": 0
+     },
+     {
+      "from": 300000,
+      "to": 450000,
+      "rate": 0.05,
+      "tax": 7500
+     }
+    ]
+   },
+   {
+    "label_pt": "£650.000 - comprador padrão",
+    "label_en": "£650,000 - standard buyer",
+    "price": 650000,
+    "buyer": "standard",
+    "relief_applies": false,
+    "tax": 22500,
+    "effective_rate_pct": 3.46,
+    "breakdown": [
+     {
+      "from": 0,
+      "to": 125000,
+      "rate": 0.0,
+      "tax": 0
+     },
+     {
+      "from": 125000,
+      "to": 250000,
+      "rate": 0.02,
+      "tax": 2500
+     },
+     {
+      "from": 250000,
+      "to": 650000,
+      "rate": 0.05,
+      "tax": 20000
+     }
+    ]
+   },
+   {
+    "label_pt": "£650.000 - primeiro imóvel (acima de £500.000: sem alívio)",
+    "label_en": "£650,000 - first-time buyer (over £500,000: no relief)",
+    "price": 650000,
+    "buyer": "first_time_buyer",
+    "relief_applies": false,
+    "tax": 22500,
+    "effective_rate_pct": 3.46,
+    "breakdown": [
+     {
+      "from": 0,
+      "to": 125000,
+      "rate": 0.0,
+      "tax": 0
+     },
+     {
+      "from": 125000,
+      "to": 250000,
+      "rate": 0.02,
+      "tax": 2500
+     },
+     {
+      "from": 250000,
+      "to": 650000,
+      "rate": 0.05,
+      "tax": 20000
+     }
+    ]
+   },
+   {
+    "label_pt": "£650.000 - imóvel adicional (+5%)",
+    "label_en": "£650,000 - additional dwelling (+5%)",
+    "price": 650000,
+    "buyer": "additional",
+    "relief_applies": false,
+    "tax": 55000,
+    "effective_rate_pct": 8.46,
+    "breakdown": [
+     {
+      "from": 0,
+      "to": 125000,
+      "rate": 0.05,
+      "tax": 6250
+     },
+     {
+      "from": 125000,
+      "to": 250000,
+      "rate": 0.07,
+      "tax": 8750
+     },
+     {
+      "from": 250000,
+      "to": 650000,
+      "rate": 0.1,
+      "tax": 40000
+     }
+    ]
+   }
+  ],
+  "govuk_cross_checks": [
+   {
+    "description": "GOV.UK example: standard purchase",
+    "price": 295000,
+    "govuk_total": 4750,
+    "computed": 4750,
+    "ok": true,
+    "source_url": "https://www.gov.uk/stamp-duty-land-tax/residential-property-rates"
+   },
+   {
+    "description": "GOV.UK example: first-time buyer",
+    "price": 500000,
+    "govuk_total": 10000,
+    "computed": 10000,
+    "ok": true,
+    "source_url": "https://www.gov.uk/stamp-duty-land-tax/residential-property-rates"
+   },
+   {
+    "description": "HMRC example: additional dwelling (higher rates)",
+    "price": 300000,
+    "govuk_total": 20000,
+    "computed": 20000,
+    "ok": true,
+    "source_url": "https://www.gov.uk/guidance/stamp-duty-land-tax-buying-an-additional-residential-property"
+   },
+   {
+    "description": "GOV.UK example: shared ownership, market value election",
+    "price": 280000,
+    "govuk_total": 4000,
+    "computed": 4000,
+    "ok": true,
+    "source_url": "https://www.gov.uk/stamp-duty-land-tax/shared-ownership-property"
+   }
+  ],
+  "sources": [
+   {
+    "title": "Stamp Duty Land Tax",
+    "url": "https://www.gov.uk/stamp-duty-land-tax/residential-property-rates",
+    "api_url": "https://www.gov.uk/api/content/stamp-duty-land-tax",
+    "public_updated_at": "2024-10-30T14:07:41+00:00",
+    "updated_at": "2026-09-30T10:13:06+01:00",
+    "checked": "2026-10-18"
+   },
+   {
+    "title": "Stamp Duty Land Tax rates from 1 December 2003 to 31 March 2025",
+    "url": "https://www.gov.uk/government/publications/rates-and-allowances-stamp-duty-land-tax",
+    "api_url": "https://www.gov.uk/api/content/government/publications/rates-and-allowances-stamp-duty-land-tax",
+    "public_updated_at": "2025-04-01T08:28:36+01:00",
+    "updated_at": "2026-09-30T10:05:45+01:00",
+    "checked": "2026-10-18"
+   },
+   {
+    "title": "Stamp Duty Land Tax relief for land or property transactions",
+    "url": "https://www.gov.uk/guidance/stamp-duty-land-tax-relief-for-land-or-property-transactions",
+    "api_url": "https://www.gov.uk/api/content/guidance/stamp-duty-land-tax-relief-for-land-or-property-transactions",
+    "public_updated_at": "2025-07-09T10:53:10+01:00",
+    "updated_at": "2026-09-30T10:06:24+01:00",
+    "checked": "2026-10-18"
+   },
+   {
+    "title": "Higher rates of Stamp Duty Land Tax",
+    "url": "https://www.gov.uk/guidance/stamp-duty-land-tax-buying-an-additional-residential-property",
+    "api_url": "https://www.gov.uk/api/content/guidance/stamp-duty-land-tax-buying-an-additional-residential-property",
+    "public_updated_at": "2025-04-01T00:30:02+01:00",
+    "updated_at": "2026-09-30T10:17:21+01:00",
+    "checked": "2026-10-18"
+   },
+   {
+    "title": "Rates of Stamp Duty Land Tax for non-UK residents",
+    "url": "https://www.gov.uk/guidance/rates-of-stamp-duty-land-tax-for-non-uk-residents",
+    "api_url": "https://www.gov.uk/api/content/guidance/rates-of-stamp-duty-land-tax-for-non-uk-residents",
+    "public_updated_at": "2025-04-01T00:30:02+01:00",
+    "updated_at": "2026-09-30T10:06:59+01:00",
+    "checked": "2026-10-18"
+   }
+  ],
+  "notes": "Rates in force for residential purchases in England (and Northern Ireland) completing on or after 2025-04-01; still the current rates on 2026-10-18 per the live GOV.UK pages. Tax on each band = (portion of price in band) x rate; HMRC rounds the total down to the pound. Leasehold flats can also owe 1% on rent NPV above GBP 125,000 (ground rent is normally a peppercorn on new leases, so usually nil)."
+ },
+ "mortgage": {
+  "source": "Bank of England, Bankstats table G1.3 'Average quoted household interest rates' (Interactive Statistical Database, monthly)",
+  "source_url": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2024&Dateto=now&SeriesCodes=IUMZICQ,IUMBV34,IUMB482,IUMBV42,IUM5WTL,IUMBV45&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N",
+  "series_urls": {
+   "IUMZICQ": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2024&Dateto=now&SeriesCodes=IUMZICQ&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N",
+   "IUMBV34": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2024&Dateto=now&SeriesCodes=IUMBV34&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N",
+   "IUMB482": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2024&Dateto=now&SeriesCodes=IUMB482&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N",
+   "IUMBV42": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2024&Dateto=now&SeriesCodes=IUMBV42&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N",
+   "IUM5WTL": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2024&Dateto=now&SeriesCodes=IUM5WTL&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N",
+   "IUMBV45": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2024&Dateto=now&SeriesCodes=IUMBV45&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N"
+  },
+  "series_titles_url": "https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?Travel=NIxAZxSUx&FromSeries=1&ToSeries=50&DAT=RNG&FD=1&FM=Jan&FY=2026&TD=31&TM=Dec&TY=2026&FNY=Y&CSVF=TT&html.x=66&html.y=26&SeriesCodes=IUMZICQ,IUMBV34,IUMB482,IUMBV42,IUM5WTL,IUMBV45&UsingCodes=Y&Filter=N&title=G1.3&VPD=Y",
+  "table_url": "https://www.bankofengland.co.uk/statistics/tables",
+  "checked": "2026-10-18",
+  "as_of": "2026-09-30",
+  "month": "2026-09",
+  "rate_unit": "percent per annum",
+  "rates": [
+   {
+    "label": "2-year fixed, 60% LTV",
+    "ltv": 60,
+    "fixed_years": 2,
+    "rate": 5.01,
+    "series": "IUMZICQ",
+    "g13_row": "2 year 60% LTV fixed-rate owner occupied",
+    "series_title": "Monthly interest rate of UK monetary financial institutions (excl. Central Bank) sterling 2 year (60% LTV) fixed rate mortgage to households (in percent) not seasonally adjusted"
+   },
+   {
+    "label": "2-year fixed, 75% LTV",
+    "ltv": 75,
+    "fixed_years": 2,
+    "rate": 5.13,
+    "series": "IUMBV34",
+    "g13_row": "2 year 75% LTV fixed-rate owner occupied",
+    "series_title": "Monthly interest rate of UK monetary financial institutions (excl. Central Bank) sterling 2 year (75% LTV) fixed rate mortgage to households (in percent) not seasonally adjusted"
+   },
+   {
+    "label": "2-year fixed, 90% LTV",
+    "ltv": 90,
+    "fixed_years": 2,
+    "rate": 5.37,
+    "series": "IUMB482",
+    "g13_row": "2 year 90% LTV fixed-rate owner occupied",
+    "series_title": "Monthly interest rate of UK monetary financial institutions (excl. Central Bank) sterling 2 year (90% LTV) fixed rate mortgage to households (in percent) not seasonally adjusted"
+   },
+   {
+    "label": "5-year fixed, 75% LTV",
+    "ltv": 75,
+    "fixed_years": 5,
+    "rate": 4.98,
+    "series": "IUMBV42",
+    "g13_row": "5 year 75% LTV fixed-rate owner occupied",
+    "series_title": "Monthly interest rate of UK monetary financial institutions (excl. Central Bank) sterling 5 year (75% LTV) fixed rate mortgage to households (in percent) not seasonally adjusted"
+   },
+   {
+    "label": "5-year fixed, 95% LTV",
+    "ltv": 95,
+    "fixed_years": 5,
+    "rate": 5.54,
+    "series": "IUM5WTL",
+    "g13_row": "5 year 95% LTV fixed-rate owner occupied",
+    "series_title": "Monthly interest rate of UK monetary financial institutions (excl. Central Bank) sterling 5 year (95% LTV) fixed rate mortgage to households (in percent) not seasonally adjusted"
+   },
+   {
+    "label": "10-year fixed, 75% LTV",
+    "ltv": 75,
+    "fixed_years": 10,
+    "rate": 5.34,
+    "series": "IUMBV45",
+    "g13_row": "10 year 75% LTV fixed-rate owner occupied",
+    "series_title": "Monthly interest rate of UK monetary financial institutions (excl. Central Bank) sterling 10 year (75% LTV) fixed rate mortgage to households (in percent) not seasonally adjusted"
+   }
+  ],
+  "unavailable": [
+   {
+    "series": "IUMZICR",
+    "label": "2-year fixed, 85% LTV",
+    "reason": "IADB export answered 'Access denied' (2026-10-18); not retried"
+   },
+   {
+    "series": "IUM2WTL",
+    "label": "2-year fixed, 95% LTV",
+    "reason": "IADB export answered 'Access denied' (2026-10-18); not retried"
+   },
+   {
+    "series": "IUMBV37",
+    "label": "3-year fixed, 75% LTV",
+    "reason": "IADB export answered 'Access denied' (2026-10-18); not retried"
+   },
+   {
+    "series": "IUMTLMV",
+    "label": "Standard variable rate (SVR)",
+    "reason": "IADB export answered 'Access denied' (2026-10-18); not retried"
+   }
+  ],
+  "history": [
+   {
+    "month": "2024-01",
+    "IUMZICQ": 4.62,
+    "IUMBV34": 4.71,
+    "IUMB482": 5.44,
+    "IUMBV42": 4.43,
+    "IUM5WTL": 5.24,
+    "IUMBV45": 4.68
+   },
+   {
+    "month": "2024-02",
+    "IUMZICQ": 4.62,
+    "IUMBV34": 4.76,
+    "IUMB482": 5.26,
+    "IUMBV42": 4.41,
+    "IUM5WTL": 5.16,
+    "IUMBV45": 4.75
+   },
+   {
+    "month": "2024-03",
+    "IUMZICQ": 4.8,
+    "IUMBV34": 4.96,
+    "IUMB482": 5.39,
+    "IUMBV42": 4.53,
+    "IUM5WTL": 5.3,
+    "IUMBV45": 4.79
+   },
+   {
+    "month": "2024-04",
+    "IUMZICQ": 4.86,
+    "IUMBV34": 4.98,
+    "IUMB482": 5.47,
+    "IUMBV42": 4.51,
+    "IUM5WTL": 5.34,
+    "IUMBV45": 4.78
+   },
+   {
+    "month": "2024-05",
+    "IUMZICQ": 5.01,
+    "IUMBV34": 5.19,
+    "IUMB482": 5.66,
+    "IUMBV42": 4.66,
+    "IUM5WTL": 5.48,
+    "IUMBV45": 4.87
+   },
+   {
+    "month": "2024-06",
+    "IUMZICQ": 5.0,
+    "IUMBV34": 5.16,
+    "IUMB482": 5.65,
+    "IUMBV42": 4.64,
+    "IUM5WTL": 5.47,
+    "IUMBV45": 4.87
+   },
+   {
+    "month": "2024-07",
+    "IUMZICQ": 4.8,
+    "IUMBV34": 4.99,
+    "IUMB482": 5.61,
+    "IUMBV42": 4.49,
+    "IUM5WTL": 5.43,
+    "IUMBV45": 4.86
+   },
+   {
+    "month": "2024-08",
+    "IUMZICQ": 4.55,
+    "IUMBV34": 4.8,
+    "IUMB482": 5.54,
+    "IUMBV42": 4.33,
+    "IUM5WTL": 5.33,
+    "IUMBV45": 4.85
+   },
+   {
+    "month": "2024-09",
+    "IUMZICQ": 4.37,
+    "IUMBV34": 4.58,
+    "IUMB482": 5.4,
+    "IUMBV42": 4.09,
+    "IUM5WTL": 5.23,
+    "IUMBV45": 4.8
+   },
+   {
+    "month": "2024-10",
+    "IUMZICQ": 4.19,
+    "IUMBV34": 4.4,
+    "IUMB482": 5.3,
+    "IUMBV42": 4.06,
+    "IUM5WTL": 5.14,
+    "IUMBV45": 4.65
+   },
+   {
+    "month": "2024-11",
+    "IUMZICQ": 4.39,
+    "IUMBV34": 4.53,
+    "IUMB482": 5.41,
+    "IUMBV42": 4.29,
+    "IUM5WTL": 5.24,
+    "IUMBV45": 4.61
+   },
+   {
+    "month": "2024-12",
+    "IUMZICQ": 4.47,
+    "IUMBV34": 4.6,
+    "IUMB482": 5.37,
+    "IUMBV42": 4.37,
+    "IUM5WTL": 5.24,
+    "IUMBV45": 4.58
+   },
+   {
+    "month": "2025-01",
+    "IUMZICQ": 4.48,
+    "IUMBV34": 4.63,
+    "IUMB482": 5.35,
+    "IUMBV42": 4.37,
+    "IUM5WTL": 5.25,
+    "IUMBV45": 4.57
+   },
+   {
+    "month": "2025-02",
+    "IUMZICQ": 4.45,
+    "IUMBV34": 4.65,
+    "IUMB482": 5.26,
+    "IUMBV42": 4.38,
+    "IUM5WTL": 5.26,
+    "IUMBV45": 4.6
+   },
+   {
+    "month": "2025-03",
+    "IUMZICQ": 4.31,
+    "IUMBV34": 4.54,
+    "IUMB482": 5.09,
+    "IUMBV42": 4.32,
+    "IUM5WTL": 5.12,
+    "IUMBV45": 4.6
+   },
+   {
+    "month": "2025-04",
+    "IUMZICQ": 4.23,
+    "IUMBV34": 4.42,
+    "IUMB482": 4.96,
+    "IUMBV42": 4.29,
+    "IUM5WTL": 5.04,
+    "IUMBV45": 4.59
+   },
+   {
+    "month": "2025-05",
+    "IUMZICQ": 4.07,
+    "IUMBV34": 4.18,
+    "IUMB482": 4.82,
+    "IUMBV42": 4.19,
+    "IUM5WTL": 4.95,
+    "IUMBV45": 4.53
+   },
+   {
+    "month": "2025-06",
+    "IUMZICQ": 4.18,
+    "IUMBV34": 4.28,
+    "IUMB482": 4.8,
+    "IUMBV42": 4.26,
+    "IUM5WTL": 4.96,
+    "IUMBV45": 4.51
+   },
+   {
+    "month": "2025-07",
+    "IUMZICQ": 4.02,
+    "IUMBV34": 4.21,
+    "IUMB482": 4.62,
+    "IUMBV42": 4.15,
+    "IUM5WTL": 4.88,
+    "IUMBV45": 4.47
+   },
+   {
+    "month": "2025-08",
+    "IUMZICQ": 3.93,
+    "IUMBV34": 4.1,
+    "IUMB482": 4.55,
+    "IUMBV42": 4.11,
+    "IUM5WTL": 4.86,
+    "IUMBV45": 4.46
+   },
+   {
+    "month": "2025-09",
+    "IUMZICQ": 4.03,
+    "IUMBV34": 4.19,
+    "IUMB482": 4.58,
+    "IUMBV42": 4.16,
+    "IUM5WTL": 4.9,
+    "IUMBV45": 4.54
+   },
+   {
+    "month": "2025-10",
+    "IUMZICQ": 4.03,
+    "IUMBV34": 4.2,
+    "IUMB482": 4.57,
+    "IUMBV42": 4.17,
+    "IUM5WTL": 4.88,
+    "IUMBV45": 4.55
+   },
+   {
+    "month": "2025-11",
+    "IUMZICQ": 3.91,
+    "IUMBV34": 4.06,
+    "IUMB482": 4.49,
+    "IUMBV42": 4.06,
+    "IUM5WTL": 4.81,
+    "IUMBV45": 4.49
+   },
+   {
+    "month": "2025-12",
+    "IUMZICQ": 3.78,
+    "IUMBV34": 3.97,
+    "IUMB482": 4.42,
+    "IUMBV42": 3.99,
+    "IUM5WTL": 4.75,
+    "IUMBV45": 4.48
+   },
+   {
+    "month": "2026-01",
+    "IUMZICQ": 3.72,
+    "IUMBV34": 3.93,
+    "IUMB482": 4.36,
+    "IUMBV42": 3.94,
+    "IUM5WTL": 4.73,
+    "IUMBV45": 4.47
+   },
+   {
+    "month": "2026-02",
+    "IUMZICQ": 3.78,
+    "IUMBV34": 3.97,
+    "IUMB482": 4.34,
+    "IUMBV42": 4.0,
+    "IUM5WTL": 4.77,
+    "IUMBV45": 4.47
+   },
+   {
+    "month": "2026-03",
+    "IUMZICQ": 4.3,
+    "IUMBV34": 4.45,
+    "IUMB482": 4.79,
+    "IUMBV42": 4.42,
+    "IUM5WTL": 5.12,
+    "IUMBV45": 4.81
+   },
+   {
+    "month": "2026-04",
+    "IUMZICQ": 4.97,
+    "IUMBV34": 5.14,
+    "IUMB482": 5.46,
+    "IUMBV42": 4.96,
+    "IUM5WTL": 5.61,
+    "IUMBV45": 5.27
+   },
+   {
+    "month": "2026-05",
+    "IUMZICQ": 4.77,
+    "IUMBV34": 4.91,
+    "IUMB482": 5.31,
+    "IUMBV42": 4.77,
+    "IUM5WTL": 5.42,
+    "IUMBV45": 5.25
+   },
+   {
+    "month": "2026-06",
+    "IUMZICQ": 4.59,
+    "IUMBV34": 4.8,
+    "IUMB482": 5.18,
+    "IUMBV42": 4.62,
+    "IUM5WTL": 5.31,
+    "IUMBV45": 5.18
+   },
+   {
+    "month": "2026-07",
+    "IUMZICQ": 4.6,
+    "IUMBV34": 4.79,
+    "IUMB482": 5.07,
+    "IUMBV42": 4.58,
+    "IUM5WTL": 5.28,
+    "IUMBV45": 5.16
+   },
+   {
+    "month": "2026-08",
+    "IUMZICQ": 4.79,
+    "IUMBV34": 4.92,
+    "IUMB482": 5.16,
+    "IUMBV42": 4.78,
+    "IUM5WTL": 5.36,
+    "IUMBV45": 5.25
+   },
+   {
+    "month": "2026-09",
+    "IUMZICQ": 5.01,
+    "IUMBV34": 5.13,
+    "IUMB482": 5.37,
+    "IUMBV42": 4.98,
+    "IUM5WTL": 5.54,
+    "IUMBV45": 5.34
+   }
+  ],
+  "notes": "Monthly averages of advertised ('quoted') rates on new owner-occupier mortgages, weighted by lender business volumes; not seasonally adjusted; exclude product fees. The Bank publishes no 5-year 90% LTV series - the 5-year series are 75% (IUMBV42) and 95% (IUM5WTL); for a 5-year fix at 90% LTV use a value between them (closer to 95%). Use as indicative rates, not offers."
+ },
+ "shared_ownership": {
+  "source_url": "https://www.gov.uk/shared-ownership-scheme",
+  "source_updated_at": "2026-09-14T09:39:14+01:00",
+  "checked": "2026-10-18",
+  "rate_unit": "fraction",
+  "min_initial_share": 0.1,
+  "max_initial_share": 0.75,
+  "usual_initial_share": [
+   0.25,
+   0.75
+  ],
+  "rent_rate_on_unsold": 0.0275,
+  "rent_cap_national": 0.03,
+  "rent_typical_national": 0.0275,
+  "deposit_of_share": [
+   0.05,
+   0.1
+  ],
+  "household_income_cap": 80000,
+  "household_income_cap_london": 90000,
+  "staircasing": {
+   "min_tranche": 0.1,
+   "min_tranche_newer_leases": 0.05,
+   "one_percent_annual_years": 15,
+   "max_share": 1.0,
+   "notes": "Shares of 10% or more at any time (some newer leases 5%, some older 25%), priced at a RICS valuation at the time; homes bought from 1 April 2021 may allow 1% a year for the first 15 years at an HPI-indexed price (no admin fee). Rent falls in proportion to the landlord's remaining share. Max 100% (80% in designated protected areas; 75% for older-persons shared ownership)."
+  },
+  "rent_review": "Annual; leases from 12 Oct 2023: RPI + up to 0.5% or CPI + 1% (never falls).",
+  "sdlt_note": "SDLT: either a market value election (one-off SDLT on the FULL market value, FTB relief if that value <= GBP 500,000, nothing more on staircasing) or staged payments (SDLT on the share price only if above the threshold, plus rent NPV; more SDLT only once the share exceeds 80%).",
+  "london": {
+   "source_url": "https://www.london.gov.uk/programmes-strategies/housing-and-land/buying-and-owning-home/shared-ownership-scheme",
+   "checked": "2026-10-18",
+   "fetched": false,
+   "blocked": "https://www.london.gov.uk/... returned HTTP 403 to an automated request on 2026-10-18; not retried or worked around. Figures below are as published by the GLA and quoted in web-search extracts of its pages on that date.",
+   "rent_cap_initial": 0.0275,
+   "notes": "Bromley is a London borough: shared ownership homes are marketed through Homes for Londoners and providers; the GLA caps the initial rent at 2.75% a year of the unsold share's value; household income up to GBP 90,000."
+  },
+  "london_living_rent": {
+   "source_url": "https://www.london.gov.uk/programmes-strategies/housing-and-land/homes-londoners/london-living-rent",
+   "checked": "2026-10-18",
+   "fetched": false,
+   "income_cap": 67000,
+   "income_cap_note": "GLA material (July 2024) aligns London Living Rent with the GBP 67,000 maximum household income for intermediate rented products; older GLA pages still say GBP 60,000 - check the live GLA page.",
+   "notes": "London Living Rent is an intermediate RENT product, not a sale: rents are set from GLA ward-level benchmarks at about one third of average local household income (adjusted by bedroom count), for working households who rent or live with others and cannot yet buy locally; it is meant to help them save a deposit (often to buy their home through shared ownership)."
+  },
+  "low_cost_rent": {
+   "notes": "Low-Cost Rent (Social Rent / London Affordable Rent) homes are let by a registered provider to households nominated from the council's housing register (London Borough of Bromley). They are rented, not sold, so no purchase price applies."
+  },
+  "notes": "New-model shared ownership (homes funded from April 2021): buy 10%-75% of the full market value with a mortgage or savings and pay rent on the rest; all shared ownership homes are leasehold (service/estate charges apply). In this app, 'Intermediate' plots are treated as shared ownership: share price = share x market value; annual rent = rent_rate_on_unsold x (1 - share) x market value."
+ }
+}

@@ -1,0 +1,21 @@
+/* Draggable bottom sheets on phones (assets/sheets.js) */
+@media (max-width: 900px) {
+  html, body { overscroll-behavior-y: none; }
+  /* vertical pans belong to the sheet logic / content scroll; no page pinch-zoom from inside a sheet */
+  .tab-body, .detail-body { overscroll-behavior: contain; touch-action: pan-x pan-y; }
+  .tabs, .detail-head { touch-action: pan-x; }
+  /* handles: real buttons with a big touch target around the 5px bar */
+  .grab { position: relative; touch-action: none; border: 0; padding: 0; appearance: none; -webkit-appearance: none; }
+  .grab::after { content: ""; position: absolute; inset: -14px -60px -10px; }
+  .grab:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+  .detail { --half: 0.56; height: calc(var(--half) * 100%); transition: transform .22s ease, bottom .22s ease, height .24s cubic-bezier(.2, .8, .2, 1); }
+  .detail.full { height: calc(100% - 8px); }
+  .detail > .grab { margin: 8px auto 0; }
+  .detail-head { padding-top: 8px; }
+  .sidebar { transition: height .24s cubic-bezier(.2, .8, .2, 1); }
+  .sidebar.dragging, .detail.dragging { transition: none !important; }
+  /* image viewer: on a narrow screen the toolbar wraps and the close button stays in reach */
+  .lb-bar { flex-wrap: wrap; row-gap: 6px; position: relative; padding-right: 64px; }
+  .lb-bar .sp { display: none; }
+  #lb-close { position: absolute; top: 8px; right: 10px; min-width: 44px; min-height: 36px; }
+}

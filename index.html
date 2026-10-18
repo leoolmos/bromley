@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="assets/app.css">
 <link rel="stylesheet" href="assets/sun.css">
+<link rel="stylesheet" href="assets/sheets.css">
+<link rel="stylesheet" href="assets/prices.css">
 </head>
 <body>
 <div class="loading" id="loading"><div><div class="spin"></div><span data-t="loading">Carregando mapa…</span></div></div>
@@ -38,6 +40,7 @@
     <div class="grab" id="grab"></div>
     <nav class="tabs" id="tabs">
       <button data-tab="explore" class="active" data-t="tab_explore">Explorar</button>
+      <button data-tab="prices" data-t="tab_prices">Preços</button>
       <button data-tab="phases" data-t="tab_phases">Fases</button>
       <button data-tab="updates"><span data-t="tab_updates">Atualizações</span><span class="badge hidden" id="upd-badge"></span></button>
       <button data-tab="list" data-t="tab_list">Lista</button>
@@ -61,6 +64,7 @@
           <button data-mode="beds" class="active" style="flex:1" data-t="m_beds">Quartos</button>
           <button data-mode="tenure" style="flex:1" data-t="m_tenure">Tenure</button>
           <button data-mode="type" style="flex:1" data-t="m_type">Tipo</button>
+          <button data-mode="price" style="flex:1" data-t="m_price" disabled>Preço</button>
         </div>
         <div class="legend" id="legend" style="margin-top:10px"></div>
         <p class="small muted" style="margin:6px 8px 0" data-t="legend_hint">Clique numa categoria para mostrar/ocultar no mapa.</p>
@@ -73,6 +77,9 @@
           <label class="toggle-row"><span data-t="ly_phases">Fases 1–4</span><span class="switch"><input type="checkbox" id="ly-phases" checked><span></span></span></label>
           <label class="toggle-row"><span data-t="ly_parcels">Parcelas da Fase 1</span><span class="switch"><input type="checkbox" id="ly-parcels" checked><span></span></span></label>
           <label class="toggle-row"><span data-t="ly_homes">Casas e prédios</span><span class="switch"><input type="checkbox" id="ly-homes" checked><span></span></span></label>
+          <label class="toggle-row"><span><span class="ly-key ly-key-sold"></span><span data-t="ly_sold">Vendidas recentemente (Land Registry)</span></span><span class="switch"><input type="checkbox" id="ly-sold"><span></span></span></label>
+          <label class="toggle-row"><span><span class="ly-key ly-key-listing"></span><span data-t="ly_listings">À venda agora (OnTheMarket)</span></span><span class="switch"><input type="checkbox" id="ly-listings"><span></span></span></label>
+          <div class="pr-ly-legend hidden" id="ly-market-legend"></div>
         </div>
       </section>
       <section>
@@ -84,6 +91,9 @@
         <p class="small muted" id="about-data"></p>
       </section>
     </div>
+
+    <!-- PRICES (assets/prices.js) -->
+    <div class="tab-body hidden" id="tab-prices"></div>
 
     <!-- PHASES -->
     <div class="tab-body hidden" id="tab-phases"></div>
@@ -104,7 +114,7 @@
       <div style="overflow-x:auto;margin:0 -4px">
       <table class="list-table" id="list-table">
         <thead><tr>
-          <th data-k="id">Plot</th><th data-k="beds" data-t="th_beds">Qts</th><th data-k="plot_type" data-t="th_type">Tipo</th>
+          <th data-k="id">Plot</th><th data-k="value" class="num" data-t="th_value">Estim.</th><th data-k="beds" data-t="th_beds">Qts</th><th data-k="plot_type" data-t="th_type">Tipo</th>
           <th data-k="tenure">Tenure</th><th data-k="area" data-t="th_area">m²</th><th data-k="phase" data-t="th_phase">Fase</th>
         </tr></thead>
         <tbody></tbody>
@@ -149,6 +159,8 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="assets/sun-math.js"></script>
 <script src="assets/sun.js"></script>
+<script src="assets/prices.js"></script>
 <script src="assets/app.js"></script>
+<script src="assets/sheets.js"></script>
 </body>
 </html>

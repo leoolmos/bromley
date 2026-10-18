@@ -27,6 +27,7 @@ import os
 import re
 import sys
 import tempfile
+import time
 import urllib.parse
 
 import requests
@@ -229,7 +230,19 @@ def committee_meetings():
     """Upcoming Development Control Committee meetings and whether their agenda mentions the application."""
     s = requests.Session()
     s.headers["User-Agent"] = "ravensbourne-place-tracker (+https://github.com/leoolmos/bromley)"
-    page = s.get(CDS + f"ieListMeetings.aspx?CommitteeId={COMMITTEE_ID}", timeout=60).text
+
+    def get(url):   # the site sometimes drops a connection: two more tries, a little apart (never on 4xx/5xx)
+        for i in range(3):
+            try:
+                r = s.get(url, timeout=60)
+                r.raise_for_status()
+                return r.text
+            except requests.ConnectionError:
+                if i == 2:
+                    raise
+                time.sleep(15 * (i + 1))
+
+    page = get(CDS + f"ieListMeetings.aspx?CommitteeId={COMMITTEE_ID}")
     today = dt.date.today()
     out = []
     for href, label in re.findall(r'<a[^>]+href="([^"]*MId=\d+[^"]*)"[^>]*>(.*?)</a>', page, re.S):
@@ -241,7 +254,7 @@ def committee_meetings():
         if day < today - dt.timedelta(days=45):
             continue
         url = CDS + html.unescape(href)
-        agenda = html.unescape(re.sub(r"<[^>]+>", " ", s.get(url, timeout=60).text))
+        agenda = html.unescape(re.sub(r"<[^>]+>", " ", get(url)))
         out.append({
             "date": day.isoformat(), "time": m.group(2) or None, "url": url,
             "agenda_published": bool(re.search(r"Agenda (frontsheet|reports pack)|Public reports pack", agenda)),
@@ -343,6 +356,13 @@ def main():
 
     prev = json.load(open(SNAPSHOT)) if os.path.exists(SNAPSHOT) else None
     cur = fetch()
+    cm, pm = cur["committee"], (prev or {}).get("committee") or {}
+    if cm["meetings"] is None and pm.get("meetings"):
+        # committee site unreachable this time: keep the last list (and when it was read) instead of blanking it
+        cm["meetings"] = pm["meetings"]
+        cm["meetings_checked"] = pm.get("meetings_checked") or prev.get("fetched_at")
+    elif cm["meetings"] is not None:
+        cm["meetings_checked"] = cur["fetched_at"]
     ch = diff(prev, cur)
     updates = json.load(open(UPDATES)) if os.path.exists(UPDATES) else []
     changed = (prev is None or ch["fields"] or ch["agenda_new"] or ch["new_documents"]

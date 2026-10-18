@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-18T11:06:58+00:00",
+ "fetched_at": "2026-10-18T15:39:07+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -3395,6 +3395,36 @@
  "committee": {
   "name": "Development Control Committee",
   "url": "https://cds.bromley.gov.uk/ieListMeetings.aspx?CommitteeId=133",
-  "meetings": null
+  "meetings": [
+   {
+    "date": "2026-09-17",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8315&Ver=4",
+    "agenda_published": true,
+    "mentions_application": false
+   },
+   {
+    "date": "2026-10-14",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8501&Ver=4",
+    "agenda_published": false,
+    "mentions_application": false
+   },
+   {
+    "date": "2026-11-12",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8316&Ver=4",
+    "agenda_published": false,
+    "mentions_application": false
+   },
+   {
+    "date": "2027-01-21",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8317&Ver=4",
+    "agenda_published": false,
+    "mentions_application": false
+   }
+  ],
+  "meetings_checked": "2026-10-18T15:39:07+00:00"
  }
 }

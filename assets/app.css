@@ -197,6 +197,9 @@ h1, h2, h3, h4 { margin: 0; letter-spacing: -.01em; }
   display: flex; flex-direction: column; overflow: hidden; transform: translateX(calc(100% + 24px)); transition: transform .22s ease;
 }
 .detail.open { transform: none; }
+/* a closed drawer is off-screen: hide it from focus / find-in-page and keep it from growing the page */
+.detail:not(.open) { visibility: hidden; transition: transform .22s ease, visibility 0s linear .22s; }
+.layout { overflow: hidden; overflow: clip; }
 .detail-head { padding: 14px 16px 12px; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: flex-start; }
 .detail-head h2 { font-size: 18px; font-weight: 700; }
 .detail-head .sub { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px; }
