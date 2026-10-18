@@ -94,6 +94,7 @@ function settle(s, i) {   // animate from the dragged height to state i
 /* ---------------- gesture ---------------- */
 const SKIP = 'input[type=range], .lb-stage, .sun-panel';
 const WIN = { capture: true, passive: false };
+const FLICK = 0.2;   // px/ms: released faster than this, the sheet goes on in the direction of the motion
 
 function start(s, e) {
   if (g) {
@@ -152,18 +153,23 @@ function move(e) {
     const dx = t.clientX - g.x0, dy = t.clientY - g.y0;
     if (Math.abs(dx) < 7 && Math.abs(dy) < 7) return;
     if (!e.cancelable) { g.mode = 'none'; return; }
-    if (Math.abs(dx) > Math.abs(dy)) {   // sideways: tables, sliders
-      if (!g.header) { g.mode = 'none'; return; }
-      // the handle and header scroll nowhere: keep the touch (an unclaimed move lets the browser take it and
-      // makes the rest uncancelable) and wait for the vertical part of the swipe
+    // at the top only if no scroller under the finger (the suggestion list, a table, the tab) is scrolled
+    let atTop = true, side = false;
+    for (let n = g.node; n && n !== g.s.el; n = n.parentElement) {
+      if (n.scrollTop > 0) atTop = false;
+      if (n.scrollWidth > n.clientWidth + 1 && /auto|scroll/.test(getComputedStyle(n).overflowX)) side = true;
+    }
+    const last = g.s.states.length - 1;
+    const sheet = g.header || (dy < 0 && g.idx < last) || (dy > 0 && atTop && (g.s.dismiss || g.idx > 0));
+    if (Math.abs(dx) > Math.abs(dy)) {
+      // sideways first: a table that pans sideways, or content the sheet could not move for, gets the touch;
+      // otherwise keep it (an unclaimed move lets the browser take the rest of the touch) and wait for the
+      // vertical part of the swipe: a thumb often starts at 45° or more
+      if (side || !sheet) { g.mode = 'none'; return; }
       e.preventDefault();
       return;
     }
-    // at the top only if no scroller under the finger (the suggestion list, a table, the tab) is scrolled
-    let atTop = true;
-    for (let n = g.node; n && n !== g.s.el; n = n.parentElement) if (n.scrollTop > 0) { atTop = false; break; }
-    const last = g.s.states.length - 1;
-    if (g.header || (dy < 0 && g.idx < last) || (dy > 0 && atTop && (g.s.dismiss || g.idx > 0))) {
+    if (sheet) {
       engage(t, e);
       e.preventDefault();
     } else { g.mode = 'scroll'; return; }
@@ -189,17 +195,22 @@ function end(e) {
   if (recent.length < 2) recent = d.track.slice(-2);   // sparse events (a slow device): the last two moves
   const v = e.type === 'touchend' && now - last[1] < 80 && recent.length > 1
     ? (recent[0][0] - last[0]) / Math.max(1, last[1] - recent[0][1]) : 0;   // px/ms, positive = upwards
-  // the state nearest to where the flick would carry the sheet, but at most one state on from the one the
-  // gesture began in, unless the finger itself went further (-1 = the card dismissed)
-  const hs = d.hs, h = d.s.el.offsetHeight;
-  const near = y => {
-    if (d.s.dismiss && y < hs[0] * 0.6) return -1;
-    let b = 0;
-    hs.forEach((x, i) => { if (Math.abs(x - y) < Math.abs(hs[b] - y)) b = i; });
-    return b;
-  };
-  const at = near(h);
-  const to = Math.min(Math.max(near(h + v * 220), Math.min(d.idx - 1, at)), Math.max(d.idx + 1, at));
+  // released moving: the next state in the direction of the motion, never back against it; released still:
+  // the nearest state. Below its half height the card closes if let go under 60% of it, or if the flick would
+  // carry it there (-1 = closed)
+  const hs = d.hs, h = d.s.el.offsetHeight, closes = y => d.s.dismiss && y < hs[0] * 0.6;
+  let to = 0;
+  if (v > FLICK) {
+    to = hs.findIndex(x => x > h + 2);
+    if (to < 0) to = hs.length - 1;
+  } else if (v < -FLICK) {
+    to = -1;
+    hs.forEach((x, i) => { if (x < h - 2) to = i; });
+    if (to < 0 && !closes(h + v * 220)) to = 0;
+  } else {
+    hs.forEach((x, i) => { if (Math.abs(x - h) < Math.abs(hs[to] - h)) to = i; });
+    if (closes(h)) to = -1;
+  }
   if (to < 0) dismiss(d.s.el);
   else settle(d.s, to);
 }
@@ -221,6 +232,10 @@ SHEETS.forEach(s => {
   s.el.addEventListener('touchstart', e => start(s, e), { passive: true });
   s.el.addEventListener('touchmove', move, { passive: false });
 });
+// a second finger landing on the map while a sheet is dragged must not pinch-zoom it (Leaflet counts every touch)
+window.addEventListener('touchstart', e => {
+  if (g && g.mode === 'drag' && !g.s.el.contains(e.target)) e.stopPropagation();
+}, { capture: true, passive: true });
 mq.addEventListener('change', () => { abort(); SHEETS.forEach(s => { s.el.style.height = ''; s.el.classList.remove('dragging'); }); });
 
 /* ---------------- phone conveniences ---------------- */
