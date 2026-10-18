@@ -336,6 +336,19 @@ function onZoom() {
 }
 
 /* ---------------- selection / detail ---------------- */
+// phone: the detail sheet covers the lower part of the map, so keep the home in the strip above it
+function focusOn(lat, lon, zoom, fly) {
+  const phone = matchMedia('(max-width: 900px)').matches;
+  if (phone && $('#detail').classList.contains('full')) $('#detail').classList.remove('full');   // a new card opens at half height
+  const cover = phone ? $('#detail').offsetHeight : 0;
+  if (fly) {
+    const z = Math.max(map.getZoom(), zoom);
+    map.flyTo(map.unproject(map.project([lat, lon], z).add([0, cover / 2]), z), z, { duration: .6 });
+  } else if (phone) {
+    const H = map.getSize().y, y = map.latLngToContainerPoint([lat, lon]).y, mid = (H - cover) / 2;
+    if (y > H - cover - 30 || y < 30) map.panBy([0, y - mid]);
+  }
+}
 function select(type, id, opts = {}) {
   const prev = S.sel;
   S.sel = { type, id };
@@ -346,13 +359,13 @@ function select(type, id, opts = {}) {
     if (h.kind === 'apartment') return select('b', 'blk:' + h.block, { unit: id, fly: opts.fly });
     selRing.setLatLng([h.lat, h.lon]).setRadius(markerRadius() + 4);
     if (map.hasLayer(layers.homes)) selRing.addTo(map);
-    if (opts.fly) map.flyTo([h.lat, h.lon], Math.max(map.getZoom(), 18.5), { duration: .6 });
+    focusOn(h.lat, h.lon, 18.5, opts.fly);
     showHouse(h);
     sun?.setFocus({ lat: h.lat, lon: h.lon, heightM: 9, label: h.id });
   } else if (type === 'b') {
     const b = D.blockById.get(id);
     const m = markers.get(id); m && m.setIcon(blockIcon(b));
-    if (opts.fly) map.flyTo([b.lat, b.lon], Math.max(map.getZoom(), 18), { duration: .6 });
+    focusOn(b.lat, b.lon, 18, opts.fly);
     showBlock(b, opts.unit);
     sun?.setFocus({ lat: b.lat, lon: b.lon, heightM: (b.storeys || 3) * 3 + 3, label: b.name });
   }
