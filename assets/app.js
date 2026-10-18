@@ -14,9 +14,10 @@ const store = {
 const STR = {
   pt: {
     loading: 'Carregando mapa…', subtitle: 'Bromley · Berkeley Homes · pedido',
-    tab_explore: 'Explorar', tab_phases: 'Fases', tab_updates: 'Atualizações', tab_list: 'Lista',
+    tab_explore: 'Explorar', tab_phases: 'Fases', tab_updates: 'Atualizações', tab_list: 'Lista', tab_prices: 'Preços',
     search_ph: 'Buscar plot, ex. R-S12_034 ou Block E', filter_ph: 'Filtrar por plot ou tipologia…',
-    color_by: 'Colorir por', m_beds: 'Quartos', m_tenure: 'Tenure', m_type: 'Tipo',
+    color_by: 'Colorir por', m_beds: 'Quartos', m_tenure: 'Tenure', m_type: 'Tipo', m_price: 'Preço',
+    ly_sold: 'Vendidas recentemente (Land Registry)', ly_listings: 'À venda agora (OnTheMarket)', th_value: 'Estim.',
     legend_hint: 'Clique numa categoria para mostrar/ocultar no mapa.',
     layers: 'Camadas', ly_drawings: 'Desenhos da Fase 1 (plantas)', ly_phases: 'Fases 1–4', ly_parcels: 'Parcelas da Fase 1', ly_homes: 'Casas e prédios',
     sheets: 'Pranchas originais', sheets_hint: 'Abrem em tela cheia com zoom. No mapa elas já aparecem encaixadas no lugar.',
@@ -69,9 +70,10 @@ const STR = {
   },
   en: {
     loading: 'Loading map…', subtitle: 'Bromley · Berkeley Homes · application',
-    tab_explore: 'Explore', tab_phases: 'Phases', tab_updates: 'Updates', tab_list: 'List',
+    tab_explore: 'Explore', tab_phases: 'Phases', tab_updates: 'Updates', tab_list: 'List', tab_prices: 'Prices',
     search_ph: 'Search a plot, e.g. R-S12_034 or Block E', filter_ph: 'Filter by plot or house type…',
-    color_by: 'Colour by', m_beds: 'Bedrooms', m_tenure: 'Tenure', m_type: 'Type',
+    color_by: 'Colour by', m_beds: 'Bedrooms', m_tenure: 'Tenure', m_type: 'Type', m_price: 'Price',
+    ly_sold: 'Recently sold (Land Registry)', ly_listings: 'For sale now (OnTheMarket)', th_value: 'Est.',
     legend_hint: 'Click a category to show/hide it on the map.',
     layers: 'Layers', ly_drawings: 'Phase 1 drawings (plans)', ly_phases: 'Phases 1–4', ly_parcels: 'Phase 1 parcels', ly_homes: 'Houses and blocks',
     sheets: 'Original drawings', sheets_hint: 'Open full-screen with zoom. On the map they are already fitted in place.',
@@ -134,8 +136,11 @@ const TYP = { 'Detached': '#7c3aed', 'Semi-Detached': '#0ea5e9', 'End Terrace': 
 const PH = { '1': '#4f6bd8', '2': '#f2b84b', '3': '#e57373', '4': '#9c7ad1' };
 const AFFORDABLE = ['Low-Cost Rent', 'Intermediate'];
 
-const S = { mode: 'beds', hidden: { beds: new Set(), tenure: new Set(), type: new Set() }, sel: null };
+const S = { mode: 'beds', hidden: { beds: new Set(), tenure: new Set(), type: new Set(), price: new Set() }, sel: null };
 let D, map, layers = {}, markers = new Map(), selRing, sun = null;
+// price estimates live in assets/prices.js (window.Prices); every call goes through PX so that a missing
+// module, data that has not arrived yet or an error in it never breaks the rest of the app
+const PX = (fn, ...a) => { try { const P = window.Prices; return P && typeof P[fn] === 'function' ? P[fn](...a) : undefined; } catch (e) { console.error(e); return undefined; } };
 
 /* ---------------- helpers ---------------- */
 const fmtDate = (iso, opts) => {
@@ -164,15 +169,18 @@ const sheetName = id => id?.startsWith('gfp') ? t('sheet_gfp', id.slice(3)) : ({
 function catOf(h, mode) {
   if (mode === 'beds') return String(h.beds);
   if (mode === 'tenure') return h.tenure;
+  if (mode === 'price') return PX('catOf', h) ?? '?';
   return h.plot_type;
 }
 function colorOf(h, mode = S.mode) {
   if (mode === 'beds') return BED[h.beds] || '#94a3b8';
   if (mode === 'tenure') return TEN[h.tenure] || '#94a3b8';
+  if (mode === 'price') return PX('colorOf', h) || '#94a3b8';
   return TYP[h.plot_type] || '#94a3b8';
 }
 function blockColor(b) {
   if (S.mode === 'tenure') return TEN[b.tenure] || '#475569';
+  if (S.mode === 'price') return PX('blockColor', b) || '#334155';
   return '#334155';
 }
 const visible = h => !S.hidden[S.mode].has(catOf(h, S.mode));
@@ -287,7 +295,7 @@ function buildMarkers() {
       radius: r, weight: h.approx ? 1.5 : 1.2, color: h.approx ? '#0f172a' : '#ffffff', dashArray: h.approx ? '2 2' : null,
       fillColor: colorOf(h), fillOpacity: .95,
     });
-    m.bindTooltip(() => `<b>${esc(h.id)}</b> · ${t('bed_short', h.beds)} · ${esc(tm('type', h.plot_type))}`, { className: 'home-tip', direction: 'top', offset: [0, -6] });
+    m.bindTooltip(() => `<b>${esc(h.id)}</b> · ${t('bed_short', h.beds)} · ${esc(tm('type', h.plot_type))}${PX('tip', h) || ''}`, { className: 'home-tip', direction: 'top', offset: [0, -6] });
     m.on('click', e => { L.DomEvent.stopPropagation(e); select('h', h.id); });
     m.addTo(layers.homes); markers.set(h.id, m);
   }
@@ -351,7 +359,8 @@ function focusOn(lat, lon, zoom, fly) {
 }
 function select(type, id, opts = {}) {
   const prev = S.sel;
-  S.sel = { type, id };
+  S.sel = { type, id, unit: opts.unit };
+  PX('clear');
   if (prev && prev.type === 'b') { const m = markers.get(prev.id); m && m.setIcon(blockIcon(D.blockById.get(prev.id))); }
   map.removeLayer(selRing);
   if (type === 'h') {
@@ -382,10 +391,18 @@ function openDetail(title, subHTML, bodyHTML) {
 }
 function closeDetail() {
   $('#detail').classList.remove('open');
+  PX('clear');
   if (S.sel && S.sel.type === 'b') { const id = S.sel.id; S.sel = null; const m = markers.get(id); m && m.setIcon(blockIcon(D.blockById.get(id))); }
   S.sel = null; map && map.removeLayer(selRing);
   sun?.setFocus(null);
   setHash('');
+}
+function refreshDetail() {
+  if (!S.sel || !$('#detail').classList.contains('open')) return;
+  const y = $('#d-body').scrollTop;
+  if (S.sel.type === 'h') showHouse(D.byId.get(S.sel.id));
+  else if (S.sel.type === 'b') showBlock(D.blockById.get(S.sel.id), S.sel.unit);
+  $('#d-body').scrollTop = y;
 }
 const fig = (src, label, full) => src ? `<div class="fig" data-src="${full || src}" data-label="${esc(label)}"><img loading="lazy" src="${src}" alt="${esc(label)}"><span class="tag">${esc(label)}</span><span class="zoom">${t('enlarge')}</span></div>` : '';
 function kvRows(rows) { return `<table class="kv">${rows.filter(r => r[1] !== null && r[1] !== undefined && r[1] !== '').map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}</table>`; }
@@ -401,11 +418,13 @@ function wireFigures() {
   $$('#d-body [data-back]').forEach(r => r.addEventListener('click', () => select('b', r.dataset.back)));
   $$('#d-body [data-same]').forEach(r => r.addEventListener('click', () => { switchTab('list'); $('#f-q').value = r.dataset.same; renderList(); }));
   $$('#d-body [data-zoom-phase]').forEach(r => r.addEventListener('click', () => zoomPhase(r.dataset.zoomPhase)));
+  PX('wire', $('#d-body'));
 }
 function tenurePill(tn) { return tn ? pill(esc(tm('tenure', tn)), TEN[tn] || '#94a3b8') : ''; }
 function showHouse(h) {
   const same = D.homes.filter(x => x.housetype === h.housetype).length;
   const body = `
+    ${PX('houseCard', h) || ''}
     <div class="figs">${fig(elevSrc(h.img), t('elevation'))}${fig(planSrc(h.img), t('floorplans'), planHD(h.img))}</div>
     ${h.approx ? `<div class="note warn">${t('approx')}</div>` : ''}
     ${kvRows([
@@ -436,6 +455,7 @@ function showBlock(b, unitId) {
     const u = D.byId.get(unitId);
     const body = `
       <p style="margin:0 0 10px"><a href="#" data-back="${b.id}" onclick="return false">${t('back_block')}</a></p>
+      ${PX('houseCard', u) || ''}
       <div class="figs">${fig(planSrc(b.img), t('floorplans_lvl'), planHD(b.img))}${fig(elevSrc(b.img), t('elevation'))}</div>
       ${kvRows([
         [t('k_block'), esc(b.name)], [t('k_level'), u.level != null ? t('level_n', u.level) : null],
@@ -449,17 +469,19 @@ function showBlock(b, unitId) {
   }
   const byLevel = {};
   units.forEach(u => (byLevel[u.level ?? '?'] ||= []).push(u));
-  const rows = Object.keys(byLevel).sort((a, c) => a - c).map(l => `<tr class="lvl"><td colspan="4">${l === '?' ? '—' : t('level_n', +l)}</td></tr>` +
-    byLevel[l].map(u => `<tr data-unit="${esc(u.id)}" style="cursor:pointer"><td>${esc(u.id.split('_').pop())}</td><td>${esc(u.occupancy)}</td><td>${tenurePill(u.tenure)}</td><td>${u.nia ? u.nia + ' m²' : '—'}</td></tr>`).join('')).join('');
+  const est = PX('unitCell', units[0]) !== undefined;   // the estimate column once prices are loaded
+  const rows = Object.keys(byLevel).sort((a, c) => a - c).map(l => `<tr class="lvl"><td colspan="${est ? 5 : 4}">${l === '?' ? '—' : t('level_n', +l)}</td></tr>` +
+    byLevel[l].map(u => `<tr data-unit="${esc(u.id)}" style="cursor:pointer"><td>${esc(u.id.split('_').pop())}</td><td>${esc(u.occupancy)}</td><td>${tenurePill(u.tenure)}</td><td>${u.nia ? u.nia + ' m²' : '—'}</td>${est ? `<td class="num">${PX('unitCell', u)}</td>` : ''}</tr>`).join('')).join('');
   const mix = Object.entries(b.bed_mix).map(([k, v]) => `${v}× ${t('bed_short', k)}`).join(' · ');
   const body = `
+    ${PX('blockCard', b, units) || ''}
     <div class="figs">${fig(elevSrc(b.img), t('elevation'))}${fig(planSrc(b.img), t('floorplans_lvl'), planHD(b.img))}</div>
     ${kvRows([
       [t('k_units'), b.count], [t('k_storeys'), b.storeys], [t('k_mix'), mix],
       [t('k_nia_total'), b.nia_total ? `${nf(b.nia_total)} m²` : null], [t('k_tenure'), esc(tm('tenure_long', b.tenure))],
       [t('k_parcel'), esc(b.parcel)], [t('k_phase'), t('phase_n', b.phase)],
     ])}
-    <table class="unit-table"><thead><tr><th>Nº</th><th>${t('m_type')}</th><th>Tenure</th><th>NIA</th></tr></thead><tbody>${rows}</tbody></table>
+    <table class="unit-table"><thead><tr><th>Nº</th><th>${t('m_type')}</th><th>Tenure</th><th>NIA</th>${est ? `<th class="num">${t('th_value')}</th>` : ''}</tr></thead><tbody>${rows}</tbody></table>
     <div class="btn-row"><button class="btn" data-sheet="${b.sheet}">${t('see_sheet')}</button><button class="btn" data-copy>${t('copy_link')}</button></div>`;
   openDetail(b.name, [pill(`${b.count} ${t('apartments')}`, '#475569'), tenurePill(b.tenure), pill(t('phase_n', b.phase), PH['1'])].join(''), body);
 }
@@ -509,17 +531,23 @@ function renderStats() {
     [nf(D.counts.apartments), `${t('apartments')} · ${D.blocks.length} ${t('blocks')}`], [`${nf(aff)} <small style="font-size:12px;color:var(--muted)">${Math.round(aff / D.homes.length * 100)}%</small>`, t('affordable')],
   ].map(([b, s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
 }
+// legend categories of a colour mode: [{ c (category key), col, label }]
+function legendCats(mode) {
+  if (mode === 'beds') return ['1', '2', '3', '4', '5'].map(c => ({ c, col: BED[c], label: t('beds_n', +c) }));
+  if (mode === 'tenure') return Object.keys(TEN).map(c => ({ c, col: TEN[c], label: tm('tenure_long', c) }));
+  if (mode === 'price') return PX('cats') || [];
+  return Object.keys(TYP).map(c => ({ c, col: TYP[c], label: tm('type', c) }));
+}
 function renderLegend() {
   const mode = S.mode, counts = {};
   D.homes.forEach(h => { const c = catOf(h, mode); counts[c] = (counts[c] || 0) + 1; });
-  const cats = mode === 'beds' ? ['1', '2', '3', '4', '5'] : mode === 'tenure' ? Object.keys(TEN) : Object.keys(TYP);
   const max = Math.max(...Object.values(counts));
-  $('#legend').innerHTML = cats.filter(c => counts[c]).map(c => {
-    const col = mode === 'beds' ? BED[c] : mode === 'tenure' ? TEN[c] : TYP[c];
-    const label = mode === 'beds' ? t('beds_n', +c) : mode === 'tenure' ? tm('tenure_long', c) : tm('type', c);
+  const note = mode === 'price' ? (PX('legendNote') || '')
+    : mode !== 'tenure' ? `<div class="small muted" style="padding:4px 8px"><span class="swatch sq" style="background:#334155"></span> ${t('block')} (A–G2) — ${LANG === 'pt' ? 'apartamentos agrupados por prédio' : 'apartments grouped by block'}</div>` : '';
+  $('#legend').innerHTML = legendCats(mode).filter(x => counts[x.c]).map(({ c, col, label }) => {
     return `<button data-cat="${esc(c)}" class="${S.hidden[mode].has(c) ? 'off' : ''}"><span class="swatch ${c === 'Apartment' ? 'sq' : ''}" style="background:${col}"></span><span>${esc(label)}</span><span class="count">${counts[c]}</span></button>
       <div class="bar"><i style="width:${counts[c] / max * 100}%;background:${col}"></i></div>`;
-  }).join('') + (mode !== 'tenure' ? `<div class="small muted" style="padding:4px 8px"><span class="swatch sq" style="background:#334155"></span> ${t('block')} (A–G2) — ${t('m_tenure').toLowerCase() === 'tenure' ? '' : ''}${LANG === 'pt' ? 'apartamentos agrupados por prédio' : 'apartments grouped by block'}</div>` : '');
+  }).join('') + note;
   $$('#legend button').forEach(b => b.addEventListener('click', () => {
     const c = b.dataset.cat, set = S.hidden[S.mode];
     set.has(c) ? set.delete(c) : set.add(c);
@@ -783,10 +811,10 @@ function renderList() {
   const q = $('#f-q').value.trim().toUpperCase(), fb = $('#f-beds').value, ft = $('#f-tenure').value, fy = $('#f-type').value, fp = $('#f-phase').value;
   const rows = D.homes.filter(h => (!fb || String(h.beds) === fb) && (!ft || h.tenure === ft) && (!fy || h.plot_type === fy) && (!fp || h.phase === fp) &&
     (!q || h.id.toUpperCase().includes(q) || (h.housetype || '').toUpperCase() === q || (h.housetype || '').toUpperCase().includes(q)));
-  const val = h => sortKey === 'area' ? (area(h) || 0) : (h[sortKey] ?? '');
+  const val = h => sortKey === 'area' ? (area(h) || 0) : sortKey === 'value' ? (PX('value', h) || 0) : (h[sortKey] ?? '');
   rows.sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : 0) * sortDir);
   $('#f-count').textContent = t('list_count', rows.length, D.homes.length);
-  $('#list-table tbody').innerHTML = rows.map(h => `<tr data-id="${esc(h.id)}"><td><span class="swatch" style="background:${colorOf(h)}"></span> ${esc(h.id)}</td><td>${h.beds}</td>
+  $('#list-table tbody').innerHTML = rows.map(h => `<tr data-id="${esc(h.id)}"><td><span class="swatch" style="background:${colorOf(h)}"></span> ${esc(h.id)}</td><td class="num">${PX('short', h) || '—'}</td><td>${h.beds}</td>
     <td>${esc(tm('type', h.plot_type))}</td><td>${esc(tm('tenure', h.tenure))}</td><td>${area(h) || '—'}</td><td>${h.phase}</td></tr>`).join('');
   $$('#list-table tbody tr').forEach(tr => tr.onclick = () => select('h', tr.dataset.id, { fly: true }));
 }
@@ -794,7 +822,9 @@ function renderList() {
 /* ---------------- tabs / i18n / theme ---------------- */
 function switchTab(name) {
   $$('#tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
-  ['explore', 'phases', 'updates', 'list'].forEach(n => $('#tab-' + n).classList.toggle('hidden', n !== name));
+  if (!$('#tab-' + name)) return;
+  ['explore', 'prices', 'phases', 'updates', 'list'].forEach(n => $('#tab-' + n).classList.toggle('hidden', n !== name));
+  if (name === 'prices') PX('renderTab', $('#tab-prices'));
   if (name === 'updates' && D.updates[0]) { store.set('rp-seen-update', D.updates[0].fetched_at); updatesBadge(); }
   const sb = $('#sidebar'); if (sb.classList.contains('collapsed')) sb.classList.remove('collapsed');
 }
@@ -809,7 +839,8 @@ function applyLang() {
   renderStats(); renderLegend(); renderSheets(); renderPhases(); renderUpdates(); renderStatusChip(); initList(); updatesBadge();
   map.removeLayer(layers.parcelLabels); onZoom();   // map labels in the new language
   sun?.setLang(LANG);
-  if (S.sel) { const s = S.sel; S.sel = null; select(s.type, s.id); }
+  PX('onLang');
+  if (S.sel) { const s = S.sel; S.sel = null; select(s.type, s.id, { unit: s.unit }); }
 }
 function initTheme() {
   const saved = store.get('rp-theme', '');
@@ -915,10 +946,26 @@ function initSun() {
   try { sun = window.SunPath?.create(map, { center: [h0.lat, h0.lon], lang: LANG }) || null; } catch (e) { console.error(e); }
 }
 
+/* ---------------- price estimates (assets/prices.js) ---------------- */
+// the shared overlay canvas hit-tests the last-drawn layer first: keep the homes on top of anything added later
+function raiseHomes() { layers.homes.eachLayer(l => l.bringToFront && l.bringToFront()); }
+function initPrices() {
+  PX('init', {
+    map, D, S, layers, t, tm, esc, nf, fmtDate, store, $, $$, raiseHomes,
+    lang: () => LANG,
+    select: (type, id, o) => select(type, id, o),
+    switchTab: name => switchTab(name),
+    // the market data arrived (or failed): redraw what shows estimates
+    onReady() { refreshDetail(); renderLegend(); renderList(); },
+    setMode(mode) { $(`#mode-seg [data-mode="${mode}"]`)?.click(); },
+  });
+}
+
 /* ---------------- wiring ---------------- */
 function initUI() {
   $$('#tabs button').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
   $$('#mode-seg button').forEach(b => b.addEventListener('click', () => {
+    if (b.disabled) return;
     S.mode = b.dataset.mode;
     $$('#mode-seg button').forEach(x => x.classList.toggle('active', x === b));
     renderLegend(); buildMarkers(); reselect(); renderList();
@@ -927,7 +974,7 @@ function initUI() {
   $('#d-close').addEventListener('click', closeDetail);
   const toggle = (id, layer, extra) => $(id).addEventListener('change', e => { e.target.checked ? layer().addTo(map) : map.removeLayer(layer()); extra && extra(e.target.checked); onZoom(); });
   toggle('#ly-drawings', () => layers.drawings);
-  toggle('#ly-phases', () => layers.phases, on => { on ? layers.phaseLabels.addTo(map) : map.removeLayer(layers.phaseLabels); });
+  toggle('#ly-phases', () => layers.phases, on => { on ? layers.phaseLabels.addTo(map) : map.removeLayer(layers.phaseLabels); if (on) { layers.phases.bringToBack(); raiseHomes(); } });
   toggle('#ly-parcels', () => layers.parcels);
   toggle('#ly-homes', () => layers.homes, on => { if (!on) map.removeLayer(selRing); });
   $('#ly-opacity').addEventListener('input', e => layers.drawings.setOpacity(e.target.value / 100));
@@ -956,6 +1003,7 @@ load().then(() => {
   initSearch();
   initLightbox();
   applyLang();
+  initPrices();   // registers the price module; it fetches data/market/*.json once the map is idle
   readHash();
   $('#loading').remove();
 }).catch(err => {

@@ -30,8 +30,22 @@ Hayes Farm / Rookery Estates, Bromley. Pedido de planejamento **26/02199/OUT** n
   - Os cálculos usam o algoritmo NOAA em `assets/sun-math.js`, comparado ao pvlib/NREL SPA por
     `node scripts/test_sun.mjs`: erro menor que 0,02° e nascer/pôr do sol com diferença de menos de
     4 s. O horário de verão de Londres (BST) está incluído.
-- Busca por plot ou prédio, cores por quartos, tenure ou tipo, filtros, lista completa, links
-  compartilháveis (`#h=R-S12_034`, `#b=blk:E`, `#p=2`, `#t=updates`) e PT/EN. Funciona no celular.
+- **Preços — estimativa de cada casa e apartamento** (aba *Preços*, modo de cor *Preço* e um cartão
+  na ficha de cada imóvel):
+  - valor estimado de imóvel novo a preços de hoje, com faixa provável, £/m², a área usada (GIA/NIA),
+    o equivalente usado, o erro típico e os 5 comparáveis de maior peso (com botão para vê-los no mapa);
+  - calculadora **"No seu caso"**: entrada, imposto de transmissão (SDLT, com o alívio de primeiro
+    imóvel e os adicionais de +5% para quem terá outro imóvel em qualquer país e +2% para não
+    residentes), financiamento, prestação mensal e total na compra; nas casas *Intermediate* (shared
+    ownership) simula a compra de uma cota e o aluguel do resto; nas de aluguel social mostra o valor
+    só como referência;
+  - camadas no mapa com as vendas registradas no Land Registry desde 2023 e os imóveis à venda agora
+    no OnTheMarket, num raio de 2,5 km;
+  - na aba *Preços*: como funciona, precisão, prêmio de imóvel novo, tabela por tipo e quartos,
+    gráfico de £/m², vendas e anúncios da região, imóveis novos da Berkeley à venda, premissas de
+    custo e fontes. **É uma estimativa indicativa, não uma avaliação nem oferta.**
+- Busca por plot ou prédio, cores por quartos, tenure, tipo ou preço, filtros, lista completa, links
+  compartilháveis (`#h=R-S12_034`, `#b=blk:E`, `#p=2`, `#t=updates`, `#t=prices`) e PT/EN. Funciona no celular.
 
 ## Atualizar os dados do registro
 
@@ -56,12 +70,55 @@ commit do resultado. Também dá para rodar manualmente em *Actions → Update p
 O servidor do registro não envia o certificado intermediário da Sectigo. O script inclui esse
 certificado em `scripts/certs/` e o acrescenta ao bundle de CAs, então a verificação TLS continua completa.
 
+## Atualizar as estimativas de preço
+
+Os dados de mercado ficam em `data/market/` e são gerados pelos scripts de `scripts/market/`
+(Python 3 + `requests`). Cada script guarda em cache tudo o que baixa (uma nova rodada não busca de
+novo o que já está no cache; apague a pasta para atualizar) e respeita os sites: poucas requisições,
+com pausa entre elas, e para em caso de bloqueio (403/429/captcha), sem tentar contornar. Todos usam a
+mesma pasta de cache: `$MARKET_CACHE`, ou `~/.cache/bromley-market` se a variável não existir. Rode nesta ordem:
+
+```bash
+pip install requests
+export MARKET_CACHE=~/.cache/bromley-market   # cache local, fora do repositório (este é o padrão)
+python3 scripts/market/fetch_sold.py        # vendas Land Registry + postcodes.io       -> sold.json
+python3 scripts/market/fetch_listings.py    # anúncios OnTheMarket (cache em otm/)       -> listings.json
+python3 scripts/market/fetch_berkeley.py    # imóveis novos da Berkeley (berkeley/)      -> berkeley.json
+python3 scripts/market/fetch_context.py     # UK HPI, SDLT, juros BoE, shared ownership  -> context.json
+python3 scripts/market/build_estimates.py   # estimativa de cada imóvel + teste de erro -> estimates.json
+```
+
+- `fetch_sold.py`, `fetch_listings.py`, `fetch_berkeley.py` e `build_estimates.py` aceitam `--offline`
+  (só o cache, nenhuma requisição); `--cache` muda a pasta e `--out` o arquivo gerado.
+- Os anúncios que não são venda normal de mercado ficam fora dos comparáveis: só compra à vista, reforma
+  completa, inventário (probate), leasehold com menos de 80 anos, leilão e cotas de shared ownership.
+  O mesmo imóvel anunciado por duas imobiliárias conta uma vez. Se a área total escrita no anúncio
+  contradiz o campo de área em mais de 10%, vale a do texto, com metade do peso. Vendas em condomínios
+  para aposentados ficam marcadas (`retirement`) e fora das medianas.
+- A faixa provável cobre 8 em cada 10 casos do teste "deixando um de fora" (por tipo de imóvel), mais a
+  incerteza do desconto sobre o preço pedido e, no valor de imóvel novo, a faixa do prêmio (1,05–1,20).
+- Imóveis com área de planilha muito diferente da usual do seu housetype (provável erro da planilha) e
+  apartamentos para cadeirante (M4(3)) são avaliados pela área típica/padrão (`area_used` em
+  `estimates.json`), com o valor pela área da planta em `value_at_plan_area`.
+- Contrato: enquanto `sold.json` não tiver áreas, `estimates.homes[*].comps` são ids de anúncios do
+  OnTheMarket (preço pedido), resolvidos por `estimates.comps_index` (`basis: "asking"`), e não ids de
+  transações do Land Registry (`comps_source` diz qual é o caso).
+- As vendas do Land Registry não trazem a área. Para que elas entrem no cálculo, baixe o arquivo de
+  certificados de energia (EPC) de Bromley em https://get-energy-performance-data.communities.gov.uk/
+  (precisa de conta GOV.UK One Login) e rode
+  `python3 scripts/market/fetch_sold.py --epc-csv ~/Downloads/<arquivo>.zip` antes de `build_estimates.py`.
+  Sem isso, as estimativas usam os anúncios que informam a área (preço pedido −4,5%).
+- O app carrega `data/market/*.json` depois que o mapa aparece (`assets/prices.js`); se os arquivos não
+  existirem, o resto do app funciona normalmente.
+
 ## Estrutura
 
 | Caminho | Conteúdo |
 |---|---|
 | `index.html`, `assets/app.js`, `assets/app.css` | O app (Leaflet 1.9.4 via CDN, sem build). |
 | `assets/sun.js`, `assets/sun.css`, `assets/sun-math.js` | Simulação do sol (timeline, trajetória, sombra) e cálculo solar. |
+| `assets/prices.js`, `assets/prices.css` | Estimativas de preço: cartão e calculadora na ficha, modo de cor *Preço*, camadas de vendas/anúncios e a aba *Preços*. |
+| `data/market/` | `sold.json`, `listings.json`, `berkeley.json`, `context.json` e `estimates.json` (gerados por `scripts/market/`). |
 | `data/homes.json` | 578 imóveis com coordenadas e ficha; 9 prédios. |
 | `data/geo.json` | Polígonos das fases 1–4 e das parcelas da Fase 1. |
 | `data/planning.json`, `data/updates.json` | Status atual do pedido e histórico dos fetches. |
@@ -69,7 +126,7 @@ certificado em `scripts/certs/` e o acrescenta ao bundle de CAs, então a verifi
 | `tiles/` | Tiles WebP (z15–19) das plantas georreferenciadas, mais um índice em `meta.json`. |
 | `assets/sheets/` | Pranchas originais (GFP 1–12, Site Plan 1A/1B, Parcel Plan, Phasing). |
 | `assets/units/` | Fachadas (`elev/`), plantas (`plan/`) e plantas em alta resolução (`plan-hd/`) por tipologia ou prédio. |
-| `scripts/` | `fetch_planning.py`, `build_data.py`, `build_tiles.py` e as fontes em `scripts/source/`. |
+| `scripts/` | `fetch_planning.py`, `build_data.py`, `build_tiles.py`, as fontes em `scripts/source/` e os scripts de preço em `scripts/market/`. |
 
 ### Como as plantas foram georreferenciadas
 
@@ -95,5 +152,11 @@ Todos os dados e desenhos vêm dos documentos públicos do pedido 26/02199/OUT n
 - desenhos de cada house type e de cada prédio;
 - ES Vol 1 Cap. C e Vol 2 Apêndice C4 (Illustrative Phasing Strategy);
 - Further Environmental Information (set/2026).
+
+Os dados de preço vêm de: HM Land Registry (Price Paid Data e UK House Price Index — *Contains HM
+Land Registry data © Crown copyright and database right 2026. This data is licensed under the Open
+Government Licence v3.0.*), ONS Postcode Directory via postcodes.io (OGL v3.0), anúncios do
+OnTheMarket, site do Berkeley Group, Bank of England (Bankstats G1.3) e GOV.UK (SDLT e shared
+ownership, OGL v3.0). As datas de cada fonte aparecem na aba *Preços*.
 
 Mapa base © OpenStreetMap contributors; imagem de satélite © Esri.
