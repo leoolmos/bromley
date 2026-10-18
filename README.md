@@ -11,7 +11,8 @@ Hayes Farm / Rookery Estates, Bromley. Pedido de planejamento **26/02199/OUT** n
 - **Tudo num mapa só** (OpenStreetMap ou satélite). Os 12 desenhos de planta térrea (1:200) e
   as duas site plans (1:1000) foram georreferenciados e viraram uma camada de tiles, encaixada no
   terreno real. Dá para dar zoom até ver as plantas de cada casa.
-- **As 578 casas e apartamentos da Fase 1** estão no lugar certo. Clique em qualquer um para ver:
+- **As 578 casas e apartamentos da Fase 1** estão no lugar certo. Ao aproximar o mapa, cada casa mostra no
+  ponto o número de quartos, em qualquer modo de cor. Clique em qualquer uma para ver:
   - a ficha: quartos e pessoas, tipo, housetype, tenure, área (GIA ou NIA), vagas, acessibilidade,
     parcela e prancha;
   - as **fachadas** e a **planta**, em alta resolução e com zoom;
