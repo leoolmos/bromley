@@ -21,6 +21,15 @@ Hayes Farm / Rookery Estates, Bromley. Pedido de planejamento **26/02199/OUT** n
 - **Atualizações**: o status do pedido, as datas-chave, as próximas reuniões do Development Control
   Committee (com a pauta checada) e o histórico de cada *fetch*. Inclui ainda uma linha do tempo dos
   documentos, um gráfico dos comentários públicos e a lista dos 332+ documentos com link direto.
+- **☀ Sol — trajetória do sol ao longo do ano**: botão no mapa que abre uma timeline com ▶ play.
+  - Modo *Ano*: o sol percorre o arco de cada dia enquanto as datas avançam; clique em "jan" e
+    dê play.
+  - Modo *Dia*: 24 h, com a noite escurecendo o mapa.
+  - No mapa aparecem a trajetória do sol, os solstícios, as direções do nascer e do pôr do sol e a
+    **sombra em escala real** de um prédio de referência (9 m) ou da casa/prédio selecionado.
+  - Os cálculos usam o algoritmo NOAA em `assets/sun-math.js`, comparado ao pvlib/NREL SPA por
+    `node scripts/test_sun.mjs`: erro menor que 0,02° e nascer/pôr do sol com diferença de menos de
+    4 s. O horário de verão de Londres (BST) está incluído.
 - Busca por plot ou prédio, cores por quartos, tenure ou tipo, filtros, lista completa, links
   compartilháveis (`#h=R-S12_034`, `#b=blk:E`, `#p=2`, `#t=updates`) e PT/EN. Funciona no celular.
 
@@ -52,6 +61,7 @@ certificado em `scripts/certs/` e o acrescenta ao bundle de CAs, então a verifi
 | Caminho | Conteúdo |
 |---|---|
 | `index.html`, `assets/app.js`, `assets/app.css` | O app (Leaflet 1.9.4 via CDN, sem build). |
+| `assets/sun.js`, `assets/sun.css`, `assets/sun-math.js` | Simulação do sol (timeline, trajetória, sombra) e cálculo solar. |
 | `data/homes.json` | 578 imóveis com coordenadas e ficha; 9 prédios. |
 | `data/geo.json` | Polígonos das fases 1–4 e das parcelas da Fase 1. |
 | `data/planning.json`, `data/updates.json` | Status atual do pedido e histórico dos fetches. |

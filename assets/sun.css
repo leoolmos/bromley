@@ -1,0 +1,283 @@
+/* ---------- sun simulation (assets/sun.js) ---------- */
+:root {
+  --sunp-amber: #f59e0b;
+  --sunp-night: #2b3850; --sunp-twi: #8b80d9; --sunp-gold: #fb923c; --sunp-day: #fde68a; --sunp-noon: #fff4c7;
+  --sunp-shadow: 0 1px 2px rgba(15, 23, 42, .06), 0 22px 48px -18px rgba(15, 23, 42, .38);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sunp-night: #26334d; --sunp-twi: #5b52b8; --sunp-gold: #e2773a; --sunp-day: #e6c160; --sunp-noon: #f7dd8a;
+    --sunp-shadow: 0 1px 2px rgba(0, 0, 0, .45), 0 22px 48px -18px rgba(0, 0, 0, .7);
+  }
+}
+:root[data-theme="dark"] {
+  --sunp-night: #26334d; --sunp-twi: #5b52b8; --sunp-gold: #e2773a; --sunp-day: #e6c160; --sunp-noon: #f7dd8a;
+  --sunp-shadow: 0 1px 2px rgba(0, 0, 0, .45), 0 22px 48px -18px rgba(0, 0, 0, .7);
+}
+
+/* toggle under the Map/Satellite switch; top-right controls share one width */
+.leaflet-top.leaflet-right { display: flex; flex-direction: column; align-items: stretch; }
+.sun-ctl { padding: 6px; }
+.sun-toggle {
+  display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; padding: 6px 11px; cursor: pointer;
+  border: 1px solid var(--line-2); border-radius: 9px; background: var(--panel); color: var(--ink-2);
+  font-size: 12.5px; font-weight: 600; transition: background .15s, color .15s, border-color .15s;
+}
+.sun-toggle svg { width: 16px; height: 16px; color: var(--sunp-amber); transition: transform .4s cubic-bezier(.2, .8, .2, 1); }
+.sun-toggle:hover { border-color: var(--sunp-amber); }
+.sun-toggle:hover svg { transform: rotate(45deg); }
+.sun-toggle[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--panel); }
+.sun-toggle[aria-pressed="true"] svg { color: #fbbf24; filter: drop-shadow(0 0 4px rgba(251, 191, 36, .8)); }
+.sun-toggle:focus-visible, .sun-panel button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* map overlay panes */
+.sunp-pane { transition: opacity .25s ease; }
+.sunp-pane.sunp-off { opacity: 0; }
+.sunp-pathpane.sunp-zooming { opacity: 0; transition-duration: .08s; }
+.sunp-dim { position: absolute; left: 0; top: 0; overflow: hidden; pointer-events: none; }
+.sunp-dim i { position: absolute; display: block; opacity: 0; will-change: opacity, transform; }
+.sunp-off .sunp-dim i, .sunp-off .sunp-hel { will-change: auto; }   /* no composited layers kept while closed */
+.sunp-dark { inset: 0; }
+.sunp-glow { background: linear-gradient(to top, rgba(255, 166, 77, .11) 0, rgba(255, 166, 77, .11) 18%, rgba(255, 128, 40, .36) 100%); }
+.sunp-svg { position: absolute; left: 0; top: 0; pointer-events: none; overflow: visible; }
+.sunp-svg text {
+  font: 700 11px/1 Inter, system-ui, sans-serif; fill: #0f172a; text-anchor: middle; dominant-baseline: central;
+  paint-order: stroke; stroke: rgba(255, 255, 255, .92); stroke-width: 3.2px; stroke-linejoin: round;
+}
+.sunp-plate { stroke: none; }
+.sunp-ring { fill: none; stroke: rgba(15, 23, 42, .72); stroke-width: 1.4; }
+.sunp-ring-h { fill: none; stroke: rgba(255, 255, 255, .75); stroke-width: 4.5; }
+.sunp-alt { fill: none; stroke: rgba(15, 23, 42, .32); stroke-width: 1; stroke-dasharray: 2 4; }
+.sunp-ticks { fill: none; stroke: rgba(15, 23, 42, .62); stroke-width: 1.3; stroke-linecap: round; }
+.sunp-svg .sunp-card { font-size: 12px; font-weight: 800; letter-spacing: .02em; }
+.sunp-svg .sunp-card.n { fill: #dc2626; }
+.sunp-svg .sunp-altlbl { font-size: 9.5px; font-weight: 600; fill: #475569; text-anchor: start; }
+.sunp-sol { fill: none; stroke-width: 1.6; stroke-dasharray: 5 4; stroke-linecap: round; }
+.sunp-sol.jun { stroke: #c2410c; }
+.sunp-sol.dec { stroke: #1d4ed8; }
+.sunp-svg .sunp-sollbl { font-size: 10px; font-weight: 700; text-anchor: end; }
+.sunp-svg .sunp-sollbl.jun { fill: #c2410c; }
+.sunp-svg .sunp-sollbl.dec { fill: #1d4ed8; }
+/* moving parts: composited, positioned by transform from the pane origin (layer coordinates) */
+.sunp-hel { position: absolute; left: 0; top: 0; pointer-events: none; transform-origin: 0 0; will-change: transform; }
+.sunp-pathpane > .sunp-hel { z-index: 2; }
+.sunp-pathpane > .sunp-svg { z-index: 1; }   /* Leaflet gives map-pane svgs z-index 200 */
+.sunp-pathpane > .sunp-sh { z-index: 0; }
+.sunp-sh { width: 1000px; height: 6px; border-radius: 0 4px 4px 0; background: linear-gradient(90deg, rgba(2, 6, 23, .58), rgba(2, 6, 23, .16)); }
+.sunp-shtip { width: 12px; height: 14px; background: rgba(2, 6, 23, .42); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.sunp-shlbl {
+  font: 700 11px/1 Inter, system-ui, sans-serif; color: #0f172a; white-space: nowrap; font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff;
+}
+.sunp-line { width: 1000px; height: 1.5px; background: linear-gradient(90deg, rgba(234, 88, 12, .1), rgba(234, 88, 12, .85)); }
+.sunp-sun {
+  --c: #fde047; --e: #f59e0b; --h: 252, 211, 77;
+  width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%;
+  background: radial-gradient(circle closest-side, rgba(var(--h), .95) 0, rgba(var(--h), .5) 32%, rgba(var(--h), 0) 100%);
+}
+.sunp-sun i {
+  position: absolute; left: 50%; top: 50%; width: 19px; height: 19px; margin: -9.5px 0 0 -9.5px; border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, .95); box-sizing: border-box;
+  background: radial-gradient(circle at 40% 36%, #fffbeb 0, var(--c) 48%, var(--e) 100%);
+  box-shadow: 0 0 0 1px rgba(154, 52, 18, .5), 0 1px 5px rgba(124, 45, 18, .45);
+}
+.sunp-sun.ghost { background: none; }
+.sunp-sun.ghost i { width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; background: rgba(30, 41, 59, .55); border: 1.5px dashed rgba(226, 232, 240, .9); box-shadow: none; }
+.sunp-rays line { stroke-width: 1.6; stroke-dasharray: 1 4; stroke-linecap: round; }
+.sunp-rays .rise { stroke: #d97706; fill: #f59e0b; }
+.sunp-rays .set { stroke: #dc2626; fill: #ef4444; }
+.sunp-rays circle { stroke: #fff; stroke-width: 1.6; stroke-dasharray: none; }
+.sunp-arc-h { fill: none; stroke: rgba(15, 23, 42, .38); stroke-width: 7.5; stroke-linecap: round; stroke-linejoin: round; }
+.sunp-arc path { fill: none; stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+.sunp-focus { fill: #fff; stroke: #0f172a; stroke-width: 2; }
+
+/* hide the first-visit hint while the panel is up */
+body.sun-on .map-hint { opacity: 0 !important; }
+
+/* ---------- timeline panel ---------- */
+/* below the other control corners (z 1000), so the top-right switches are never painted over */
+.sun-corner { left: 0; right: 0; display: flex; justify-content: center; z-index: 999; transition: right .22s ease, bottom .2s ease; }
+.sun-corner.side { justify-content: flex-start; }   /* short, wide map: panel at the left, dial beside it (sun.js) */
+@media (min-width: 901px) {   /* keep the panel and the top-right switches clear of the detail drawer */
+  .leaflet-top.leaflet-right { transition: right .22s ease; }
+  .layout:has(#detail.open) .sun-corner { right: calc(var(--detail) + 24px); }
+  .layout:has(#detail.open) .leaflet-top.leaflet-right { right: calc(var(--detail) + 14px); }
+  /* too little room beside the drawer: the panel spans the map and the drawer ends above it */
+  .detail { transition: transform .22s ease, bottom .22s ease; }
+  body.sun-below .layout:has(#detail.open) .sun-corner { right: 0; }
+  body.sun-below .detail { bottom: calc(var(--sunp-ph, 230px) + 10px); }
+}
+.sunp-lift-l .leaflet-bottom.leaflet-left .leaflet-control-scale { margin-bottom: var(--sunp-lift-l); }
+.sunp-lift-r .leaflet-bottom.leaflet-right .leaflet-control-zoom { margin-bottom: var(--sunp-lift-r); }
+.leaflet-control-scale, .leaflet-control-zoom { transition: margin-bottom .2s ease; }
+
+.sun-panel {
+  container: sunp / inline-size;   /* its layout follows its own width (the drawer can squeeze it), not the viewport */
+  position: relative; pointer-events: auto; width: min(780px, calc(100% - 24px)); margin: 0 12px calc(var(--sunp-attr, 16px) + 8px);
+  padding: 12px 14px 10px; border-radius: 18px; border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--sunp-shadow); color: var(--ink); font: 13px/1.35 Inter, system-ui, sans-serif; cursor: default;
+  opacity: 0; visibility: hidden; transform: translateY(14px) scale(.985); transform-origin: 50% 100%;
+  transition: opacity .2s ease, transform .28s cubic-bezier(.2, .8, .2, 1), visibility 0s linear .28s;
+}
+.sun-panel.open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.sun-panel button { font: inherit; }
+
+.sun-top {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 12px; row-gap: 2px; align-items: center;
+  grid-template-areas: "play when ctls" "play facts facts" "play shadow shadow";
+}
+.sun-play {
+  grid-area: play; width: 46px; height: 46px; border-radius: 50%; border: 0; cursor: pointer; display: grid; place-items: center; color: #fff;
+  background: radial-gradient(circle at 32% 26%, #fde68a 0, #f59e0b 46%, #ea580c 100%);
+  box-shadow: 0 8px 18px -6px rgba(234, 88, 12, .7), inset 0 1px 0 rgba(255, 255, 255, .45), inset 0 -2px 4px rgba(194, 65, 12, .35);
+  transition: transform .14s ease, box-shadow .2s ease;
+}
+.sun-play:hover { transform: translateY(-1px); box-shadow: 0 12px 22px -6px rgba(234, 88, 12, .75), inset 0 1px 0 rgba(255, 255, 255, .45), inset 0 -2px 4px rgba(194, 65, 12, .35); }
+.sun-play:active { transform: scale(.95); }
+.sun-play svg { width: 20px; height: 20px; fill: currentColor; filter: drop-shadow(0 1px 1px rgba(124, 45, 18, .35)); }
+.sun-play .i-play { margin-left: 3px; }
+.sun-play .i-pause, .sun-play[aria-pressed="true"] .i-play { display: none; }
+.sun-play[aria-pressed="true"] .i-pause { display: block; }
+.sun-panel.playing .sun-play { animation: sunp-pulse 2.4s ease-in-out infinite; }
+@keyframes sunp-pulse { 50% { box-shadow: 0 8px 18px -6px rgba(234, 88, 12, .7), 0 0 0 6px rgba(245, 158, 11, .16), inset 0 1px 0 rgba(255, 255, 255, .45); } }
+
+.sun-when { grid-area: when; display: flex; align-items: baseline; gap: 8px; min-width: 0; white-space: nowrap; }
+.sun-date { font-size: 18px; font-weight: 800; letter-spacing: -.02em; }
+.sun-time { font-size: 18px; font-weight: 600; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.sun-tz {
+  align-self: center; font-size: 10px; font-weight: 700; letter-spacing: .06em; color: var(--muted);
+  border: 1px solid var(--line-2); border-radius: 5px; padding: 1px 5px 0;
+}
+.sun-tz2 { display: none; }
+.sun-facts { grid-area: facts; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12.5px; color: var(--muted); min-width: 0; }
+.sun-f { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.sun-f b { color: var(--ink); font-weight: 650; font-variant-numeric: tabular-nums; }
+.sun-f svg { width: 14px; height: 14px; flex: none; }
+.sun-pos svg { color: var(--sunp-amber); }
+.sun-rise-f svg { color: #d97706; }
+.sun-set-f svg { color: #e11d48; }
+.sun-sep { opacity: .6; }
+.sun-sh { grid-area: shadow; color: var(--ink-2); font-size: 12.5px; min-width: 0; }
+.sun-sh-l { overflow: hidden; text-overflow: ellipsis; }
+.sun-sh svg { color: var(--ink-2); }
+.sun-sh-n:empty { display: none; }
+
+.sun-ctls { grid-area: ctls; display: flex; align-items: center; gap: 8px; justify-self: end; }
+.sun-ctls .seg button { padding: 5px 10px; font-variant-numeric: tabular-nums; }
+.sun-ctls .seg button:not(.active):hover { color: var(--ink); }
+.sun-cycle {
+  display: none; min-width: 40px; height: 30px; padding: 0 8px; border-radius: 9px; border: 1px solid var(--line-2);
+  background: var(--panel); color: var(--ink-2); font-size: 12.5px; font-weight: 700; cursor: pointer; font-variant-numeric: tabular-nums;
+}
+.sun-close.icon-btn { width: 32px; height: 32px; border-radius: 9px; }
+.sun-close.icon-btn svg { width: 16px; height: 16px; }
+
+/* tracks */
+.sun-tracks { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); display: grid; gap: 6px; }
+.sun-trk { position: relative; }
+.sun-spark { display: block; width: calc(100% - 16px); height: 38px; margin: 0 8px; overflow: visible; }
+.sun-sp-line { fill: none; stroke: var(--sunp-amber); stroke-width: 1.6; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.sun-sp-grid line { stroke: var(--line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.sun-sp-half { stroke: var(--line-2); stroke-width: 1; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
+.sun-yr-trk::before {   /* baseline of the date track */
+  content: ""; position: absolute; left: 8px; right: 8px; top: 37px; height: 2px; border-radius: 1px; background: var(--line-2);
+}
+.sun-mark { position: absolute; left: 0; top: 0; width: 0; pointer-events: none; will-change: transform; }
+.sun-ymark { height: 38px; }
+.sun-ymark::before { content: ""; position: absolute; left: -1px; top: 0; bottom: 0; width: 2px; border-radius: 1px; background: var(--ink); opacity: .78; }
+.sun-dot {
+  position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--sunp-amber); box-shadow: 0 0 0 2px var(--panel);
+}
+.sun-knob {
+  position: absolute; left: -7px; width: 14px; height: 14px; border-radius: 50%; background: #fff;
+  border: 2.5px solid var(--ink); box-shadow: 0 1px 4px rgba(15, 23, 42, .35); transition: box-shadow .15s;
+}
+.sun-ymark .sun-knob { top: 31px; }
+.sun-months { margin-top: 10px; }
+.sun-dmark { top: 0; height: 14px; }
+.sun-dmark .sun-knob { top: 0; }
+.sun-range {
+  position: absolute; left: 0; top: -2px; width: 100%; height: 50px; margin: 0; padding: 0; opacity: 0; cursor: pointer;
+  -webkit-appearance: none; appearance: none; background: transparent; touch-action: pan-y;
+}
+.sun-dr { height: 22px; top: -4px; }
+.sun-range::-webkit-slider-runnable-track { height: 100%; background: transparent; }
+.sun-range::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; }
+.sun-range::-moz-range-thumb { width: 16px; height: 16px; border: 0; }
+.sun-trk:has(.sun-range:focus-visible) .sun-knob { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 40%, transparent), 0 1px 4px rgba(15, 23, 42, .35); }
+.sun-trk:hover .sun-knob { box-shadow: 0 0 0 4px color-mix(in srgb, var(--sunp-amber) 22%, transparent), 0 1px 4px rgba(15, 23, 42, .35); }
+.sun-band { height: 10px; margin: 2px 8px 0; border-radius: 5px; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 10%, transparent); }
+.sun-axis { position: relative; height: 14px; margin-top: 4px; font-size: 10.5px; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.sun-axis span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; transition: color .15s; }
+.sun-months button {
+  position: absolute; top: -2px; transform: translateX(-50%); border: 0; background: none; padding: 2px 5px; border-radius: 5px;
+  font: inherit; color: inherit; cursor: pointer; white-space: nowrap; transition: color .15s, background .15s;
+}
+.sun-months button:hover { color: var(--ink); background: color-mix(in srgb, var(--sunp-amber) 16%, transparent); }
+.sun-months button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.sun-months .on { color: var(--ink); font-weight: 800; }
+/* the dial is the focus in sun mode: the map's permanent phase / parcel labels would collide with its labels */
+body.sun-on .leaflet-tooltip.phase-label { display: none; }
+.sun-hours span:first-child { transform: none; margin-left: -8px; }
+.sun-hours span:last-child { transform: translateX(-100%); margin-left: 8px; }
+.sun-day-trk { margin-top: 2px; }
+.sun-day-trk .sun-axis { margin-top: 3px; }
+
+@media (max-width: 900px) {
+  body.sheet-expanded .leaflet-top.leaflet-right { display: none; }   /* the map is covered by the sheet */
+  .sun-panel { padding: 10px 12px 8px; border-radius: 16px; width: calc(100% - 20px); margin-left: 10px; margin-right: 10px; }
+  .sun-sh { font-size: 11.5px; }
+  .sun-play { width: 40px; height: 40px; }
+  .sun-play svg { width: 18px; height: 18px; }
+  .sun-date, .sun-time { font-size: 16px; }
+  .sun-facts { gap: 2px 12px; font-size: 11.5px; }
+  .sun-ctls .seg button { padding: 5px 8px; }
+  .sun-close.icon-btn { width: 30px; height: 30px; }
+  .sun-tracks { margin-top: 8px; padding-top: 6px; }
+  .sun-spark, .sun-ymark { height: 28px; }
+  .sun-yr-trk::before { top: 27px; }
+  .sun-ymark .sun-knob { top: 21px; }
+  .sun-months { margin-top: 9px; }
+  .sun-range { height: 40px; }
+  .sun-dr { height: 22px; }
+}
+/* phone in landscape: while the sun is on, the folded sheet keeps only its handle and tabs */
+@media (max-width: 900px) and (max-height: 520px) {
+  body.sun-on .sidebar.collapsed { height: 60px; }
+  body.sun-on.sheet-collapsed .leaflet-bottom { bottom: 60px; }
+}
+.sun-corner.side .sun-panel { width: min(420px, calc(50% - 20px)); }
+
+/* compact: facts on their own row, one speed button */
+@container sunp (max-width: 540px) {
+  .sun-top { column-gap: 10px; row-gap: 3px; grid-template-areas: "play when ctls" "facts facts facts" "shadow shadow shadow"; }
+  .sun-facts { margin-top: 5px; }
+  .sun-when { gap: 6px; }
+  .sun-when .sun-tz { display: none; }   /* no room next to the controls: shown at the start of the facts row */
+  .sun-tz2 { display: inline-block; align-self: center; }
+  .sun-ctls { gap: 6px; }
+  .sun-speeds { display: none !important; }
+  .sun-cycle { display: inline-block; }
+}
+/* narrow: the controls get their own row */
+@container sunp (max-width: 330px) {
+  .sun-top { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "play when" "ctls ctls" "facts facts" "shadow shadow"; }
+  .sun-ctls { justify-self: stretch; margin-top: 6px; }
+  .sun-close { margin-left: auto; }
+}
+
+/* mini (short map, see lift() in sun.js): no facts, no day-length chart */
+.sun-panel.mini .sun-facts, .sun-panel.mini .sun-sh, .sun-panel.mini .sun-spark, .sun-panel.mini .sun-dot, .sun-panel.mini .sun-ymark::before { display: none; }
+.sun-panel.mini .sun-tracks { margin-top: 8px; padding-top: 8px; }
+.sun-panel.mini .sun-ymark { height: 14px; }
+.sun-panel.mini .sun-yr-trk::before { top: 6px; }
+.sun-panel.mini .sun-ymark .sun-knob { top: 0; }
+.sun-panel.mini .sun-months { margin-top: 17px; }
+.sun-panel.mini .sun-yr { height: 30px; top: -6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sun-panel, .sunp-pane, .sun-corner, .leaflet-control-scale, .leaflet-control-zoom { transition: none; }
+  .sun-panel.playing .sun-play { animation: none; }
+}
