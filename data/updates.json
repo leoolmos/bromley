@@ -1,5 +1,52 @@
 [
  {
+  "fetched_at": "2026-10-20T11:37:46+00:00",
+  "summary_pt": "2 documento(s) novo(s). Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "2 new document(s). Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-09-04",
+   "earliest_decision_date": "2026-09-04",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [],
+   "agenda_new": [],
+   "new_documents": [
+    {
+     "id": "068Tv00000mOuK5IAK",
+     "title": "Tree Protection Plan",
+     "category": "Drawing",
+     "date": "2026-10-20",
+     "published": "2026-10-20",
+     "ext": "pdf",
+     "size": 8050509,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000mOuK5IAK"
+    },
+    {
+     "id": "068Tv00000mOx8EIAS",
+     "title": "Aboricultural Impact Statement",
+     "category": "Supporting Document",
+     "date": "2026-10-20",
+     "published": "2026-10-20",
+     "ext": "pdf",
+     "size": 24458626,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000mOx8EIAS"
+    }
+   ],
+   "removed_documents": [],
+   "comments_total": 3620,
+   "comments_delta": 0,
+   "stance_delta": {}
+  }
+ },
+ {
   "fetched_at": "2026-10-19T13:17:58+00:00",
   "summary_pt": "1 documento(s) novo(s). Ainda sem decisão e sem data de comitê publicada no registro.",
   "summary_en": "1 new document(s). Not yet decided; no committee date published on the register.",
