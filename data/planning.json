@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-20T11:37:46+00:00",
+ "fetched_at": "2026-10-21T11:50:13+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -41,6 +41,16 @@
    "ext": "pdf",
    "size": 8050509,
    "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000mOuK5IAK"
+  },
+  {
+   "id": "068Tv00000mPqz9IAC",
+   "title": "Report - Outcomes from post-application engagement",
+   "category": "Supporting Document",
+   "date": "2026-10-20",
+   "published": "2026-10-20",
+   "ext": "pdf",
+   "size": 4766872,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000mPqz9IAC"
   },
   {
    "id": "068Tv00000mOx8EIAS",
@@ -3384,11 +3394,11 @@
   }
  ],
  "comments": {
-  "total": 3620,
+  "total": 3624,
   "by_stance": {
-   "Object": 2521,
+   "Object": 2524,
    "Support": 1070,
-   "Representation": 28,
+   "Representation": 29,
    "Neutral": 1
   },
   "by_month": {
@@ -3414,13 +3424,13 @@
     "Representation": 1
    },
    "2026-10": {
-    "Support": 69,
-    "Object": 23,
-    "Representation": 10
+    "Object": 26,
+    "Representation": 11,
+    "Support": 69
    }
   },
-  "last_comment_date": "2026-10-16",
-  "last_7_days": 18
+  "last_comment_date": "2026-10-20",
+  "last_7_days": 8
  },
  "committee": {
   "name": "Development Control Committee",
@@ -3455,6 +3465,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-10-20T11:37:46+00:00"
+  "meetings_checked": "2026-10-21T11:50:13+00:00"
  }
 }

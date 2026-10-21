@@ -1,5 +1,45 @@
 [
  {
+  "fetched_at": "2026-10-21T11:50:13+00:00",
+  "summary_pt": "1 documento(s) novo(s). +4 comentário(s) públicos (total 3624). Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "1 new document(s). +4 public comment(s) (total 3624). Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-09-04",
+   "earliest_decision_date": "2026-09-04",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [],
+   "agenda_new": [],
+   "new_documents": [
+    {
+     "id": "068Tv00000mPqz9IAC",
+     "title": "Report - Outcomes from post-application engagement",
+     "category": "Supporting Document",
+     "date": "2026-10-20",
+     "published": "2026-10-20",
+     "ext": "pdf",
+     "size": 4766872,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000mPqz9IAC"
+    }
+   ],
+   "removed_documents": [],
+   "comments_total": 3624,
+   "comments_delta": 4,
+   "stance_delta": {
+    "Object": 3,
+    "Representation": 1
+   }
+  }
+ },
+ {
   "fetched_at": "2026-10-20T11:37:46+00:00",
   "summary_pt": "2 documento(s) novo(s). Ainda sem decisão e sem data de comitê publicada no registro.",
   "summary_en": "2 new document(s). Not yet decided; no committee date published on the register.",
