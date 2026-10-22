@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-21T11:50:13+00:00",
+ "fetched_at": "2026-10-22T11:53:37+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -18,8 +18,8 @@
   "determination_level": null,
   "received_date": "2026-06-01",
   "valid_date": "2026-06-16",
-  "consultation_deadline": "2026-09-04",
-  "earliest_decision_date": "2026-09-04",
+  "consultation_deadline": "2026-11-12",
+  "earliest_decision_date": "2026-11-12",
   "committee_date": null,
   "scheduled_decision_date": null,
   "planning_portal_ref": "PP-14947118",
@@ -32,6 +32,16 @@
   "open_for_comments": true
  },
  "documents": [
+  {
+   "id": "068Tv00000mZWsdIAG",
+   "title": "Cover Letter and AQN Technical Note from Air Quality Consultants Ltd",
+   "category": "Supporting Document",
+   "date": "2026-10-22",
+   "published": "2026-10-22",
+   "ext": "pdf",
+   "size": 254649,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000mZWsdIAG"
+  },
   {
    "id": "068Tv00000mOuK5IAK",
    "title": "Tree Protection Plan",
@@ -3465,6 +3475,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-10-21T11:50:13+00:00"
+  "meetings_checked": "2026-10-22T11:53:37+00:00"
  }
 }

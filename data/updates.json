@@ -1,5 +1,57 @@
 [
  {
+  "fetched_at": "2026-10-22T11:53:37+00:00",
+  "summary_pt": "Fim da consulta pública: 04/09/2026 → 12/11/2026. Data mais cedo para decisão: 04/09/2026 → 12/11/2026. 1 documento(s) novo(s). Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "Consultation deadline: 4 Sep 2026 → 12 Nov 2026. Earliest decision date: 4 Sep 2026 → 12 Nov 2026. 1 new document(s). Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-11-12",
+   "earliest_decision_date": "2026-11-12",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [
+    {
+     "field": "consultation_deadline",
+     "label_pt": "Fim da consulta pública",
+     "label_en": "Consultation deadline",
+     "from": "2026-09-04",
+     "to": "2026-11-12"
+    },
+    {
+     "field": "earliest_decision_date",
+     "label_pt": "Data mais cedo para decisão",
+     "label_en": "Earliest decision date",
+     "from": "2026-09-04",
+     "to": "2026-11-12"
+    }
+   ],
+   "agenda_new": [],
+   "new_documents": [
+    {
+     "id": "068Tv00000mZWsdIAG",
+     "title": "Cover Letter and AQN Technical Note from Air Quality Consultants Ltd",
+     "category": "Supporting Document",
+     "date": "2026-10-22",
+     "published": "2026-10-22",
+     "ext": "pdf",
+     "size": 254649,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000mZWsdIAG"
+    }
+   ],
+   "removed_documents": [],
+   "comments_total": 3624,
+   "comments_delta": 0,
+   "stance_delta": {}
+  }
+ },
+ {
   "fetched_at": "2026-10-21T11:50:13+00:00",
   "summary_pt": "1 documento(s) novo(s). +4 comentário(s) públicos (total 3624). Ainda sem decisão e sem data de comitê publicada no registro.",
   "summary_en": "1 new document(s). +4 public comment(s) (total 3624). Not yet decided; no committee date published on the register.",
