@@ -1,5 +1,42 @@
 [
  {
+  "fetched_at": "2026-10-29T13:01:57+00:00",
+  "summary_pt": "1 documento(s) novo(s). Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "1 new document(s). Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-11-12",
+   "earliest_decision_date": "2026-11-12",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [],
+   "agenda_new": [],
+   "new_documents": [
+    {
+     "id": "068Tv00000n0PNUIA2",
+     "title": "GLA Consultation - (Post Stage 1 Set 2) - Energy Memo",
+     "category": "Supporting Document",
+     "date": "2026-10-28",
+     "published": "2026-10-28",
+     "ext": "xlsx",
+     "size": 198101,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000n0PNUIA2"
+    }
+   ],
+   "removed_documents": [],
+   "comments_total": 3626,
+   "comments_delta": 0,
+   "stance_delta": {}
+  }
+ },
+ {
   "fetched_at": "2026-10-26T13:03:56+00:00",
   "summary_pt": "Nenhum documento novo. +1 comentário(s) públicos (total 3626). Ainda sem decisão e sem data de comitê publicada no registro.",
   "summary_en": "No new documents. +1 public comment(s) (total 3626). Not yet decided; no committee date published on the register.",
