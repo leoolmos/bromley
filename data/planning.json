@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-29T13:01:57+00:00",
+ "fetched_at": "2026-10-30T12:57:17+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -3464,13 +3464,6 @@
     "mentions_application": false
    },
    {
-    "date": "2026-10-14",
-    "time": "7.30 pm",
-    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8501&Ver=4",
-    "agenda_published": false,
-    "mentions_application": false
-   },
-   {
     "date": "2026-11-12",
     "time": "7.30 pm",
     "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8316&Ver=4",
@@ -3485,6 +3478,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-10-29T13:01:57+00:00"
+  "meetings_checked": "2026-10-30T12:57:17+00:00"
  }
 }
