@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-30T12:57:17+00:00",
+ "fetched_at": "2026-10-31T12:30:32+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -184,7 +184,7 @@
   },
   {
    "id": "068Tv00000lO9f5IAC",
-   "title": "Bromley Green - Groundwater Representation",
+   "title": "Keep Bromley Green - Groundwater Representation",
    "category": "Representation",
    "date": "2026-09-29",
    "published": "2026-10-06",
@@ -194,7 +194,7 @@
   },
   {
    "id": "068Tv00000lMgryIAC",
-   "title": "Bromley Green- Groundwater Representation Follow up",
+   "title": "Keep Bromley Green- Groundwater Representation Follow up",
    "category": "Representation",
    "date": "2026-09-29",
    "published": "2026-10-05",
@@ -474,7 +474,7 @@
   },
   {
    "id": "068Tv00000jyxeQIAQ",
-   "title": "Bromley Green - Ground Investigation - Representation",
+   "title": "Keep Bromley Green - Ground Investigation - Representation",
    "category": "Representation",
    "date": "2026-09-14",
    "published": "2026-09-14",
@@ -3478,6 +3478,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-10-30T12:57:17+00:00"
+  "meetings_checked": "2026-10-31T12:30:32+00:00"
  }
 }
