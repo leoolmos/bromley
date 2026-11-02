@@ -1,5 +1,104 @@
 [
  {
+  "fetched_at": "2026-11-02T15:53:41+00:00",
+  "summary_pt": "7 documento(s) novo(s). +1 comentário(s) públicos (total 3627). Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "7 new document(s). +1 public comment(s) (total 3627). Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-11-12",
+   "earliest_decision_date": "2026-11-12",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [],
+   "agenda_new": [],
+   "new_documents": [
+    {
+     "id": "068Tv00000nLqNcIAK",
+     "title": "Representation_hedgerows_v0.38",
+     "category": "Representation",
+     "date": "2026-10-31",
+     "published": "2026-11-02",
+     "ext": "pdf",
+     "size": 4750231,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLqNcIAK"
+    },
+    {
+     "id": "068Tv00000nLQ8PIAW",
+     "title": "Representation - Keep Bromley Green News Shopper Article",
+     "category": "Representation",
+     "date": "2026-10-30",
+     "published": "2026-11-02",
+     "ext": "pdf",
+     "size": 1323741,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLQ8PIAW"
+    },
+    {
+     "id": "068Tv00000nLtLRIA0",
+     "title": "Representation - Keep Bromley Green Flooding Document (Redacted)",
+     "category": "Representation",
+     "date": "2026-10-30",
+     "published": "2026-11-02",
+     "ext": "pdf",
+     "size": 11301259,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLtLRIA0"
+    },
+    {
+     "id": "068Tv00000nLQoMIAW",
+     "title": "Your_Shout_Analysis",
+     "category": "Representation",
+     "date": "2026-10-28",
+     "published": "2026-11-02",
+     "ext": "pdf",
+     "size": 275033,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLQoMIAW"
+    },
+    {
+     "id": "068Tv00000nLqYvIAK",
+     "title": "Planning Objection Follow up",
+     "category": "Representation",
+     "date": "2026-10-28",
+     "published": "2026-11-02",
+     "ext": "pdf",
+     "size": 1697471,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLqYvIAK"
+    },
+    {
+     "id": "068Tv00000nLHRjIAO",
+     "title": "Groundwater_Representation_3",
+     "category": "Representation",
+     "date": "2026-10-28",
+     "published": "2026-11-02",
+     "ext": "pdf",
+     "size": 93220,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLHRjIAO"
+    },
+    {
+     "id": "068Tv00000muPXzIAM",
+     "title": "British Horse Society",
+     "category": "Consultee Comment",
+     "date": "2026-10-22",
+     "published": "2026-10-27",
+     "ext": "docx",
+     "size": 699604,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000muPXzIAM"
+    }
+   ],
+   "removed_documents": [],
+   "comments_total": 3627,
+   "comments_delta": 1,
+   "stance_delta": {
+    "Object": 1
+   }
+  }
+ },
+ {
   "fetched_at": "2026-10-29T13:01:57+00:00",
   "summary_pt": "1 documento(s) novo(s). Ainda sem decisão e sem data de comitê publicada no registro.",
   "summary_en": "1 new document(s). Not yet decided; no committee date published on the register.",

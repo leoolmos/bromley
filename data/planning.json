@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-01T13:29:00+00:00",
+ "fetched_at": "2026-11-02T15:53:41+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -33,6 +33,66 @@
  },
  "documents": [
   {
+   "id": "068Tv00000nLqNcIAK",
+   "title": "Representation_hedgerows_v0.38",
+   "category": "Representation",
+   "date": "2026-10-31",
+   "published": "2026-11-02",
+   "ext": "pdf",
+   "size": 4750231,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLqNcIAK"
+  },
+  {
+   "id": "068Tv00000nLQ8PIAW",
+   "title": "Representation - Keep Bromley Green News Shopper Article",
+   "category": "Representation",
+   "date": "2026-10-30",
+   "published": "2026-11-02",
+   "ext": "pdf",
+   "size": 1323741,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLQ8PIAW"
+  },
+  {
+   "id": "068Tv00000nLtLRIA0",
+   "title": "Representation - Keep Bromley Green Flooding Document (Redacted)",
+   "category": "Representation",
+   "date": "2026-10-30",
+   "published": "2026-11-02",
+   "ext": "pdf",
+   "size": 11301259,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLtLRIA0"
+  },
+  {
+   "id": "068Tv00000nLQoMIAW",
+   "title": "Your_Shout_Analysis",
+   "category": "Representation",
+   "date": "2026-10-28",
+   "published": "2026-11-02",
+   "ext": "pdf",
+   "size": 275033,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLQoMIAW"
+  },
+  {
+   "id": "068Tv00000nLqYvIAK",
+   "title": "Planning Objection Follow up",
+   "category": "Representation",
+   "date": "2026-10-28",
+   "published": "2026-11-02",
+   "ext": "pdf",
+   "size": 1697471,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLqYvIAK"
+  },
+  {
+   "id": "068Tv00000nLHRjIAO",
+   "title": "Groundwater_Representation_3",
+   "category": "Representation",
+   "date": "2026-10-28",
+   "published": "2026-11-02",
+   "ext": "pdf",
+   "size": 93220,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nLHRjIAO"
+  },
+  {
    "id": "068Tv00000n0PNUIA2",
    "title": "GLA Consultation - (Post Stage 1 Set 2) - Energy Memo",
    "category": "Supporting Document",
@@ -41,6 +101,16 @@
    "ext": "xlsx",
    "size": 198101,
    "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000n0PNUIA2"
+  },
+  {
+   "id": "068Tv00000muPXzIAM",
+   "title": "British Horse Society",
+   "category": "Consultee Comment",
+   "date": "2026-10-22",
+   "published": "2026-10-27",
+   "ext": "docx",
+   "size": 699604,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000muPXzIAM"
   },
   {
    "id": "068Tv00000mZWsdIAG",
@@ -3414,9 +3484,9 @@
   }
  ],
  "comments": {
-  "total": 3626,
+  "total": 3627,
   "by_stance": {
-   "Object": 2526,
+   "Object": 2527,
    "Support": 1070,
    "Representation": 29,
    "Neutral": 1
@@ -3444,25 +3514,18 @@
     "Representation": 1
    },
    "2026-10": {
-    "Object": 28,
+    "Object": 29,
     "Representation": 11,
     "Support": 69
    }
   },
-  "last_comment_date": "2026-10-24",
-  "last_7_days": 6
+  "last_comment_date": "2026-10-31",
+  "last_7_days": 1
  },
  "committee": {
   "name": "Development Control Committee",
   "url": "https://cds.bromley.gov.uk/ieListMeetings.aspx?CommitteeId=133",
   "meetings": [
-   {
-    "date": "2026-09-17",
-    "time": "7.30 pm",
-    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8315&Ver=4",
-    "agenda_published": true,
-    "mentions_application": false
-   },
    {
     "date": "2026-11-12",
     "time": "7.30 pm",
@@ -3478,6 +3541,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-10-31T12:30:32+00:00"
+  "meetings_checked": "2026-11-02T15:53:41+00:00"
  }
 }
