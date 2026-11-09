@@ -1,5 +1,34 @@
 [
  {
+  "fetched_at": "2026-11-09T16:20:06+00:00",
+  "summary_pt": "Nenhum documento novo. +3 comentário(s) públicos (total 3633). Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "No new documents. +3 public comment(s) (total 3633). Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-11-12",
+   "earliest_decision_date": "2026-11-12",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [],
+   "agenda_new": [],
+   "new_documents": [],
+   "removed_documents": [],
+   "comments_total": 3633,
+   "comments_delta": 3,
+   "stance_delta": {
+    "Representation": 1,
+    "Object": 2
+   }
+  }
+ },
+ {
   "fetched_at": "2026-11-06T14:17:23+00:00",
   "summary_pt": "Nenhum documento novo. +1 comentário(s) públicos (total 3630). Ainda sem decisão e sem data de comitê publicada no registro.",
   "summary_en": "No new documents. +1 public comment(s) (total 3630). Not yet decided; no committee date published on the register.",

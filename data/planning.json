@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-08T13:25:50+00:00",
+ "fetched_at": "2026-11-09T16:20:06+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -3484,11 +3484,11 @@
   }
  ],
  "comments": {
-  "total": 3630,
+  "total": 3633,
   "by_stance": {
-   "Object": 2530,
+   "Object": 2532,
    "Support": 1070,
-   "Representation": 29,
+   "Representation": 30,
    "Neutral": 1
   },
   "by_month": {
@@ -3519,11 +3519,12 @@
     "Support": 69
    },
    "2026-11": {
-    "Object": 3
+    "Representation": 1,
+    "Object": 5
    }
   },
-  "last_comment_date": "2026-11-05",
-  "last_7_days": 4
+  "last_comment_date": "2026-11-09",
+  "last_7_days": 6
  },
  "committee": {
   "name": "Development Control Committee",
@@ -3544,6 +3545,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-11-08T13:25:50+00:00"
+  "meetings_checked": "2026-11-09T16:20:06+00:00"
  }
 }
