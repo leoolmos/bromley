@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-09T16:20:06+00:00",
+ "fetched_at": "2026-11-10T14:54:20+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -32,6 +32,16 @@
   "open_for_comments": true
  },
  "documents": [
+  {
+   "id": "068Tv00000nuBUUIA2",
+   "title": "Representation - Redacted",
+   "category": "Representation",
+   "date": "2026-11-09",
+   "published": "2026-11-10",
+   "ext": "pdf",
+   "size": 13633526,
+   "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nuBUUIA2"
+  },
   {
    "id": "068Tv00000nLqNcIAK",
    "title": "Representation_hedgerows_v0.38",
@@ -3484,9 +3494,9 @@
   }
  ],
  "comments": {
-  "total": 3633,
+  "total": 3634,
   "by_stance": {
-   "Object": 2532,
+   "Object": 2533,
    "Support": 1070,
    "Representation": 30,
    "Neutral": 1
@@ -3519,11 +3529,11 @@
     "Support": 69
    },
    "2026-11": {
-    "Representation": 1,
-    "Object": 5
+    "Object": 6,
+    "Representation": 1
    }
   },
-  "last_comment_date": "2026-11-09",
+  "last_comment_date": "2026-11-10",
   "last_7_days": 6
  },
  "committee": {
@@ -3545,6 +3555,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-11-09T16:20:06+00:00"
+  "meetings_checked": "2026-11-10T14:54:20+00:00"
  }
 }

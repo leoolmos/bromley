@@ -1,5 +1,44 @@
 [
  {
+  "fetched_at": "2026-11-10T14:54:20+00:00",
+  "summary_pt": "1 documento(s) novo(s). +1 comentário(s) públicos (total 3634). Ainda sem decisão e sem data de comitê publicada no registro.",
+  "summary_en": "1 new document(s). +1 public comment(s) (total 3634). Not yet decided; no committee date published on the register.",
+  "status": "Valid",
+  "decision": null,
+  "key_dates": {
+   "received_date": "2026-06-01",
+   "valid_date": "2026-06-16",
+   "consultation_deadline": "2026-11-12",
+   "earliest_decision_date": "2026-11-12",
+   "committee_date": null,
+   "scheduled_decision_date": null,
+   "decision_date": null,
+   "decision_notice_date": null
+  },
+  "changes": {
+   "fields": [],
+   "agenda_new": [],
+   "new_documents": [
+    {
+     "id": "068Tv00000nuBUUIA2",
+     "title": "Representation - Redacted",
+     "category": "Representation",
+     "date": "2026-11-09",
+     "published": "2026-11-10",
+     "ext": "pdf",
+     "size": 13633526,
+     "url": "https://planningaccess.bromley.gov.uk/sfc/servlet.shepherd/version/download/068Tv00000nuBUUIA2"
+    }
+   ],
+   "removed_documents": [],
+   "comments_total": 3634,
+   "comments_delta": 1,
+   "stance_delta": {
+    "Object": 1
+   }
+  }
+ },
+ {
   "fetched_at": "2026-11-09T16:20:06+00:00",
   "summary_pt": "Nenhum documento novo. +3 comentário(s) públicos (total 3633). Ainda sem decisão e sem data de comitê publicada no registro.",
   "summary_en": "No new documents. +3 public comment(s) (total 3633). Not yet decided; no committee date published on the register.",
