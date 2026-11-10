@@ -95,7 +95,7 @@ class Register:
         self.s = requests.Session()
         # passed per request: a Session-level `verify` is overridden by REQUESTS_CA_BUNDLE
         self.ca = ca_bundle()
-        self.s.headers["User-Agent"] = "ravensbourne-place-tracker (+https://github.com/leoolmos/bromley)"
+        self.s.headers["User-Agent"] = "ravensbourne-place-tracker (+https://github.com/leoolmos/ravensbourne-place-bromley)"
         html = self.s.get(BASE + "/s/", timeout=60, verify=self.ca).text
         dec = urllib.parse.unquote(html)
         fwuid = re.search(r'"fwuid":"([^"]+)"', dec)
@@ -229,7 +229,7 @@ def fetch():
 def committee_meetings():
     """Upcoming Development Control Committee meetings and whether their agenda mentions the application."""
     s = requests.Session()
-    s.headers["User-Agent"] = "ravensbourne-place-tracker (+https://github.com/leoolmos/bromley)"
+    s.headers["User-Agent"] = "ravensbourne-place-tracker (+https://github.com/leoolmos/ravensbourne-place-bromley)"
 
     def get(url):   # the site sometimes drops a connection: two more tries, a little apart (never on 4xx/5xx)
         for i in range(3):
