@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-11T14:23:37+00:00",
+ "fetched_at": "2026-11-12T15:15:28+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -11,7 +11,7 @@
   "status": "Valid",
   "agent": "Paddy Hynes",
   "officer": "Xanna Machecourt",
-  "proposal": "Hybrid planning permission for a phased residential-led mixed use development comprising:\nFull planning permission for a phase of the development to provide homes, retail and community uses, public open space and landscaping; demolition of existing structures and site clearance works; enhancements to Public Rights of Way; access and highway works; and all associated works including temporary and permanent enabling works.\nOutline planning permission (all matters reserved) for the provision of further homes, a residence for children in care, flexible commercial, social, healthcare and community uses, car and cycle parking, public open space and landscaping; demolition of existing structures and site clearance works; enhancements to Public Rights of Way; access and highway works; and all associated works including temporary and permanent enabling works.",
+  "proposal": "Hybrid planning permission for a phased residential-led mixed use development (including up to 2,200 new homes) comprising:\nFull planning permission for a phase of the development to provide homes, retail and community uses, public open space and landscaping; demolition of existing structures and site clearance works; enhancements to Public Rights of Way; access and highway works; and all associated works including temporary and permanent enabling works.\nOutline planning permission (all matters reserved) for the provision of further homes, a residence for children in care, flexible commercial, social, healthcare and community uses, car and cycle parking, public open space and landscaping; demolition of existing structures and site clearance works; enhancements to Public Rights of Way; access and highway works; and all associated works including temporary and permanent enabling works.",
   "decision": null,
   "decision_date": null,
   "decision_notice_date": null,
@@ -3494,9 +3494,9 @@
   }
  ],
  "comments": {
-  "total": 3634,
+  "total": 3635,
   "by_stance": {
-   "Object": 2533,
+   "Object": 2534,
    "Support": 1070,
    "Representation": 30,
    "Neutral": 1
@@ -3529,11 +3529,11 @@
     "Support": 69
    },
    "2026-11": {
-    "Object": 6,
+    "Object": 7,
     "Representation": 1
    }
   },
-  "last_comment_date": "2026-11-10",
+  "last_comment_date": "2026-11-11",
   "last_7_days": 6
  },
  "committee": {
@@ -3555,6 +3555,6 @@
     "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-11-11T14:23:37+00:00"
+  "meetings_checked": "2026-11-12T15:15:28+00:00"
  }
 }
