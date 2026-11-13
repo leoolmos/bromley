@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-12T15:15:28+00:00",
+ "fetched_at": "2026-11-13T14:35:45+00:00",
  "source": "https://planningaccess.bromley.gov.uk/pr/s/detail/a0lTv000003RpUXIA0?c__r=Arcus_BE_Public_Register",
  "application": {
   "reference": "26/02199/OUT",
@@ -3494,9 +3494,9 @@
   }
  ],
  "comments": {
-  "total": 3635,
+  "total": 3636,
   "by_stance": {
-   "Object": 2534,
+   "Object": 2535,
    "Support": 1070,
    "Representation": 30,
    "Neutral": 1
@@ -3529,11 +3529,11 @@
     "Support": 69
    },
    "2026-11": {
-    "Object": 7,
+    "Object": 8,
     "Representation": 1
    }
   },
-  "last_comment_date": "2026-11-11",
+  "last_comment_date": "2026-11-12",
   "last_7_days": 6
  },
  "committee": {
@@ -3553,8 +3553,15 @@
     "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8317&Ver=4",
     "agenda_published": false,
     "mentions_application": false
+   },
+   {
+    "date": "2027-03-11",
+    "time": "7.30 pm",
+    "url": "https://cds.bromley.gov.uk/ieListDocuments.aspx?CId=133&MId=8318&Ver=4",
+    "agenda_published": false,
+    "mentions_application": false
    }
   ],
-  "meetings_checked": "2026-11-12T15:15:28+00:00"
+  "meetings_checked": "2026-11-13T14:35:45+00:00"
  }
 }
